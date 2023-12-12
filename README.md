@@ -1,2 +1,1 @@
-# -busc
-Gina's Website
+# Being Us Creations : Gina's Art Website
