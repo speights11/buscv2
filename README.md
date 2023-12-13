@@ -11,3 +11,6 @@ Add domain managed by GoDaddy to AWS
 https://docs.aws.amazon.com/amplify/latest/userguide/to-add-a-custom-domain-managed-by-a-third-party-dns-provider.html
 
 https://docs.aws.amazon.com/amplify/latest/userguide/to-add-a-custom-domain-managed-by-godaddy.html
+
+Send Email
+https://www.youtube.com/watch?v=hPeXnEX1EWE
