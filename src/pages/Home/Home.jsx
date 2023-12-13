@@ -4,11 +4,10 @@ import MenuItem from "@mui/material/MenuItem";
 import TextField from "@mui/material/TextField";
 import FormControl from "@mui/material/FormControl";
 import InputAdornment from "@mui/material/InputAdornment";
-import Select, { SelectChangeEvent } from "@mui/material/Select";
+import Select from "@mui/material/Select";
 import EmailIcon from "@mui/icons-material/Email";
 import SupervisedUserCircleIcon from "@mui/icons-material/SupervisedUserCircle";
 import NoteIcon from "@mui/icons-material/Note";
-// import HearingIcon from '@mui/icons-material/Hearing';
 import Button from "@mui/material/Button";
 import { EMAIL_SVC, mailStruct, sendEmail } from "components/EmailService";
 import gina from "assets/images/gina2.png";
@@ -50,7 +49,7 @@ const Home = () => {
         </div>
 
         <div className={`${complete ? "hidden" : "keep-in-touch"}`}>
-          <h1>Let's Keep In Touch</h1>
+          <h1>Let&apos;s Keep In Touch</h1>
 
           <p>
             Please join our mailing list to hear about upcoming shows and new

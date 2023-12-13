@@ -5,6 +5,7 @@ import Tab from "@mui/material/Tab";
 import HomeIcon from "@mui/icons-material/Home";
 import ContactPageIcon from "@mui/icons-material/ContactPage";
 import CollectionsIcon from "@mui/icons-material/Collections";
+import PropTypes from "prop-types";
 import logo from "assets/images/logo.png";
 
 import "App.css";
@@ -65,6 +66,10 @@ const Main = ({ children }) => {
       </div>
     </div>
   );
+};
+
+Main.propTypes = {
+  children: PropTypes.any,
 };
 
 export default Main;

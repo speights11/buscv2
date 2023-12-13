@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FormLabel, TextField, TextareaAutosize, Button } from "@mui/material";
+import { TextField, Button } from "@mui/material";
 import { EMAIL_SVC, mailStruct, sendEmail } from "components/EmailService";
 import FormControl from "@mui/material/FormControl";
 import InputAdornment from "@mui/material/InputAdornment";
