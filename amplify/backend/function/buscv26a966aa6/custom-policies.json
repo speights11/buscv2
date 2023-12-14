@@ -1,0 +1,7 @@
+[
+  {
+    "Action": ["ses.sendEmail"],
+    "Effect": "Allow",
+    "Resource": ["arn:aws:ses:*:*:identity/beinguscreations@gmail.com"]
+  }
+]

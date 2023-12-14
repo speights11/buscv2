@@ -1,3 +1,6 @@
+PRODUCTION RULES:
+https://docs.amplify.aws/cli/graphql/authorization-rules
+
 AWS CLI
 https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html
 

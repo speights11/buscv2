@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import { TextField, Button } from "@mui/material";
-import { EMAIL_SVC, mailStruct, sendEmail } from "components/EmailService";
+import {
+  EMAIL_SVC,
+  mailStruct,
+  callAwsEmailSvc,
+} from "components/EmailService";
 import FormControl from "@mui/material/FormControl";
 import InputAdornment from "@mui/material/InputAdornment";
 import EmailIcon from "@mui/icons-material/Email";
@@ -21,7 +25,7 @@ const Contact = () => {
     message.address = email;
     message.body = comments;
 
-    sendEmail(message).then(() => setComplete(true));
+    callAwsEmailSvc(message).then(() => setComplete(true));
   };
 
   return (

@@ -1,3 +1,7 @@
+import React from "react";
+import { API } from "aws-amplify";
+import createContact from "./graphql";
+
 export const EMAIL_SVC = {
   referredBy: "referredBy",
   join: "join",
@@ -6,14 +10,25 @@ export const EMAIL_SVC = {
 
 export const mailStruct = { svc: "", name: "", address: "", body: "" };
 
-export const sendEmail = (message) => {
+export const callAwsEmailSvc = (message) => {
   return new Promise((resolve, reject) => {
     console.log("-----------------------------");
     console.log("-----------------------------");
-    console.log("sendEmail called");
+    console.log("callAwsEmailSvc called");
     console.log(message);
     console.log("-----------------------------");
     console.log("-----------------------------");
+
+    API.graphql({
+      query: createContact,
+      variables: {
+        input: {
+          name: message.name,
+          email: message.address,
+          comments: message.body,
+        },
+      },
+    });
     resolve("ok");
   });
 };

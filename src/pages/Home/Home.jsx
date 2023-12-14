@@ -9,7 +9,11 @@ import EmailIcon from "@mui/icons-material/Email";
 import SupervisedUserCircleIcon from "@mui/icons-material/SupervisedUserCircle";
 import NoteIcon from "@mui/icons-material/Note";
 import Button from "@mui/material/Button";
-import { EMAIL_SVC, mailStruct, sendEmail } from "components/EmailService";
+import {
+  EMAIL_SVC,
+  mailStruct,
+  callAwsEmailSvc,
+} from "components/EmailService";
 import gina from "assets/images/gina2.png";
 import "App.css";
 
@@ -32,7 +36,7 @@ const Home = () => {
     message.address = email;
     message.body = source === 3 ? `Other: ${comments}` : `${options[source]}`;
 
-    sendEmail(message).then(() => setComplete(true));
+    callAwsEmailSvc(message).then(() => setComplete(true));
   };
 
   return (
