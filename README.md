@@ -1,3 +1,6 @@
+AWS CLI
+https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html
+
 AWS Amplify
 https://aws.amazon.com/amplify/hosting/
 
