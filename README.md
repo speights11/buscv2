@@ -20,3 +20,5 @@ https://docs.aws.amazon.com/amplify/latest/userguide/to-add-a-custom-domain-mana
 
 Send Email
 https://www.youtube.com/watch?v=hPeXnEX1EWE
+
+"Resource": ["arn:aws:ses:*:*:identity/beinguscreations@gmail.com"]

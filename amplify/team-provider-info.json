@@ -14,8 +14,13 @@
     "categories": {
       "function": {
         "buscv26a966aa6": {
-          "sesEmail": "beinguscreations@gmail.com"
+          "sesEmail": "beinguscreations@gmail.com",
+          "deploymentBucketName": "amplify-buscv2-dev-160947-deployment",
+          "s3Key": "amplify-builds/buscv26a966aa6-49354a37333245494443-build.zip"
         }
+      },
+      "api": {
+        "buscv2": {}
       }
     }
   }

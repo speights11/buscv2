@@ -35,6 +35,22 @@
     }
   },
   "parameters": {
+    "AMPLIFY_function_buscv26a966aa6_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "buscv26a966aa6"
+        }
+      ]
+    },
+    "AMPLIFY_function_buscv26a966aa6_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "buscv26a966aa6"
+        }
+      ]
+    },
     "AMPLIFY_function_buscv26a966aa6_sesEmail": {
       "usedBy": [
         {

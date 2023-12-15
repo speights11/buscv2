@@ -17,7 +17,7 @@ exports.handler = async (event) => {
       const email = record.dynamodb.NewImage.email.S;
       const comments = record.dynamodb.NewImage.comments.S;
 
-      await ses.sendEmail({
+      await ses.SendEmail({
         Destination: {
           ToAddresses: [process.env.SES_EMAIL],
         },
