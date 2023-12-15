@@ -34,7 +34,8 @@ const Home = () => {
     message.svc = EMAIL_SVC.join;
     message.name = name;
     message.address = email;
-    message.body = source === 3 ? `Other: ${comments}` : `${options[source]}`;
+    message.comments =
+      source === 3 ? `Other: ${comments}` : `${options[source]}`;
 
     callAwsEmailSvc(message).then(() => setComplete(true));
   };

@@ -4,7 +4,7 @@ import "App.css";
 import Main from "components/Main";
 import Home from "pages/Home/Home";
 import Gallery from "pages/Gallery/Gallery";
-import Contact from "pages/Contact/Contact";
+import ContactV2 from "pages/Contact/ContactV2";
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
         <Route index path="/" element={<Home />} />
         <Route index path="/home" element={<Home />} />
         <Route path="/gallery" element={<Gallery />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/contact" element={<Contactv2 />} />
       </Routes>
     </Main>
   );

@@ -8,7 +8,7 @@ export const EMAIL_SVC = {
   contact: "contact",
 };
 
-export const mailStruct = { svc: "", name: "", address: "", body: "" };
+export const mailStruct = { svc: "", name: "", address: "", comments: "" };
 
 export const callAwsEmailSvc = (message) => {
   return new Promise((resolve, reject) => {
@@ -25,7 +25,7 @@ export const callAwsEmailSvc = (message) => {
         input: {
           name: message.name,
           email: message.address,
-          comments: message.body,
+          comments: message.comments,
         },
       },
     });

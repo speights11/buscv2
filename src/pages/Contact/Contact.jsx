@@ -23,7 +23,7 @@ const Contact = () => {
     message.svc = EMAIL_SVC.contact;
     message.name = name;
     message.address = email;
-    message.body = comments;
+    message.comments = comments;
 
     callAwsEmailSvc(message).then(() => setComplete(true));
   };
