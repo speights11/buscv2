@@ -21,7 +21,7 @@ https://docs.aws.amazon.com/amplify/latest/userguide/to-add-a-custom-domain-mana
 
 https://docs.aws.amazon.com/amplify/latest/userguide/to-add-a-custom-domain-managed-by-godaddy.html
 
-Send Email
+Send Email Instructions
 https://www.youtube.com/watch?v=hPeXnEX1EWE
 
 "Resource": ["arn:aws:ses:*:*:identity/beinguscreations@gmail.com"]
