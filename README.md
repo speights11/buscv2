@@ -7,6 +7,9 @@ https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html
 AWS Amplify
 https://aws.amazon.com/amplify/hosting/
 
+Service role
+arn:aws:iam::400149547320:role/amplifyconsole-backend-role
+
 AWS CDN host and CI/CD Pipeline via Git
 https://aws.amazon.com/getting-started/hands-on/host-static-website/
 
