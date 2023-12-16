@@ -9,6 +9,7 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 
 Amplify.configure(config);
+const client = generateContact();
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
