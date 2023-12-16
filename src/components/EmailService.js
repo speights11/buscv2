@@ -10,10 +10,10 @@ export const EMAIL_SVC = {
 };
 
 export const mailStruct = { svc: "", name: "", address: "", comments: "" };
-Amplify.configure(awsmobile);
-const client = generateClient();
-
 export const callAwsEmailSvc = (message) => {
+  Amplify.configure(awsmobile);
+  const client = generateClient();
+
   return new Promise((resolve, reject) => {
     console.log("-----------------------------");
     console.log("-----------------------------");
