@@ -1,5 +1,5 @@
 // import React from "react";
-import { Amplify } from "aws-amplify";
+// import { Amplify } from "aws-amplify";
 import { createContactUs } from "graphql/mutations";
 import { generateClient } from "aws-amplify/api";
 
