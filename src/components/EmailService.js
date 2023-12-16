@@ -1,5 +1,5 @@
 import { Amplify } from "aws-amplify";
-import config from "./aws-exports";
+import config from "../aws-exports";
 import { createContactUs } from "graphql/mutations";
 import { generateClient } from "aws-amplify/api";
 
