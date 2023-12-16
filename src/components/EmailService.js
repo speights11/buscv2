@@ -1,6 +1,6 @@
-import React from "react";
-import { API } from "aws-amplify";
-import createContact from "./graphql";
+// import React from "react";
+import { Amplify } from "aws-amplify";
+import { createContactUs } from "graphql/mutations";
 
 export const EMAIL_SVC = {
   referredBy: "referredBy",
@@ -19,8 +19,8 @@ export const callAwsEmailSvc = (message) => {
     console.log("-----------------------------");
     console.log("-----------------------------");
 
-    API.graphql({
-      query: createContact,
+    Amplify.graphql({
+      query: createContactUs,
       variables: {
         input: {
           name: message.name,
