@@ -40,5 +40,12 @@ export const callAwsEmailSvc = (message) => {
     console.log("-----------------------------");
 
     resolve("ok");
+  }).catch((err) => {
+    console.error("-----------------------------");
+    console.error("-----------------------------");
+    console.error("callAwsEmailSvc ERROR!");
+    console.error(err);
+    console.error("-----------------------------");
+    console.error("-----------------------------");
   });
 };
