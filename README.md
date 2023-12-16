@@ -1,3 +1,6 @@
+DEBUG SETUP
+https://docs.amplify.aws/javascript/build-a-backend/graphqlapi/set-up-graphql-api/
+
 PRODUCTION RULES:
 https://docs.amplify.aws/cli/graphql/authorization-rules
 
@@ -25,3 +28,8 @@ Send Email Instructions
 https://www.youtube.com/watch?v=hPeXnEX1EWE
 
 "Resource": ["arn:aws:ses:*:*:identity/beinguscreations@gmail.com"]
+
+## Amplify Commands
+
+amplify add api
+amplify push -y
