@@ -1,5 +1,5 @@
-// import React from "react";
-// import { Amplify } from "aws-amplify";
+import { Amplify } from "aws-amplify";
+import config from "./aws-exports";
 import { createContactUs } from "graphql/mutations";
 import { generateClient } from "aws-amplify/api";
 
@@ -10,6 +10,7 @@ export const EMAIL_SVC = {
 };
 
 export const mailStruct = { svc: "", name: "", address: "", comments: "" };
+Amplify.configure(config);
 const client = generateClient();
 
 export const callAwsEmailSvc = (message) => {
@@ -31,6 +32,13 @@ export const callAwsEmailSvc = (message) => {
         },
       },
     });
+
+    console.log("-----------------------------");
+    console.log("-----------------------------");
+    console.log("callAwsEmailSvc success!");
+    console.log("-----------------------------");
+    console.log("-----------------------------");
+
     resolve("ok");
   });
 };
