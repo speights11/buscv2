@@ -1,5 +1,5 @@
-import { Amplify } from "aws-amplify";
-import awsmobile from "../aws-exports";
+// import { Amplify } from "aws-amplify";
+// import awsmobile from "../aws-exports";
 import { createContactUs } from "graphql/mutations";
 import { generateClient } from "aws-amplify/api";
 
@@ -10,7 +10,7 @@ export const EMAIL_SVC = {
 };
 export const mailStruct = { svc: "", name: "", address: "", comments: "" };
 
-Amplify.configure(awsmobile);
+// Amplify.configure(awsmobile);
 
 export const callAwsEmailSvc = (message) => {
   const client = generateClient();

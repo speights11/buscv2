@@ -1,7 +1,10 @@
 /**
  * @type {import('@types/aws-lambda').APIGatewayProxyHandler}
  */
+import { Amplify } from "aws-amplify";
+import awsmobile from "./aws-exports";
 
+Amplify.configure(awsmobile);
 const aws = require("aws-sdk");
 const ses = new aws.SES();
 
