@@ -13,6 +13,7 @@ exports.handler = async (event) => {
     console.log("DynamoDB Record: %j", record.dynamodb);
 
     if (record.eventName === "INSERT") {
+      const type = record.dynamodb.NewImage.type.S;
       const clientName = record.dynamodb.NewImage.name.S;
       const email = record.dynamodb.NewImage.email.S;
       const message = record.dynamodb.NewImage.message.S;
@@ -23,7 +24,9 @@ exports.handler = async (event) => {
         },
         Source: process.env.SES_EMAIL,
         Message: {
-          Subject: { Data: "Client Email" },
+          Subject: {
+            Data: type === "contact" ? "Contact Us" : "Join Mailing List",
+          },
           Body: {
             Text: {
               Data: `Message from ${clientName} at ${email}:\n${message}`,
