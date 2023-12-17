@@ -15,7 +15,7 @@ import "App.css";
 const Contact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [comments, setComments] = useState("");
+  const [message, setMessage] = useState("");
   const [complete, setComplete] = useState(false);
 
   const handleSubmit = () => {
@@ -23,7 +23,7 @@ const Contact = () => {
     message.svc = EMAIL_SVC.contact;
     message.name = name;
     message.address = email;
-    message.comments = comments;
+    message.message = message;
 
     callAwsEmailSvc(message).then(() => setComplete(true));
   };
@@ -72,9 +72,9 @@ const Contact = () => {
               sx={{ m: 1, minWidth: "40vw", background: "#ffffff" }}
               multiline
               minRows={3}
-              label="Comments"
+              label="Message"
               variant="filled"
-              onChange={(e) => setComments(e.target.value)}
+              onChange={(e) => setMessage(e.target.value)}
               InputProps={{
                 startAdornment: (
                   <InputAdornment position="start">

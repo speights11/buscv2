@@ -15,7 +15,7 @@ exports.handler = async (event) => {
     if (record.eventName === "INSERT") {
       const clientName = record.dynamodb.NewImage.name.S;
       const email = record.dynamodb.NewImage.email.S;
-      const comments = record.dynamodb.NewImage.comments.S;
+      const message = record.dynamodb.NewImage.message.S;
 
       await ses.SendEmail({
         Destination: {
@@ -26,7 +26,7 @@ exports.handler = async (event) => {
           Subject: { Data: "Client Email" },
           Body: {
             Text: {
-              Data: `Message from ${clientName} at ${email}:\n${comments}`,
+              Data: `Message from ${clientName} at ${email}:\n${message}`,
             },
           },
         },

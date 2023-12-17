@@ -21,7 +21,7 @@ const Home = () => {
   const [source, setSource] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [comments, setComments] = useState("");
+  const [message, setMessage] = useState("");
   const [complete, setComplete] = useState(false);
   const options = ["From a friend", "Internet Search", "An Art Show", "Other"];
 
@@ -34,8 +34,7 @@ const Home = () => {
     message.svc = EMAIL_SVC.join;
     message.name = name;
     message.address = email;
-    message.comments =
-      source === 3 ? `Other: ${comments}` : `${options[source]}`;
+    message.message = source === 3 ? `Other: ${message}` : `${options[source]}`;
 
     callAwsEmailSvc(message).then(() => setComplete(true));
   };
@@ -120,7 +119,7 @@ const Home = () => {
                 sx={{ m: 1, minWidth: "30vw", background: "#ffffff" }}
                 label="Other"
                 variant="filled"
-                onChange={(e) => setComments(e.target.value)}
+                onChange={(e) => setMessage(e.target.value)}
                 disabled={source !== 3}
                 InputProps={{
                   startAdornment: (

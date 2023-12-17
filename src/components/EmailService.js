@@ -6,7 +6,7 @@ export const EMAIL_SVC = {
   join: "join",
   contact: "contact",
 };
-export const mailStruct = { svc: "", name: "", address: "", comments: "" };
+export const mailStruct = { svc: "", name: "", address: "", message: "" };
 
 export const callAwsEmailSvc = (message) => {
   const client = generateClient();
@@ -25,7 +25,7 @@ export const callAwsEmailSvc = (message) => {
         input: {
           name: message.name,
           email: message.address,
-          comments: message.comments,
+          message: message.message,
         },
       },
     });
