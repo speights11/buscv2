@@ -9,11 +9,7 @@ import EmailIcon from "@mui/icons-material/Email";
 import SupervisedUserCircleIcon from "@mui/icons-material/SupervisedUserCircle";
 import NoteIcon from "@mui/icons-material/Note";
 import Button from "@mui/material/Button";
-import {
-  EMAIL_SVC,
-  mailStruct,
-  callAwsEmailSvc,
-} from "components/EmailService";
+import { callAwsEmailSvc } from "components/EmailService";
 import gina from "assets/images/gina2.png";
 import "App.css";
 
@@ -30,13 +26,8 @@ const Home = () => {
   };
 
   const handleSubmit = () => {
-    const message = { ...mailStruct };
-    message.svc = EMAIL_SVC.join;
-    message.name = name;
-    message.address = email;
-    message.message = source === 3 ? `Other: ${message}` : `${options[source]}`;
-
-    callAwsEmailSvc(message).then(() => setComplete(true));
+    message = source === 3 ? `Other: ${message}` : `${options[source]}`;
+    callAwsEmailSvc("join", name, email, message).then(() => setComplete(true));
   };
 
   return (

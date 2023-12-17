@@ -22,11 +22,13 @@ export declare type ValidationResponse = {
 };
 export declare type ValidationFunction<T> = (value: T, validationResponse: ValidationResponse) => ValidationResponse | Promise<ValidationResponse>;
 export declare type ContactUsCreateFormInputValues = {
+    type?: string;
     name?: string;
     email?: string;
     message?: string;
 };
 export declare type ContactUsCreateFormValidationValues = {
+    type?: ValidationFunction<string>;
     name?: ValidationFunction<string>;
     email?: ValidationFunction<string>;
     message?: ValidationFunction<string>;
@@ -34,6 +36,7 @@ export declare type ContactUsCreateFormValidationValues = {
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
 export declare type ContactUsCreateFormOverridesProps = {
     ContactUsCreateFormGrid?: PrimitiveOverrideProps<GridProps>;
+    type?: PrimitiveOverrideProps<TextFieldProps>;
     name?: PrimitiveOverrideProps<TextFieldProps>;
     email?: PrimitiveOverrideProps<TextFieldProps>;
     message?: PrimitiveOverrideProps<TextFieldProps>;

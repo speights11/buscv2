@@ -25,10 +25,12 @@ export default function ContactUsUpdateForm(props) {
     ...rest
   } = props;
   const initialValues = {
+    type: "",
     name: "",
     email: "",
     message: "",
   };
+  const [type, setType] = React.useState(initialValues.type);
   const [name, setName] = React.useState(initialValues.name);
   const [email, setEmail] = React.useState(initialValues.email);
   const [message, setMessage] = React.useState(initialValues.message);
@@ -37,6 +39,7 @@ export default function ContactUsUpdateForm(props) {
     const cleanValues = contactUsRecord
       ? { ...initialValues, ...contactUsRecord }
       : initialValues;
+    setType(cleanValues.type);
     setName(cleanValues.name);
     setEmail(cleanValues.email);
     setMessage(cleanValues.message);
@@ -60,6 +63,7 @@ export default function ContactUsUpdateForm(props) {
   }, [idProp, contactUsModelProp]);
   React.useEffect(resetStateValues, [contactUsRecord]);
   const validations = {
+    type: [{ type: "Required" }],
     name: [{ type: "Required" }],
     email: [{ type: "Required" }, { type: "Email" }],
     message: [{ type: "Required" }],
@@ -90,6 +94,7 @@ export default function ContactUsUpdateForm(props) {
       onSubmit={async (event) => {
         event.preventDefault();
         let modelFields = {
+          type,
           name,
           email,
           message,
@@ -145,6 +150,33 @@ export default function ContactUsUpdateForm(props) {
       {...rest}
     >
       <TextField
+        label="Type"
+        isRequired={true}
+        isReadOnly={false}
+        value={type}
+        onChange={(e) => {
+          let { value } = e.target;
+          if (onChange) {
+            const modelFields = {
+              type: value,
+              name,
+              email,
+              message,
+            };
+            const result = onChange(modelFields);
+            value = result?.type ?? value;
+          }
+          if (errors.type?.hasError) {
+            runValidationTasks("type", value);
+          }
+          setType(value);
+        }}
+        onBlur={() => runValidationTasks("type", type)}
+        errorMessage={errors.type?.errorMessage}
+        hasError={errors.type?.hasError}
+        {...getOverrideProps(overrides, "type")}
+      ></TextField>
+      <TextField
         label="Name"
         isRequired={true}
         isReadOnly={false}
@@ -153,6 +185,7 @@ export default function ContactUsUpdateForm(props) {
           let { value } = e.target;
           if (onChange) {
             const modelFields = {
+              type,
               name: value,
               email,
               message,
@@ -179,6 +212,7 @@ export default function ContactUsUpdateForm(props) {
           let { value } = e.target;
           if (onChange) {
             const modelFields = {
+              type,
               name,
               email: value,
               message,
@@ -205,6 +239,7 @@ export default function ContactUsUpdateForm(props) {
           let { value } = e.target;
           if (onChange) {
             const modelFields = {
+              type,
               name,
               email,
               message: value,

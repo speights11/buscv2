@@ -5,6 +5,7 @@ export const getContactUs = /* GraphQL */ `
   query GetContactUs($id: ID!) {
     getContactUs(id: $id) {
       id
+      type
       name
       email
       message
@@ -23,6 +24,7 @@ export const listContactuses = /* GraphQL */ `
     listContactuses(filter: $filter, limit: $limit, nextToken: $nextToken) {
       items {
         id
+        type
         name
         email
         message
