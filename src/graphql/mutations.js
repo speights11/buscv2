@@ -17,35 +17,3 @@ export const createContactUs = /* GraphQL */ `
     }
   }
 `;
-export const updateContactUs = /* GraphQL */ `
-  mutation UpdateContactUs(
-    $input: UpdateContactUsInput!
-    $condition: ModelContactUsConditionInput
-  ) {
-    updateContactUs(input: $input, condition: $condition) {
-      id
-      name
-      email
-      message
-      createdAt
-      updatedAt
-      __typename
-    }
-  }
-`;
-export const deleteContactUs = /* GraphQL */ `
-  mutation DeleteContactUs(
-    $input: DeleteContactUsInput!
-    $condition: ModelContactUsConditionInput
-  ) {
-    deleteContactUs(input: $input, condition: $condition) {
-      id
-      name
-      email
-      message
-      createdAt
-      updatedAt
-      __typename
-    }
-  }
-`;
