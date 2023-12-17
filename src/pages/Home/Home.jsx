@@ -13,12 +13,19 @@ import { callAwsEmailSvc } from "components/EmailService";
 import gina from "assets/images/gina2.png";
 import "App.css";
 
+const errCheck = 0x0000;
+const nameErr = 0x0001;
+const emailErr = 0x0010;
+const messageErr = 0x0100;
+
 const Home = () => {
   const [source, setSource] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [complete, setComplete] = useState(false);
+  const [errorState, setErrorState] = useState(errCheck);
+
   const options = ["From a friend", "Internet Search", "An Art Show", "Other"];
 
   const handleChange = (event) => {
@@ -26,8 +33,27 @@ const Home = () => {
   };
 
   const handleSubmit = () => {
-    const msg = source === 3 ? `Other: ${message}` : `${options[source]}`;
-    callAwsEmailSvc("join", name, email, msg).then(() => setComplete(true));
+    setErrorState(errCheck);
+    let tstVal = 0x0000;
+
+    if (!name || name.length <= 0) {
+      tstVal = tstVal | nameErr;
+    }
+
+    if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(email)) {
+      tstVal = tstVal | emailErr;
+    }
+
+    if (source === "") {
+      tstVal = tstVal | messageErr;
+    }
+
+    if (tstVal > errCheck) {
+      setErrorState(tstVal);
+    } else {
+      const msg = source === 3 ? `Other: ${message}` : `${options[source]}`;
+      callAwsEmailSvc("join", name, email, msg).then(() => setComplete(true));
+    }
   };
 
   return (
@@ -54,6 +80,8 @@ const Home = () => {
           <div className="form-row">
             <FormControl>
               <TextField
+                error={errorState & nameErr}
+                helperText="Please enter name."
                 sx={{ m: 1, minWidth: "25vw", background: "#ffffff" }}
                 label="Name"
                 variant="filled"
@@ -70,6 +98,8 @@ const Home = () => {
 
             <FormControl>
               <TextField
+                error={errorState & emailErr}
+                helperText="Please enter name."
                 sx={{ m: 1, minWidth: "25vw", background: "#ffffff" }}
                 label="Email address"
                 variant="filled"
@@ -86,7 +116,11 @@ const Home = () => {
           </div>
 
           <div className="form-row">
-            <FormControl sx={{ m: 1, minWidth: "20vw" }}>
+            <FormControl
+              sx={{ m: 1, minWidth: "20vw" }}
+              error={errorState & messageErr}
+              helperText="Please make a selection."
+            >
               <InputLabel id="demo-simple-select-autowidth-label">
                 How did you hear about us?
               </InputLabel>
