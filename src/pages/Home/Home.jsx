@@ -26,8 +26,8 @@ const Home = () => {
   };
 
   const handleSubmit = () => {
-    message = source === 3 ? `Other: ${message}` : `${options[source]}`;
-    callAwsEmailSvc("join", name, email, message).then(() => setComplete(true));
+    const msg = source === 3 ? `Other: ${message}` : `${options[source]}`;
+    callAwsEmailSvc("join", name, email, msg).then(() => setComplete(true));
   };
 
   return (
