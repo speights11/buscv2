@@ -91,7 +91,13 @@
     width: 70%;
     margin: 5vh auto;
     padding: 0.1vh 5vw 5vh 5vw;
-    /* color: rgb(206, 206, 4); */
+
+    /* color: #000000;
+    text-shadow: 2px 2px #ffffff; */
+
+    color: #ffffff;
+    text-shadow: 4px 4px black;
+
     background: url("assets/images/bg1.png");
     background-repeat: no-repeat;
     background-size: cover;

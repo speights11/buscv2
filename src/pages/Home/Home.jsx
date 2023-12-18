@@ -10,7 +10,7 @@ import SupervisedUserCircleIcon from "@mui/icons-material/SupervisedUserCircle";
 import NoteIcon from "@mui/icons-material/Note";
 import Button from "@mui/material/Button";
 import { callAwsEmailSvc } from "components/EmailService";
-import gina from "assets/images/gina2.png";
+import gina from "assets/images/gina.png";
 import "App.css";
 
 const errCheck = 0x0000;
@@ -59,14 +59,14 @@ const Home = () => {
   return (
     <>
       <div className="home-content">
+        <div className="image-frame">
+          <img src={gina} alt="Gina at 1st annual art show" />
+        </div>
+
         <div className="intro">
           <hr />
           AN EXCITING NEW COLLECTION OF ORIGINAL ART <hr />
           <h4>Brought to you by Reggie S.</h4>
-        </div>
-
-        <div className="image-frame">
-          <img src={gina} alt="Gina at 1st annual art show" />
         </div>
 
         <div className={`${complete ? "hidden" : "keep-in-touch"}`}>
