@@ -23,10 +23,12 @@ const Main = ({ children }) => {
 
   return (
     <div className="app-frame">
-      <div className="header">
-        <img src={logo} alt="BUSC logo" />
+      <div className="image-frame header">
+        <div className="">
+          <img src={logo} alt="BUSC logo" />
+        </div>
         <div>
-          <h2>Being Us Creations</h2>
+          <p className="HeaderTitle">Being Us Creations</p>
         </div>
         <div className="links">
           <div>
