@@ -4,6 +4,7 @@
 
 const aws = require("aws-sdk");
 const ses = new aws.SES();
+const emailAddr = "beinguscreations@gmail.com";
 
 exports.handler = async (event) => {
   console.log(`EVENT: ${JSON.stringify(event)}`);
@@ -20,9 +21,9 @@ exports.handler = async (event) => {
 
       await ses.SendEmail({
         Destination: {
-          ToAddresses: [process.env.SES_EMAIL],
+          ToAddresses: [emailAddr],
         },
-        Source: process.env.SES_EMAIL,
+        Source: emailAddr,
         Message: {
           Subject: {
             Data: type === "contact" ? "Contact Us" : "Join Mailing List",
