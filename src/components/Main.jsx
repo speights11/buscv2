@@ -62,7 +62,12 @@ const Main = ({ children }) => {
             <p>Snelleville, GA 30039</p>
           </div>
           <div className="copyright">
-            Copyright © 2023 Being Us Creations - All Rights Reserved.
+            Copyright &#169;2023 Being Us Creations All Rights Reserved.
+            <br />
+            All photographs appearing on this site are the property of Being Us
+            Creations. They are protected by U.S. Copyright Laws and are not to
+            be downloaded or reproduced in any way without the express written
+            permission of Being Us Creations.
           </div>
         </div>
       </div>

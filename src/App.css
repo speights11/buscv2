@@ -57,6 +57,8 @@
 
   & .copyright {
     margin: 2vh auto;
+    font-size: 0.8rem;
+    padding: 5px;
   }
 }
 
