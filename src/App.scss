@@ -349,15 +349,19 @@
 @media only screen and (max-width: 767px) {
 
   .app-frame {
-    grid-template-rows: 20vh 1fr;
+    grid-template-rows: 30vh 1fr;
   }
 
   .header {
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 0;
+    background-color: #888888;
+    // background: none;
+    background: url("assets/images/Mobile-Banner-bg.png");
+
+    & img {
+      // padding-top: 5vw;
+      width: 30vw;
+    }
   }
 
   .HeaderTitle {
@@ -369,8 +373,20 @@
   }
 
   .keep-in-touch {
+    & h1 {
+      font-size: 2.5vmax;
+    }
+
     & p {
       text-align: center;
+    }
+  }
+
+  .footer {
+    width: 80vw;
+
+    & .copyright {
+      font-size: 1.5vmax;
     }
   }
 }

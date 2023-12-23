@@ -5,12 +5,13 @@ import Tab from "@mui/material/Tab";
 import HomeIcon from "@mui/icons-material/Home";
 import ContactPageIcon from "@mui/icons-material/ContactPage";
 import CollectionsIcon from "@mui/icons-material/Collections";
+import { isMobile } from "react-device-detect";
 import PropTypes from "prop-types";
 import logo from "assets/images/logo.png";
 
 import "App.scss";
 
-const _fontSz = "0.7vw";
+const _fontSz = isMobile ? "3.7vw" : "0.5vw";
 
 const Main = ({ children }) => {
   const [value, setValue] = useState(0);
@@ -43,19 +44,19 @@ const Main = ({ children }) => {
                 icon={<HomeIcon />}
                 aria-label="home"
                 label="home"
-                sx={{ fontSize: _fontSz }}
+                sx={{ fontSize: _fontSz, fontWeight: 800 }}
               />
               <Tab
                 icon={<CollectionsIcon />}
                 aria-label="gallery"
                 label="gallery"
-                sx={{ fontSize: _fontSz }}
+                sx={{ fontSize: _fontSz, fontWeight: 800 }}
               />
               <Tab
                 icon={<ContactPageIcon />}
                 aria-label="contact"
                 label="contact us"
-                sx={{ fontSize: _fontSz }}
+                sx={{ fontSize: _fontSz, fontWeight: 800 }}
               />
             </Tabs>
           </div>
