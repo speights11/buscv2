@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
@@ -14,14 +14,16 @@ import "App.scss";
 const _fontSz = isMobile ? "3.7vw" : "0.5vw";
 
 const Main = ({ children }) => {
-  const [value, setValue] = useState(0);
+  const [pageNumber, setPageNumber] = useState(0);
   const navigate = useNavigate();
   const routePath = ["/home", "/gallery", "/contact"];
 
-  const handleChange = (event, pageNumber) => {
-    console.log(`pageNumber: ${pageNumber}`);
-    setValue(pageNumber);
+  useEffect(() => {
     navigate(routePath[pageNumber]);
+  }, [pageNumber]);
+
+  const handleChange = (event, pageNumber) => {
+    setPageNumber(pageNumber);
   };
 
   return (
@@ -36,7 +38,7 @@ const Main = ({ children }) => {
         <div className="links">
           <div>
             <Tabs
-              value={value}
+              value={pageNumber}
               onChange={handleChange}
               aria-label="icon tabs example"
             >
@@ -64,7 +66,7 @@ const Main = ({ children }) => {
       </div>
       <div className="main-content">
         {children}
-        <div className={`${value === 1 ? "hidden" : "footer"}`}>
+        <div className={`${pageNumber === 1 ? "hidden" : "footer"}`}>
           <h4>Being Us Creations</h4>
           <div className="address">
             <p>4002 Hwy 78</p>
