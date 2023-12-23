@@ -64,7 +64,7 @@ const Main = ({ children }) => {
       </div>
       <div className="main-content">
         {children}
-        <div className="footer">
+        <div className={`${value === 1 ? "hidden" : "footer"}`}>
           <h4>Being Us Creations</h4>
           <div className="address">
             <p>4002 Hwy 78</p>
