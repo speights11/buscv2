@@ -18,6 +18,9 @@ const nameErr = 0x0001;
 const emailErr = 0x0010;
 const messageErr = 0x0100;
 
+const labelFontSize = "1.0vmax";
+const fieldFontSize = "1.3vmax";
+
 const Home = () => {
   const [source, setSource] = useState("");
   const [name, setName] = useState("");
@@ -82,7 +85,11 @@ const Home = () => {
               <TextField
                 error={errorState & nameErr}
                 helperText="Please enter name."
-                sx={{ m: 1, minWidth: "25vw", background: "#ffffff" }}
+                sx={{
+                  m: 1,
+                  minWidth: "25vw",
+                  background: "#ffffff",
+                }}
                 label="Name"
                 variant="filled"
                 onChange={(e) => setName(e.target.value)}
@@ -92,7 +99,9 @@ const Home = () => {
                       <SupervisedUserCircleIcon />
                     </InputAdornment>
                   ),
+                  style: { fontSize: fieldFontSize },
                 }}
+                InputLabelProps={{ style: { fontSize: labelFontSize } }}
               />
             </FormControl>
 
@@ -110,7 +119,9 @@ const Home = () => {
                       <EmailIcon />
                     </InputAdornment>
                   ),
+                  style: { fontSize: fieldFontSize },
                 }}
+                InputLabelProps={{ style: { fontSize: labelFontSize } }}
               />
             </FormControl>
           </div>
@@ -121,7 +132,10 @@ const Home = () => {
               error={errorState & messageErr}
               helperText="Please make a selection."
             >
-              <InputLabel id="demo-simple-select-autowidth-label">
+              <InputLabel
+                id="demo-simple-select-autowidth-label"
+                sx={{ fontSize: labelFontSize }}
+              >
                 How did you hear about us?
               </InputLabel>
               <Select
@@ -129,19 +143,32 @@ const Home = () => {
                 id="demo-simple-select-autowidth"
                 value={source}
                 onChange={handleChange}
-                sx={{ m: 1, minWidth: 300, background: "#ffffff" }}
+                sx={{
+                  m: 1,
+                  maxWidth: "30vw",
+                  background: "#ffffff",
+                  fontSize: labelFontSize,
+                }}
               >
                 <MenuItem value=""></MenuItem>
-                <MenuItem value={0}>From a friend</MenuItem>
-                <MenuItem value={1}>Internet Search</MenuItem>
-                <MenuItem value={2}>An Art Show</MenuItem>
-                <MenuItem value={3}>Other</MenuItem>
+                <MenuItem sx={{ fontSize: labelFontSize }} value={0}>
+                  From a friend
+                </MenuItem>
+                <MenuItem sx={{ fontSize: labelFontSize }} value={1}>
+                  Internet Search
+                </MenuItem>
+                <MenuItem sx={{ fontSize: labelFontSize }} value={2}>
+                  An Art Show
+                </MenuItem>
+                <MenuItem sx={{ fontSize: labelFontSize }} value={3}>
+                  Other
+                </MenuItem>
               </Select>
             </FormControl>
 
             <FormControl>
               <TextField
-                sx={{ m: 1, minWidth: "30vw", background: "#ffffff" }}
+                sx={{ m: 1, maxWidth: "50vw", background: "#ffffff" }}
                 label="Other"
                 variant="filled"
                 onChange={(e) => setMessage(e.target.value)}
@@ -152,13 +179,15 @@ const Home = () => {
                       <NoteIcon />
                     </InputAdornment>
                   ),
+                  style: { fontSize: fieldFontSize },
                 }}
+                InputLabelProps={{ style: { fontSize: labelFontSize } }}
               />
             </FormControl>
           </div>
 
           <Button
-            sx={{ width: "200px" }}
+            sx={{ fontSize: labelFontSize }}
             variant="contained"
             onClick={handleSubmit}
           >

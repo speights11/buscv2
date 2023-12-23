@@ -27,7 +27,7 @@
 
 .HeaderTitle {
   font-family: "Allura", cursive;
-  font-size: 4.5vw;
+  font-size: 4.0vmax;
   font-weight: 800;
   text-align: center;
   width: 60vw;
@@ -109,7 +109,7 @@
   width: 100%;
 
   & .intro {
-    font-size: 2.5vw;
+    font-size: 2.5vmax;
     font-weight: 700;
     text-align: center;
     width: 70%;
@@ -270,8 +270,35 @@
 // ****************************************************
 
 
-// Retina Screens and Large PC - dashed green
-@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {}
+// Macbook Pro and xtra large Monitors
+@media screen and (min-device-width: 2800px) {
+
+
+  .keep-in-touch {
+    & h1 {
+      font-size: 1.5vw;
+    }
+
+    & p {
+      font-size: 1.0vw;
+    }
+  }
+
+  .footer {
+    & h4 {
+      font-size: 1.5vw;
+    }
+
+    & p {
+      font-size: 0.8vw;
+    }
+
+    & .copyright {
+      font-size: 0.8vw;
+    }
+  }
+
+}
 
 // Large Monitors - solid green
 @media only screen and (max-width: 1280px) {}
