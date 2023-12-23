@@ -9,6 +9,7 @@ import EmailIcon from "@mui/icons-material/Email";
 import SupervisedUserCircleIcon from "@mui/icons-material/SupervisedUserCircle";
 import NoteIcon from "@mui/icons-material/Note";
 import Button from "@mui/material/Button";
+import { isMobile } from "react-device-detect";
 import { callAwsEmailSvc } from "components/EmailService";
 import gina from "assets/images/gina-intro2.png";
 import "App.scss";
@@ -20,6 +21,7 @@ const messageErr = 0x0100;
 
 const labelFontSize = "1.0vmax";
 const fieldFontSize = "1.3vmax";
+const selectWidth = isMobile ? "60vw" : "25vw";
 
 const Home = () => {
   const [source, setSource] = useState("");
@@ -145,7 +147,7 @@ const Home = () => {
                 onChange={handleChange}
                 sx={{
                   m: 1,
-                  maxWidth: "30vw",
+                  minWidth: selectWidth,
                   background: "#ffffff",
                   fontSize: labelFontSize,
                 }}
