@@ -38,14 +38,6 @@
   font-size: 4.5vw !important;
 }
 
-/* font-family: "Cinzel", serif; */
-/* font-family: "Cinzel Decorative", serif; */
-/* font-family: "Fredericka the Great", serif; */
-/* font-family: "Sacramento", cursive; */
-/* font-family: "Sevillana", cursive; */
-/* font-family: "Monsieur La Doulaise", cursive; */
-/* font-family: "Zeyada", cursive; */
-
 .footer {
   margin: 0px auto 5vh auto;
   width: 50vw;
@@ -389,7 +381,27 @@
       font-size: 1.5vmax;
     }
   }
+
+  .billing {
+    width: 90vw;
+
+    & p {
+      font-size: 5vw;
+    }
+  }
+
+  .contact-form {
+    width: 95%;
+  }
 }
 
 // Smartphone Portrait
 @media only screen and (max-width: 479px) {}
+
+/* font-family: "Cinzel", serif; */
+/* font-family: "Cinzel Decorative", serif; */
+/* font-family: "Fredericka the Great", serif; */
+/* font-family: "Sacramento", cursive; */
+/* font-family: "Sevillana", cursive; */
+/* font-family: "Monsieur La Doulaise", cursive; */
+/* font-family: "Zeyada", cursive; */
