@@ -9,7 +9,7 @@ import EmailIcon from "@mui/icons-material/Email";
 import SupervisedUserCircleIcon from "@mui/icons-material/SupervisedUserCircle";
 import NoteIcon from "@mui/icons-material/Note";
 import Button from "@mui/material/Button";
-import { isMobile } from "react-device-detect";
+import { homeFormProps } from "common";
 import { callAwsEmailSvc } from "components/EmailService";
 import gina from "assets/images/gina-intro2.png";
 import "App.scss";
@@ -19,9 +19,7 @@ const nameErr = 0x0001;
 const emailErr = 0x0010;
 const messageErr = 0x0100;
 
-const labelFontSize = "1.0vmax";
-const fieldFontSize = "1.3vmax";
-const selectWidth = isMobile ? "60vw" : "25vw";
+const formProps = homeFormProps();
 
 const Home = () => {
   const [source, setSource] = useState("");
@@ -101,9 +99,11 @@ const Home = () => {
                       <SupervisedUserCircleIcon />
                     </InputAdornment>
                   ),
-                  style: { fontSize: fieldFontSize },
+                  style: { fontSize: formProps.fieldFontSize },
                 }}
-                InputLabelProps={{ style: { fontSize: labelFontSize } }}
+                InputLabelProps={{
+                  style: { fontSize: formProps.labelFontSize },
+                }}
               />
             </FormControl>
 
@@ -121,9 +121,11 @@ const Home = () => {
                       <EmailIcon />
                     </InputAdornment>
                   ),
-                  style: { fontSize: fieldFontSize },
+                  style: { fontSize: formProps.fieldFontSize },
                 }}
-                InputLabelProps={{ style: { fontSize: labelFontSize } }}
+                InputLabelProps={{
+                  style: { fontSize: formProps.labelFontSize },
+                }}
               />
             </FormControl>
           </div>
@@ -136,7 +138,7 @@ const Home = () => {
             >
               <InputLabel
                 id="demo-simple-select-autowidth-label"
-                sx={{ fontSize: labelFontSize }}
+                sx={{ fontSize: formProps.labelFontSize }}
               >
                 How did you hear about us?
               </InputLabel>
@@ -147,22 +149,22 @@ const Home = () => {
                 onChange={handleChange}
                 sx={{
                   m: 1,
-                  minWidth: selectWidth,
+                  minWidth: formProps.selectWidth,
                   background: "#ffffff",
-                  fontSize: labelFontSize,
+                  fontSize: formProps.labelFontSize,
                 }}
               >
                 <MenuItem value=""></MenuItem>
-                <MenuItem sx={{ fontSize: labelFontSize }} value={0}>
+                <MenuItem sx={{ fontSize: formProps.labelFontSize }} value={0}>
                   From a friend
                 </MenuItem>
-                <MenuItem sx={{ fontSize: labelFontSize }} value={1}>
+                <MenuItem sx={{ fontSize: formProps.labelFontSize }} value={1}>
                   Internet Search
                 </MenuItem>
-                <MenuItem sx={{ fontSize: labelFontSize }} value={2}>
+                <MenuItem sx={{ fontSize: formProps.labelFontSize }} value={2}>
                   An Art Show
                 </MenuItem>
-                <MenuItem sx={{ fontSize: labelFontSize }} value={3}>
+                <MenuItem sx={{ fontSize: formProps.labelFontSize }} value={3}>
                   Other
                 </MenuItem>
               </Select>
@@ -181,15 +183,17 @@ const Home = () => {
                       <NoteIcon />
                     </InputAdornment>
                   ),
-                  style: { fontSize: fieldFontSize },
+                  style: { fontSize: formProps.fieldFontSize },
                 }}
-                InputLabelProps={{ style: { fontSize: labelFontSize } }}
+                InputLabelProps={{
+                  style: { fontSize: formProps.labelFontSize },
+                }}
               />
             </FormControl>
           </div>
 
           <Button
-            sx={{ fontSize: labelFontSize }}
+            sx={{ fontSize: formProps.labelFontSize }}
             variant="contained"
             onClick={handleSubmit}
           >
