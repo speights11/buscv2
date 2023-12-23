@@ -283,7 +283,33 @@
 @media only screen and (max-width: 1024px) {}
 
 // Tablet Only - dashed orange
-@media only screen and (min-width: 768px) and (max-width: 980px) {}
+@media only screen and (min-width: 768px) and (max-width: 980px) {
+  .app-frame {
+    grid-template-rows: 20vh 1fr;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+  }
+
+  .HeaderTitle {
+    margin: 0;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  .keep-in-touch {
+    & p {
+      text-align: center;
+    }
+  }
+}
 
 // IPad - solid orange
 @media screen and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {}
