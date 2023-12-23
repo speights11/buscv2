@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import RingLoader from "react-spinners/RingLoader";
 
-import "../../App.css";
+import "../../App.scss";
 
 const Gallery = () => {
   const color = "#0000FF";

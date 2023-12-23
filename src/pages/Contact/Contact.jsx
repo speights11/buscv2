@@ -6,7 +6,7 @@ import InputAdornment from "@mui/material/InputAdornment";
 import EmailIcon from "@mui/icons-material/Email";
 import NoteIcon from "@mui/icons-material/Note";
 import SupervisedUserCircleIcon from "@mui/icons-material/SupervisedUserCircle";
-import "App.css";
+import "App.scss";
 
 const errCheck = 0x0000;
 const nameErr = 0x0001;

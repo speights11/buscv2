@@ -8,7 +8,7 @@ import CollectionsIcon from "@mui/icons-material/Collections";
 import PropTypes from "prop-types";
 import logo from "assets/images/logo.png";
 
-import "App.css";
+import "App.scss";
 
 const _fontSz = "0.7vw";
 

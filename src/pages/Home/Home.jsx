@@ -11,7 +11,7 @@ import NoteIcon from "@mui/icons-material/Note";
 import Button from "@mui/material/Button";
 import { callAwsEmailSvc } from "components/EmailService";
 import gina from "assets/images/gina-intro2.png";
-import "App.css";
+import "App.scss";
 
 const errCheck = 0x0000;
 const nameErr = 0x0001;
