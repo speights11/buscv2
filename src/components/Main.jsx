@@ -10,6 +10,8 @@ import logo from "assets/images/logo.png";
 
 import "App.css";
 
+const _fontSz = "0.7vw";
+
 const Main = ({ children }) => {
   const [value, setValue] = useState(0);
   const navigate = useNavigate();
@@ -37,16 +39,23 @@ const Main = ({ children }) => {
               onChange={handleChange}
               aria-label="icon tabs example"
             >
-              <Tab icon={<HomeIcon />} aria-label="home" label="home" />
+              <Tab
+                icon={<HomeIcon />}
+                aria-label="home"
+                label="home"
+                sx={{ fontSize: _fontSz }}
+              />
               <Tab
                 icon={<CollectionsIcon />}
                 aria-label="gallery"
                 label="gallery"
+                sx={{ fontSize: _fontSz }}
               />
               <Tab
                 icon={<ContactPageIcon />}
                 aria-label="contact"
                 label="contact us"
+                sx={{ fontSize: _fontSz }}
               />
             </Tabs>
           </div>
