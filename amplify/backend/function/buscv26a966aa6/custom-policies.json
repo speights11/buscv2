@@ -2,6 +2,8 @@
   {
     "Action": ["ses:SendEmail", "ses:SendRawEmail"],
     "Effect": "Allow",
-    "Resource": ["arn:aws:ses:*:*:identity/beinguscreations@gmail.com"]
+    "Resource": [
+      "arn:aws:ses:us-east-1:400149547320:identity/beinguscreations@gmail.com"
+    ]
   }
 ]
