@@ -34,3 +34,11 @@ https://www.youtube.com/watch?v=hPeXnEX1EWE
 amplify add api
 amplify push
 amplify console
+
+## Google Analytics
+
+https://developers.google.com/tag-platform/devguides/events
+
+`gtag('event', '<type>', {<parameters>});`
+
+`<type> is the type of event, such as a Google Ads conversion event or a Google Analytics 4 event name. <parameters> is an object of name/value pairs that contains data that describes the event.`

@@ -24,6 +24,11 @@ const Main = ({ children }) => {
 
   const handleChange = (event, pageNumber) => {
     setPageNumber(pageNumber);
+
+    gtag("event", "Navigation", {
+      event_category: "Pages",
+      event_label: `Navigating to ${routePath[pageNumber]}`,
+    });
   };
 
   return (
