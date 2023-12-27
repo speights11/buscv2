@@ -32,4 +32,5 @@ https://www.youtube.com/watch?v=hPeXnEX1EWE
 ## Amplify Commands
 
 amplify add api
-amplify push -y
+amplify push
+amplify console
