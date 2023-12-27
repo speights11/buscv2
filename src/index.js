@@ -5,9 +5,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 import { Amplify } from "aws-amplify";
-// import awsmobile from "./aws-exports";
 
-// Amplify.configure(awsmobile);
 Amplify.configure({
   API: {
     GraphQL: {
