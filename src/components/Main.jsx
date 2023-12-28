@@ -25,6 +25,7 @@ const Main = ({ children }) => {
   const handleChange = (event, pageNumber) => {
     setPageNumber(pageNumber);
 
+    /* eslint-disable-next-line no-undef */
     gtag("event", "Navigation", {
       event_category: "Pages",
       event_label: `Navigating to ${routePath[pageNumber]}`,
