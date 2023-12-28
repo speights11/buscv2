@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import TextField from "@mui/material/TextField";
@@ -30,6 +30,18 @@ const Home = () => {
   const [errorState, setErrorState] = useState(errCheck);
 
   const options = ["From a friend", "Internet Search", "An Art Show", "Other"];
+
+  useEffect(() => {
+    try {
+      /* eslint-disable-next-line no-undef */
+      gtag("event", "VisitHome", {
+        event_category: "Pages",
+        event_label: "Visit Home Page",
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  });
 
   const handleChange = (event) => {
     setSource(event.target.value);

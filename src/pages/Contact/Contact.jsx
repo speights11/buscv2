@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { TextField, Button } from "@mui/material";
 import { callAwsEmailSvc } from "components/EmailService";
 import FormControl from "@mui/material/FormControl";
@@ -19,6 +19,18 @@ const Contact = () => {
   const [message, setMessage] = useState("");
   const [complete, setComplete] = useState(false);
   const [errorState, setErrorState] = useState(errCheck);
+
+  useEffect(() => {
+    try {
+      /* eslint-disable-next-line no-undef */
+      gtag("event", "VisitContact", {
+        event_category: "Pages",
+        event_label: "Visit Contact Page",
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  });
 
   const handleSubmit = () => {
     setErrorState(errCheck);

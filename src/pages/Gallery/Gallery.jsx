@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import RingLoader from "react-spinners/RingLoader";
 
 import "../../App.scss";
@@ -6,6 +6,18 @@ import "../../App.scss";
 const Gallery = () => {
   const color = "#0000FF";
   const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    try {
+      /* eslint-disable-next-line no-undef */
+      gtag("event", "VisitGallery", {
+        event_category: "Pages",
+        event_label: "Visit Gallery Page",
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  });
 
   return (
     <>
