@@ -1,0 +1,430 @@
+{
+    "Items": [
+        {
+            "__typename": {
+                "S": "ContactUs"
+            },
+            "updatedAt": {
+                "S": "2024-01-26T16:59:17.477Z"
+            },
+            "createdAt": {
+                "S": "2024-01-26T16:59:17.477Z"
+            },
+            "message": {
+                "S": "Other: Text"
+            },
+            "id": {
+                "S": "c6ed911c-6055-41fc-af20-fcb3800a4e8c"
+            },
+            "email": {
+                "S": "jb30087@bellsouth.net"
+            },
+            "name": {
+                "S": "Janet Bivens"
+            },
+            "type": {
+                "S": "join"
+            }
+        },
+        {
+            "__typename": {
+                "S": "ContactUs"
+            },
+            "updatedAt": {
+                "S": "2023-12-27T19:17:46.200Z"
+            },
+            "createdAt": {
+                "S": "2023-12-27T19:17:46.200Z"
+            },
+            "message": {
+                "S": "Other: Regina Speights "
+            },
+            "id": {
+                "S": "accf5dc4-bfd2-49e5-ac39-807dc104fa7d"
+            },
+            "email": {
+                "S": "ddowen@winfirst.com"
+            },
+            "name": {
+                "S": "Del Sayles-Owen"
+            },
+            "type": {
+                "S": "join"
+            }
+        },
+        {
+            "__typename": {
+                "S": "ContactUs"
+            },
+            "updatedAt": {
+                "S": "2024-02-09T22:13:30.540Z"
+            },
+            "createdAt": {
+                "S": "2024-02-09T22:13:30.540Z"
+            },
+            "message": {
+                "S": "Other: nextdoor"
+            },
+            "id": {
+                "S": "808756c1-c5dd-462b-b3fc-f84fc8119d7f"
+            },
+            "email": {
+                "S": "jones6513@comcast.net"
+            },
+            "name": {
+                "S": "Deborah Jones"
+            },
+            "type": {
+                "S": "join"
+            }
+        },
+        {
+            "__typename": {
+                "S": "ContactUs"
+            },
+            "updatedAt": {
+                "S": "2024-01-26T17:06:29.950Z"
+            },
+            "createdAt": {
+                "S": "2024-01-26T17:06:29.950Z"
+            },
+            "message": {
+                "S": "From a friend"
+            },
+            "id": {
+                "S": "f2ec2de9-6c61-4f42-842b-2dfba8a9a7e9"
+            },
+            "email": {
+                "S": "jb30087@bellsouth.net"
+            },
+            "name": {
+                "S": "Janet Bivens"
+            },
+            "type": {
+                "S": "join"
+            }
+        },
+        {
+            "__typename": {
+                "S": "ContactUs"
+            },
+            "updatedAt": {
+                "S": "2023-12-29T23:42:46.724Z"
+            },
+            "createdAt": {
+                "S": "2023-12-29T23:42:46.724Z"
+            },
+            "message": {
+                "S": "Other: From the artist herself."
+            },
+            "id": {
+                "S": "27032ca5-ed14-40e3-bba7-904186a3d199"
+            },
+            "email": {
+                "S": "wrongtree@comcast.net"
+            },
+            "name": {
+                "S": "Ednola (Van) Cousins"
+            },
+            "type": {
+                "S": "join"
+            }
+        },
+        {
+            "__typename": {
+                "S": "ContactUs"
+            },
+            "updatedAt": {
+                "S": "2024-02-09T21:32:53.067Z"
+            },
+            "createdAt": {
+                "S": "2024-02-09T21:32:53.067Z"
+            },
+            "message": {
+                "S": "Internet Search"
+            },
+            "id": {
+                "S": "b58a31ec-ed0f-4eaf-829f-8105a21b35d1"
+            },
+            "email": {
+                "S": "joy2ga@comcast.net"
+            },
+            "name": {
+                "S": "joyce"
+            },
+            "type": {
+                "S": "join"
+            }
+        },
+        {
+            "__typename": {
+                "S": "ContactUs"
+            },
+            "updatedAt": {
+                "S": "2023-12-27T20:05:43.405Z"
+            },
+            "createdAt": {
+                "S": "2023-12-27T20:05:43.405Z"
+            },
+            "message": {
+                "S": "Wow!! \nGina, your work is incredible. You have surely built up a collection throughout the years. Congratulations!!  "
+            },
+            "id": {
+                "S": "31c3d2eb-85e1-436d-91e3-a3524470b57c"
+            },
+            "email": {
+                "S": "sdritaly51@gmail.com"
+            },
+            "name": {
+                "S": "SimoneDanielle Rio"
+            },
+            "type": {
+                "S": "contact"
+            }
+        },
+        {
+            "__typename": {
+                "S": "ContactUs"
+            },
+            "updatedAt": {
+                "S": "2023-12-27T20:53:32.717Z"
+            },
+            "createdAt": {
+                "S": "2023-12-27T20:53:32.717Z"
+            },
+            "message": {
+                "S": "Other: You"
+            },
+            "id": {
+                "S": "1082fcd4-4689-48a5-bbf1-77dedc4938a2"
+            },
+            "email": {
+                "S": "Jdrock37@yahoo.com"
+            },
+            "name": {
+                "S": "Jalen Wills"
+            },
+            "type": {
+                "S": "join"
+            }
+        }
+    ],
+    "Count": 8,
+    "ScannedCount": 8,
+    "ConsumedCapacity": null
+}
+{
+    "Items": [
+        {
+            "__typename": {
+                "S": "ContactUs"
+            },
+            "updatedAt": {
+                "S": "2024-01-26T16:59:17.477Z"
+            },
+            "createdAt": {
+                "S": "2024-01-26T16:59:17.477Z"
+            },
+            "message": {
+                "S": "Other: Text"
+            },
+            "id": {
+                "S": "c6ed911c-6055-41fc-af20-fcb3800a4e8c"
+            },
+            "email": {
+                "S": "jb30087@bellsouth.net"
+            },
+            "name": {
+                "S": "Janet Bivens"
+            },
+            "type": {
+                "S": "join"
+            }
+        },
+        {
+            "__typename": {
+                "S": "ContactUs"
+            },
+            "updatedAt": {
+                "S": "2023-12-27T19:17:46.200Z"
+            },
+            "createdAt": {
+                "S": "2023-12-27T19:17:46.200Z"
+            },
+            "message": {
+                "S": "Other: Regina Speights "
+            },
+            "id": {
+                "S": "accf5dc4-bfd2-49e5-ac39-807dc104fa7d"
+            },
+            "email": {
+                "S": "ddowen@winfirst.com"
+            },
+            "name": {
+                "S": "Del Sayles-Owen"
+            },
+            "type": {
+                "S": "join"
+            }
+        },
+        {
+            "__typename": {
+                "S": "ContactUs"
+            },
+            "updatedAt": {
+                "S": "2024-02-09T22:13:30.540Z"
+            },
+            "createdAt": {
+                "S": "2024-02-09T22:13:30.540Z"
+            },
+            "message": {
+                "S": "Other: nextdoor"
+            },
+            "id": {
+                "S": "808756c1-c5dd-462b-b3fc-f84fc8119d7f"
+            },
+            "email": {
+                "S": "jones6513@comcast.net"
+            },
+            "name": {
+                "S": "Deborah Jones"
+            },
+            "type": {
+                "S": "join"
+            }
+        },
+        {
+            "__typename": {
+                "S": "ContactUs"
+            },
+            "updatedAt": {
+                "S": "2024-01-26T17:06:29.950Z"
+            },
+            "createdAt": {
+                "S": "2024-01-26T17:06:29.950Z"
+            },
+            "message": {
+                "S": "From a friend"
+            },
+            "id": {
+                "S": "f2ec2de9-6c61-4f42-842b-2dfba8a9a7e9"
+            },
+            "email": {
+                "S": "jb30087@bellsouth.net"
+            },
+            "name": {
+                "S": "Janet Bivens"
+            },
+            "type": {
+                "S": "join"
+            }
+        },
+        {
+            "__typename": {
+                "S": "ContactUs"
+            },
+            "updatedAt": {
+                "S": "2023-12-29T23:42:46.724Z"
+            },
+            "createdAt": {
+                "S": "2023-12-29T23:42:46.724Z"
+            },
+            "message": {
+                "S": "Other: From the artist herself."
+            },
+            "id": {
+                "S": "27032ca5-ed14-40e3-bba7-904186a3d199"
+            },
+            "email": {
+                "S": "wrongtree@comcast.net"
+            },
+            "name": {
+                "S": "Ednola (Van) Cousins"
+            },
+            "type": {
+                "S": "join"
+            }
+        },
+        {
+            "__typename": {
+                "S": "ContactUs"
+            },
+            "updatedAt": {
+                "S": "2024-02-09T21:32:53.067Z"
+            },
+            "createdAt": {
+                "S": "2024-02-09T21:32:53.067Z"
+            },
+            "message": {
+                "S": "Internet Search"
+            },
+            "id": {
+                "S": "b58a31ec-ed0f-4eaf-829f-8105a21b35d1"
+            },
+            "email": {
+                "S": "joy2ga@comcast.net"
+            },
+            "name": {
+                "S": "joyce"
+            },
+            "type": {
+                "S": "join"
+            }
+        },
+        {
+            "__typename": {
+                "S": "ContactUs"
+            },
+            "updatedAt": {
+                "S": "2023-12-27T20:05:43.405Z"
+            },
+            "createdAt": {
+                "S": "2023-12-27T20:05:43.405Z"
+            },
+            "message": {
+                "S": "Wow!! \nGina, your work is incredible. You have surely built up a collection throughout the years. Congratulations!!  "
+            },
+            "id": {
+                "S": "31c3d2eb-85e1-436d-91e3-a3524470b57c"
+            },
+            "email": {
+                "S": "sdritaly51@gmail.com"
+            },
+            "name": {
+                "S": "SimoneDanielle Rio"
+            },
+            "type": {
+                "S": "contact"
+            }
+        },
+        {
+            "__typename": {
+                "S": "ContactUs"
+            },
+            "updatedAt": {
+                "S": "2023-12-27T20:53:32.717Z"
+            },
+            "createdAt": {
+                "S": "2023-12-27T20:53:32.717Z"
+            },
+            "message": {
+                "S": "Other: You"
+            },
+            "id": {
+                "S": "1082fcd4-4689-48a5-bbf1-77dedc4938a2"
+            },
+            "email": {
+                "S": "Jdrock37@yahoo.com"
+            },
+            "name": {
+                "S": "Jalen Wills"
+            },
+            "type": {
+                "S": "join"
+            }
+        }
+    ],
+    "Count": 8,
+    "ScannedCount": 8,
+    "ConsumedCapacity": null
+}
