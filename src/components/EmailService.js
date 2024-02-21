@@ -1,16 +1,16 @@
 import { createContactUs } from "graphql/mutations";
 import { generateClient } from "aws-amplify/api";
 
-export const callAwsEmailSvc = async (type, name, email, message) => {
-  const client = generateClient();
+export const callAwsEmailSvc = async (page, client, email, message) => {
+  const awsclient = generateClient();
 
   return new Promise((resolve, reject) => {
-    client.graphql({
+    awsclient.graphql({
       query: createContactUs,
       variables: {
         input: {
-          type,
-          name,
+          page,
+          client,
           email,
           message,
         },

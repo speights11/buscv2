@@ -7,15 +7,15 @@ export const handler = async (event) => {
   for (const record of event.Records) {
     if (record.eventName === "INSERT") {
       //pull off items from stream
-      const type = record.dynamodb.NewImage.type.S;
-      const name = record.dynamodb.NewImage.name.S;
+      const page = record.dynamodb.NewImage.page.S;
+      const client = record.dynamodb.NewImage.client.S;
       const email = record.dynamodb.NewImage.email.S;
       const message = record.dynamodb.NewImage.message.S;
 
+      console.log("----------------------------`-------------------------");
       console.log("-----------------------------------------------------");
-      console.log("-----------------------------------------------------");
-      console.log(`Type: ${type}`);
-      console.log(`Name: ${name}`);
+      console.log(`Page: ${page}`);
+      console.log(`Client: ${client}`);
       console.log(`Email: ${email}`);
       console.log(`Message: ${message}`);
       console.log("-----------------------------------------------------");
@@ -27,10 +27,10 @@ export const handler = async (event) => {
         },
         Message: {
           Body: {
-            Text: { Data: `Message from ${name} at ${email}:\n${message}` },
+            Text: { Data: `Message from ${client} at ${email}:\n${message}` },
           },
 
-          Subject: { Data: `Test Email: ${type}` },
+          Subject: { Data: `Test Email: ${page}` },
         },
         Source: emailAddr,
       });
