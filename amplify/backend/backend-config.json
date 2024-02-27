@@ -30,6 +30,17 @@
   "function": {
     "graphQlLambdaAuthorizer153ef91b": {
       "build": true,
+      "dependsOn": [
+        {
+          "attributes": [
+            "GraphQLAPIIdOutput",
+            "GraphQLAPIEndpointOutput",
+            "GraphQLAPIKeyOutput"
+          ],
+          "category": "api",
+          "resourceName": "buscv2"
+        }
+      ],
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
     }

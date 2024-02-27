@@ -15,7 +15,7 @@
       "function": {
         "graphQlLambdaAuthorizer153ef91b": {
           "deploymentBucketName": "amplify-buscv2-dev-222017-deployment",
-          "s3Key": "amplify-builds/graphQlLambdaAuthorizer153ef91b-65347a46465550392b35-build.zip"
+          "s3Key": "amplify-builds/graphQlLambdaAuthorizer153ef91b-2b5a48496a464f644a63-build.zip"
         }
       },
       "api": {
