@@ -428,3 +428,9 @@
     "ScannedCount": 8,
     "ConsumedCapacity": null
 }
+{
+    "Items": [],
+    "Count": 0,
+    "ScannedCount": 0,
+    "ConsumedCapacity": null
+}
