@@ -23,19 +23,19 @@ export default function ContactUsCreateForm(props) {
     ...rest
   } = props;
   const initialValues = {
-    type: "",
-    name: "",
+    page: "",
+    client: "",
     email: "",
     message: "",
   };
-  const [type, setType] = React.useState(initialValues.type);
-  const [name, setName] = React.useState(initialValues.name);
+  const [page, setPage] = React.useState(initialValues.page);
+  const [client, setClient] = React.useState(initialValues.client);
   const [email, setEmail] = React.useState(initialValues.email);
   const [message, setMessage] = React.useState(initialValues.message);
   const [errors, setErrors] = React.useState({});
   const resetStateValues = () => {
-    setType(initialValues.type);
-    setName(initialValues.name);
+    setPage(initialValues.page);
+    setClient(initialValues.client);
     setEmail(initialValues.email);
     setMessage(initialValues.message);
     setErrors({});
@@ -49,7 +49,7 @@ export default function ContactUsCreateForm(props) {
   const runValidationTasks = async (
     fieldName,
     currentValue,
-    getDisplayValue
+    getDisplayValue,
   ) => {
     const value =
       currentValue && getDisplayValue
@@ -72,8 +72,8 @@ export default function ContactUsCreateForm(props) {
       onSubmit={async (event) => {
         event.preventDefault();
         let modelFields = {
-          type,
-          name,
+          type: page,
+          name: client,
           email,
           message,
         };
@@ -82,16 +82,16 @@ export default function ContactUsCreateForm(props) {
             if (Array.isArray(modelFields[fieldName])) {
               promises.push(
                 ...modelFields[fieldName].map((item) =>
-                  runValidationTasks(fieldName, item)
-                )
+                  runValidationTasks(fieldName, item),
+                ),
               );
               return promises;
             }
             promises.push(
-              runValidationTasks(fieldName, modelFields[fieldName])
+              runValidationTasks(fieldName, modelFields[fieldName]),
             );
             return promises;
-          }, [])
+          }, []),
         );
         if (validationResponses.some((r) => r.hasError)) {
           return;
@@ -133,13 +133,13 @@ export default function ContactUsCreateForm(props) {
         label="Type"
         isRequired={true}
         isReadOnly={false}
-        value={type}
+        value={page}
         onChange={(e) => {
           let { value } = e.target;
           if (onChange) {
             const modelFields = {
               type: value,
-              name,
+              name: client,
               email,
               message,
             };
@@ -149,9 +149,9 @@ export default function ContactUsCreateForm(props) {
           if (errors.type?.hasError) {
             runValidationTasks("type", value);
           }
-          setType(value);
+          setPage(value);
         }}
-        onBlur={() => runValidationTasks("type", type)}
+        onBlur={() => runValidationTasks("type", page)}
         errorMessage={errors.type?.errorMessage}
         hasError={errors.type?.hasError}
         {...getOverrideProps(overrides, "type")}
@@ -160,12 +160,12 @@ export default function ContactUsCreateForm(props) {
         label="Name"
         isRequired={true}
         isReadOnly={false}
-        value={name}
+        value={client}
         onChange={(e) => {
           let { value } = e.target;
           if (onChange) {
             const modelFields = {
-              type,
+              type: page,
               name: value,
               email,
               message,
@@ -176,9 +176,9 @@ export default function ContactUsCreateForm(props) {
           if (errors.name?.hasError) {
             runValidationTasks("name", value);
           }
-          setName(value);
+          setClient(value);
         }}
-        onBlur={() => runValidationTasks("name", name)}
+        onBlur={() => runValidationTasks("name", client)}
         errorMessage={errors.name?.errorMessage}
         hasError={errors.name?.hasError}
         {...getOverrideProps(overrides, "name")}
@@ -192,8 +192,8 @@ export default function ContactUsCreateForm(props) {
           let { value } = e.target;
           if (onChange) {
             const modelFields = {
-              type,
-              name,
+              type: page,
+              name: client,
               email: value,
               message,
             };
@@ -219,8 +219,8 @@ export default function ContactUsCreateForm(props) {
           let { value } = e.target;
           if (onChange) {
             const modelFields = {
-              type,
-              name,
+              type: page,
+              name: client,
               email,
               message: value,
             };

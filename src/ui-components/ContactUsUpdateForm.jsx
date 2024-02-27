@@ -25,13 +25,13 @@ export default function ContactUsUpdateForm(props) {
     ...rest
   } = props;
   const initialValues = {
-    type: "",
-    name: "",
+    page: "",
+    client: "",
     email: "",
     message: "",
   };
-  const [type, setType] = React.useState(initialValues.type);
-  const [name, setName] = React.useState(initialValues.name);
+  const [page, setPage] = React.useState(initialValues.page);
+  const [client, setClient] = React.useState(initialValues.client);
   const [email, setEmail] = React.useState(initialValues.email);
   const [message, setMessage] = React.useState(initialValues.message);
   const [errors, setErrors] = React.useState({});
@@ -39,8 +39,8 @@ export default function ContactUsUpdateForm(props) {
     const cleanValues = contactUsRecord
       ? { ...initialValues, ...contactUsRecord }
       : initialValues;
-    setType(cleanValues.type);
-    setName(cleanValues.name);
+    setPage(cleanValues.page);
+    setClient(cleanValues.client);
     setEmail(cleanValues.email);
     setMessage(cleanValues.message);
     setErrors({});
@@ -63,15 +63,15 @@ export default function ContactUsUpdateForm(props) {
   }, [idProp, contactUsModelProp]);
   React.useEffect(resetStateValues, [contactUsRecord]);
   const validations = {
-    type: [{ type: "Required" }],
-    name: [{ type: "Required" }],
-    email: [{ type: "Required" }, { type: "Email" }],
-    message: [{ type: "Required" }],
+    page: [{ page: "Required" }],
+    client: [{ client: "Required" }],
+    email: [{ page: "Required" }, { page: "Email" }],
+    message: [{ page: "Required" }],
   };
   const runValidationTasks = async (
     fieldName,
     currentValue,
-    getDisplayValue
+    getDisplayValue,
   ) => {
     const value =
       currentValue && getDisplayValue
@@ -94,8 +94,8 @@ export default function ContactUsUpdateForm(props) {
       onSubmit={async (event) => {
         event.preventDefault();
         let modelFields = {
-          type,
-          name,
+          page,
+          client,
           email,
           message,
         };
@@ -104,16 +104,16 @@ export default function ContactUsUpdateForm(props) {
             if (Array.isArray(modelFields[fieldName])) {
               promises.push(
                 ...modelFields[fieldName].map((item) =>
-                  runValidationTasks(fieldName, item)
-                )
+                  runValidationTasks(fieldName, item),
+                ),
               );
               return promises;
             }
             promises.push(
-              runValidationTasks(fieldName, modelFields[fieldName])
+              runValidationTasks(fieldName, modelFields[fieldName]),
             );
             return promises;
-          }, [])
+          }, []),
         );
         if (validationResponses.some((r) => r.hasError)) {
           return;
@@ -153,55 +153,55 @@ export default function ContactUsUpdateForm(props) {
         label="Type"
         isRequired={true}
         isReadOnly={false}
-        value={type}
+        value={page}
         onChange={(e) => {
           let { value } = e.target;
           if (onChange) {
             const modelFields = {
-              type: value,
-              name,
+              page: value,
+              client,
               email,
               message,
             };
             const result = onChange(modelFields);
-            value = result?.type ?? value;
+            value = result?.page ?? value;
           }
-          if (errors.type?.hasError) {
-            runValidationTasks("type", value);
+          if (errors.page?.hasError) {
+            runValidationTasks("page", value);
           }
-          setType(value);
+          setPage(value);
         }}
-        onBlur={() => runValidationTasks("type", type)}
-        errorMessage={errors.type?.errorMessage}
-        hasError={errors.type?.hasError}
-        {...getOverrideProps(overrides, "type")}
+        onBlur={() => runValidationTasks("page", page)}
+        errorMessage={errors.page?.errorMessage}
+        hasError={errors.page?.hasError}
+        {...getOverrideProps(overrides, "page")}
       ></TextField>
       <TextField
         label="Name"
         isRequired={true}
         isReadOnly={false}
-        value={name}
+        value={client}
         onChange={(e) => {
           let { value } = e.target;
           if (onChange) {
             const modelFields = {
-              type,
-              name: value,
+              page,
+              client: value,
               email,
               message,
             };
             const result = onChange(modelFields);
-            value = result?.name ?? value;
+            value = result?.client ?? value;
           }
-          if (errors.name?.hasError) {
-            runValidationTasks("name", value);
+          if (errors.client?.hasError) {
+            runValidationTasks("client", value);
           }
-          setName(value);
+          setClient(value);
         }}
-        onBlur={() => runValidationTasks("name", name)}
-        errorMessage={errors.name?.errorMessage}
-        hasError={errors.name?.hasError}
-        {...getOverrideProps(overrides, "name")}
+        onBlur={() => runValidationTasks("client", client)}
+        errorMessage={errors.client?.errorMessage}
+        hasError={errors.client?.hasError}
+        {...getOverrideProps(overrides, "client")}
       ></TextField>
       <TextField
         label="Email"
@@ -212,8 +212,8 @@ export default function ContactUsUpdateForm(props) {
           let { value } = e.target;
           if (onChange) {
             const modelFields = {
-              type,
-              name,
+              page,
+              client,
               email: value,
               message,
             };
@@ -239,8 +239,8 @@ export default function ContactUsUpdateForm(props) {
           let { value } = e.target;
           if (onChange) {
             const modelFields = {
-              type,
-              name,
+              page,
+              client,
               email,
               message: value,
             };

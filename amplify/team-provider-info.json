@@ -16,7 +16,7 @@
         "buscv26a966aa6": {
           "sesEmail": "beinguscreations@gmail.com",
           "deploymentBucketName": "amplify-buscv2-dev-160947-deployment",
-          "s3Key": "amplify-builds/buscv26a966aa6-754f385036685557504e-build.zip"
+          "s3Key": "amplify-builds/buscv26a966aa6-633474752b346d61452f-build.zip"
         }
       },
       "api": {
