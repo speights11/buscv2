@@ -1,6 +1,6 @@
 {
   "AWSTemplateFormatVersion": "2010-09-09",
-  "Description": "{\"createdOn\":\"Windows\",\"createdBy\":\"Amplify\",\"createdWith\":\"12.8.2\",\"stackType\":\"function-Lambda\",\"metadata\":{}}",
+  "Description": "{\"createdOn\":\"Windows\",\"createdBy\":\"Amplify\",\"createdWith\":\"12.10.0\",\"stackType\":\"function-Lambda\",\"metadata\":{}}",
   "Parameters": {
     "CloudWatchRule": {
       "Type": "String",
@@ -14,17 +14,6 @@
       "Type": "String"
     },
     "s3Key": {
-      "Type": "String"
-    },
-    "apibuscv2GraphQLAPIIdOutput": {
-      "Type": "String",
-      "Default": "apibuscv2GraphQLAPIIdOutput"
-    },
-    "apibuscv2GraphQLAPIEndpointOutput": {
-      "Type": "String",
-      "Default": "apibuscv2GraphQLAPIEndpointOutput"
-    },
-    "sesEmail": {
       "Type": "String"
     }
   },
@@ -58,12 +47,12 @@
         "FunctionName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "buscv26a966aa6",
+            "graphQlLambdaAuthorizer153ef91b",
             {
               "Fn::Join": [
                 "",
                 [
-                  "buscv26a966aa6",
+                  "graphQlLambdaAuthorizer153ef91b",
                   "-",
                   {
                     "Ref": "env"
@@ -80,9 +69,6 @@
             },
             "REGION": {
               "Ref": "AWS::Region"
-            },
-            "SES_EMAIL": {
-              "Ref": "sesEmail"
             }
           }
         },
@@ -92,7 +78,7 @@
             "Arn"
           ]
         },
-        "Runtime": "nodejs20.x",
+        "Runtime": "nodejs18.x",
         "Layers": [],
         "Timeout": 25
       }
@@ -103,12 +89,12 @@
         "RoleName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "buscv2LambdaRole0948ae43",
+            "buscv2LambdaRolefed05a5f",
             {
               "Fn::Join": [
                 "",
                 [
-                  "buscv2LambdaRole0948ae43",
+                  "buscv2LambdaRolefed05a5f",
                   "-",
                   {
                     "Ref": "env"
@@ -179,88 +165,15 @@
         }
       }
     },
-    "LambdaTriggerPolicyContactUs": {
-      "DependsOn": [
-        "LambdaExecutionRole"
-      ],
-      "Type": "AWS::IAM::Policy",
+    "PermissionForAppSyncToInvokeLambda": {
+      "Type": "AWS::Lambda::Permission",
       "Properties": {
-        "PolicyName": "amplify-lambda-execution-policy-ContactUs",
-        "Roles": [
-          {
-            "Ref": "LambdaExecutionRole"
-          }
-        ],
-        "PolicyDocument": {
-          "Version": "2012-10-17",
-          "Statement": [
-            {
-              "Effect": "Allow",
-              "Action": [
-                "dynamodb:DescribeStream",
-                "dynamodb:GetRecords",
-                "dynamodb:GetShardIterator",
-                "dynamodb:ListStreams"
-              ],
-              "Resource": {
-                "Fn::ImportValue": {
-                  "Fn::Sub": "${apibuscv2GraphQLAPIIdOutput}:GetAtt:ContactUsTable:StreamArn"
-                }
-              }
-            }
-          ]
-        }
-      }
-    },
-    "LambdaEventSourceMappingContactUs": {
-      "Type": "AWS::Lambda::EventSourceMapping",
-      "DependsOn": [
-        "LambdaTriggerPolicyContactUs",
-        "LambdaExecutionRole"
-      ],
-      "Properties": {
-        "BatchSize": 100,
-        "Enabled": true,
-        "EventSourceArn": {
-          "Fn::ImportValue": {
-            "Fn::Sub": "${apibuscv2GraphQLAPIIdOutput}:GetAtt:ContactUsTable:StreamArn"
-          }
-        },
         "FunctionName": {
-          "Fn::GetAtt": [
-            "LambdaFunction",
-            "Arn"
-          ]
+          "Ref": "LambdaFunction"
         },
-        "StartingPosition": "LATEST"
+        "Action": "lambda:InvokeFunction",
+        "Principal": "appsync.amazonaws.com"
       }
-    },
-    "CustomLambdaExecutionPolicy": {
-      "Type": "AWS::IAM::Policy",
-      "Properties": {
-        "PolicyName": "custom-lambda-execution-policy",
-        "PolicyDocument": {
-          "Version": "2012-10-17",
-          "Statement": [
-            {
-              "Action": [
-                "ses:SendEmail",
-                "ses:SendRawEmail"
-              ],
-              "Effect": "Allow",
-              "Resource": [
-                "arn:aws:ses:us-east-1:400149547320:identity/beinguscreations@gmail.com"
-              ]
-            }
-          ]
-        },
-        "Roles": [
-          {
-            "Ref": "LambdaExecutionRole"
-          }
-        ]
-      },
-      "DependsOn": "LambdaExecutionRole"
     }
   },
   "Outputs": {
