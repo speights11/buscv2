@@ -2,6 +2,9 @@
   "name": "buscv2",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "^19 || ^20"
+  },
   "dependencies": {
     "@aws-amplify/ui-react": "^1.2.5",
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
@@ -38,7 +41,7 @@
     "eject": "react-scripts eject",
     "lint": "eslint --fix src/**/*.js",
     "install:clean": "rm -rf node_modules/ && rm -rf yarn.lock && yarn install && yarn audit",
-    "query": "aws dynamodb scan --table-name ContactUs-iyzxn7qq2ffkbdussy2ms3gjgq-dev  >> email-table-contents.json"
+    "query": "aws dynamodb scan --table-name ContactUs-iyzxn7qq2ffkbdussy2ms3gjgq-dev >> email-table-contents.json"
   },
   "eslintConfig": {
     "extends": [
