@@ -4,7 +4,9 @@
 	API_BUSCV2_GRAPHQLAPIKEYOUTPUT
 	ENV
 	REGION
-Amplify Params - DO NOT EDIT */import { SESClient, SendEmailCommand } from "@aws-sdk/client-ses";
+Amplify Params - DO NOT EDIT */
+
+import { SESClient, SendEmailCommand } from "@aws-sdk/client-ses";
 const ses = new SESClient({ region: "us-east-1" });
 
 const emailAddr = "beinguscreations@gmail.com";
