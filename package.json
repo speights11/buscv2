@@ -60,7 +60,9 @@
   },
   "resolutions": {
     "nth-check": "^2.0.1",
-    "postcss": "^8.4.31"
+    "postcss": "^8.4.31",
+    "follow-redirects": "^1.15.4",
+    "ip": "^2.0.1"
   },
   "devDependencies": {
     "eslint": "^8.55.0",
