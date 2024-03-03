@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "engines": {
-    "node": "^19 || ^20"
+    "node": "^16"
   },
   "dependencies": {
     "@aws-amplify/ui-react": "^1.2.5",
