@@ -14,7 +14,7 @@ import React, { useEffect } from "react";
 import gina from "assets/images/gina-intro2.png";
 import "App.scss";
 
-// const errCheck = 0x0000;
+const errCheck = 0x0000;
 // const nameErr = 0x0001;
 // const emailErr = 0x0010;
 // const messageErr = 0x0100;
@@ -22,6 +22,7 @@ import "App.scss";
 // const formProps = homeFormProps();
 
 const Home = () => {
+  console.log(errCheck);
   // const [source, setSource] = useState("");
   // const [name, setName] = useState("");
   // const [email, setEmail] = useState("");

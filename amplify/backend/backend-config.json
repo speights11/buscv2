@@ -61,14 +61,6 @@
           "resourceName": "graphQlLambdaAuthorizer153ef91b"
         }
       ]
-    },
-    "AMPLIFY_function_buscv26a966aa6_sesEmail": {
-      "usedBy": [
-        {
-          "category": "function",
-          "resourceName": "graphQlLambdaAuthorizer153ef91b"
-        }
-      ]
     }
   }
 }
