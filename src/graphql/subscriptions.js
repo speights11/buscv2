@@ -7,8 +7,8 @@ export const onCreateContactUs = /* GraphQL */ `
   ) {
     onCreateContactUs(filter: $filter) {
       id
-      type
-      name
+      page
+      client
       email
       message
       createdAt
@@ -23,8 +23,8 @@ export const onUpdateContactUs = /* GraphQL */ `
   ) {
     onUpdateContactUs(filter: $filter) {
       id
-      type
-      name
+      page
+      client
       email
       message
       createdAt
@@ -39,8 +39,8 @@ export const onDeleteContactUs = /* GraphQL */ `
   ) {
     onDeleteContactUs(filter: $filter) {
       id
-      type
-      name
+      page
+      client
       email
       message
       createdAt

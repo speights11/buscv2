@@ -4,6 +4,6 @@
  * Any changes to this file will be overwritten when running amplify pull. *
  **************************************************************************/
 
-export { default as ContactUsCreateForm } from "./ContactUsCreateForm";
-export { default as ContactUsUpdateForm } from "./ContactUsUpdateForm";
-export { default as studioTheme } from "./studioTheme";
+// export { default as ContactUsCreateForm } from "./ContactUsCreateForm";
+// export { default as ContactUsUpdateForm } from "./ContactUsUpdateForm";
+// export { default as studioTheme } from "./studioTheme";

@@ -1,11 +1,19 @@
 import React, { useState, useEffect } from "react";
-import { TextField, Button } from "@mui/material";
+import {
+  Button,
+  Input,
+  InputLabel,
+  FormHelperText,
+  FormControl,
+} from "@mui/material";
 import { callAwsEmailSvc } from "components/EmailService";
-import FormControl from "@mui/material/FormControl";
-import InputAdornment from "@mui/material/InputAdornment";
-import EmailIcon from "@mui/icons-material/Email";
-import NoteIcon from "@mui/icons-material/Note";
-import SupervisedUserCircleIcon from "@mui/icons-material/SupervisedUserCircle";
+// import FormControl from "@mui/material/FormControl";
+// import InputLabel from "@mui/material/InputLabel";
+// import FormHelperText from "@mui/material/FormHelperText";
+// import InputAdornment from "@mui/material/InputAdornment";
+// import EmailIcon from "@mui/icons-material/Email";
+// import NoteIcon from "@mui/icons-material/Note";
+// import SupervisedUserCircleIcon from "@mui/icons-material/SupervisedUserCircle";
 import "App.scss";
 
 const errCheck = 0x0000;
@@ -14,7 +22,7 @@ const emailErr = 0x0010;
 const messageErr = 0x0100;
 
 const Contact = () => {
-  const [name, setName] = useState("");
+  const [client, setClient] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [complete, setComplete] = useState(false);
@@ -36,7 +44,7 @@ const Contact = () => {
     setErrorState(errCheck);
     let tstVal = 0x0000;
 
-    if (!name || name.length <= 0) {
+    if (!client || client.length <= 0) {
       tstVal = tstVal | nameErr;
     }
 
@@ -51,7 +59,7 @@ const Contact = () => {
     if (tstVal > errCheck) {
       setErrorState(tstVal);
     } else {
-      callAwsEmailSvc("contact", name, email, message).then(() =>
+      callAwsEmailSvc("contact", client, email, message).then(() =>
         setComplete(true),
       );
     }
@@ -75,6 +83,48 @@ const Contact = () => {
           <form>
             <div className="form-row">
               <FormControl>
+                <InputLabel htmlFor="client">Name</InputLabel>
+                <Input
+                  id="client"
+                  error={errorState & nameErr}
+                  aria-describedby="client-text"
+                  onChange={(e) => setClient(e.target.value)}
+                />
+                <FormHelperText id="client-text">
+                  Please enter your name.
+                </FormHelperText>
+              </FormControl>
+            </div>
+            <div className="form-row">
+              <FormControl>
+                <InputLabel htmlFor="email">Email address</InputLabel>
+                <Input
+                  id="email"
+                  error={errorState & emailErr}
+                  aria-describedby="email-text"
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+                <FormHelperText id="email-text">
+                  We&apos;ll never share your email.
+                </FormHelperText>
+              </FormControl>
+            </div>
+            <div className="form-row">
+              <FormControl>
+                <InputLabel htmlFor="message">Comments</InputLabel>
+                <Input
+                  id="message"
+                  error={errorState & messageErr}
+                  aria-describedby="message-text"
+                  onChange={(e) => setMessage(e.target.value)}
+                />
+                <FormHelperText id="message-text">
+                  Please enter comments.
+                </FormHelperText>
+              </FormControl>
+            </div>
+
+            {/* <FormControl>
                 <TextField
                   error={errorState & nameErr}
                   helperText="Please enter name."
@@ -132,7 +182,8 @@ const Contact = () => {
                   ),
                 }}
               />
-            </FormControl>
+            </FormControl> */}
+
             <div className="btn">
               <Button
                 sx={{ width: "200px" }}

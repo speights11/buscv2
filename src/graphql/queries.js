@@ -5,8 +5,8 @@ export const getContactUs = /* GraphQL */ `
   query GetContactUs($id: ID!) {
     getContactUs(id: $id) {
       id
-      type
-      name
+      page
+      client
       email
       message
       createdAt
@@ -24,8 +24,8 @@ export const listContactuses = /* GraphQL */ `
     listContactuses(filter: $filter, limit: $limit, nextToken: $nextToken) {
       items {
         id
-        type
-        name
+        page
+        client
         email
         message
         createdAt

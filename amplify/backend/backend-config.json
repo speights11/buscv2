@@ -4,10 +4,20 @@
       "dependsOn": [],
       "output": {
         "authConfig": {
-          "additionalAuthenticationProviders": [],
+          "additionalAuthenticationProviders": [
+            {
+              "authenticationType": "AWS_LAMBDA",
+              "lambdaAuthorizerConfig": {
+                "lambdaFunction": "graphQlLambdaAuthorizer153ef91b",
+                "ttlSeconds": "300"
+              }
+            }
+          ],
           "defaultAuthentication": {
             "apiKeyConfig": {
-              "apiKeyExpirationDays": 7
+              "apiKeyExpirationDate": "2025-02-26T03:29:41.804Z",
+              "apiKeyExpirationDays": 365,
+              "description": ""
             },
             "authenticationType": "API_KEY"
           }
@@ -18,13 +28,14 @@
     }
   },
   "function": {
-    "buscv26a966aa6": {
+    "graphQlLambdaAuthorizer153ef91b": {
       "build": true,
       "dependsOn": [
         {
           "attributes": [
             "GraphQLAPIIdOutput",
-            "GraphQLAPIEndpointOutput"
+            "GraphQLAPIEndpointOutput",
+            "GraphQLAPIKeyOutput"
           ],
           "category": "api",
           "resourceName": "buscv2"
@@ -35,19 +46,19 @@
     }
   },
   "parameters": {
-    "AMPLIFY_function_buscv26a966aa6_deploymentBucketName": {
+    "AMPLIFY_function_graphQlLambdaAuthorizer153ef91b_deploymentBucketName": {
       "usedBy": [
         {
           "category": "function",
-          "resourceName": "buscv26a966aa6"
+          "resourceName": "graphQlLambdaAuthorizer153ef91b"
         }
       ]
     },
-    "AMPLIFY_function_buscv26a966aa6_s3Key": {
+    "AMPLIFY_function_graphQlLambdaAuthorizer153ef91b_s3Key": {
       "usedBy": [
         {
           "category": "function",
-          "resourceName": "buscv26a966aa6"
+          "resourceName": "graphQlLambdaAuthorizer153ef91b"
         }
       ]
     },
@@ -55,7 +66,7 @@
       "usedBy": [
         {
           "category": "function",
-          "resourceName": "buscv26a966aa6"
+          "resourceName": "graphQlLambdaAuthorizer153ef91b"
         }
       ]
     }

@@ -13,10 +13,9 @@
     },
     "categories": {
       "function": {
-        "buscv26a966aa6": {
-          "sesEmail": "beinguscreations@gmail.com",
-          "deploymentBucketName": "amplify-buscv2-dev-160947-deployment",
-          "s3Key": "amplify-builds/buscv26a966aa6-633474752b346d61452f-build.zip"
+        "graphQlLambdaAuthorizer153ef91b": {
+          "deploymentBucketName": "amplify-buscv2-dev-222017-deployment",
+          "s3Key": "amplify-builds/graphQlLambdaAuthorizer153ef91b-5663466d35686863796d-build.zip"
         }
       },
       "api": {
