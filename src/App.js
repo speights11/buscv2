@@ -1,10 +1,10 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import "App.scss";
-import Main from "components/Main";
-import Home from "pages/Home/Home";
-import Gallery from "pages/Gallery/Gallery";
-import Contact from "pages/Contact/Contact";
+import Main from "components/Main.jsx";
+import Home from "pages/Home/Home.jsx";
+import Gallery from "pages/Gallery/Gallery.jsx";
+import Contact from "pages/Contact/Contact.jsx";
 
 function App() {
   return (

@@ -1,0 +1,7 @@
+type ContactUs @model @auth(rules: [{ allow: public, operations: [create] }]) {
+  id: ID!
+  page: String!
+  client: String!
+  email: AWSEmail!
+  message: String!
+}

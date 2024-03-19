@@ -1,1 +1,57 @@
-{}
+{
+  "api": {
+    "buscv2": {
+      "dependsOn": [],
+      "output": {
+        "authConfig": {
+          "additionalAuthenticationProviders": [],
+          "defaultAuthentication": {
+            "apiKeyConfig": {
+              "apiKeyExpirationDate": "2025-03-19T18:41:22.164Z",
+              "apiKeyExpirationDays": 365,
+              "description": ""
+            },
+            "authenticationType": "API_KEY"
+          }
+        }
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "AppSync"
+    }
+  },
+  "function": {
+    "MailFunc": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributes": [
+            "GraphQLAPIIdOutput",
+            "GraphQLAPIEndpointOutput"
+          ],
+          "category": "api",
+          "resourceName": "buscv2"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_MailFunc_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "MailFunc"
+        }
+      ]
+    },
+    "AMPLIFY_function_MailFunc_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "MailFunc"
+        }
+      ]
+    }
+  }
+}

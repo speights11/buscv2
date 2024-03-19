@@ -4,3 +4,42 @@
     "ScannedCount": 0,
     "ConsumedCapacity": null
 }
+{
+    "Items": [],
+    "Count": 0,
+    "ScannedCount": 0,
+    "ConsumedCapacity": null
+}
+{
+    "Items": [
+        {
+            "__typename": {
+                "S": "ContactUs"
+            },
+            "page": {
+                "S": "contact"
+            },
+            "client": {
+                "S": "Jeff"
+            },
+            "updatedAt": {
+                "S": "2024-03-19T22:33:19.365Z"
+            },
+            "createdAt": {
+                "S": "2024-03-19T22:33:19.365Z"
+            },
+            "message": {
+                "S": "test"
+            },
+            "id": {
+                "S": "93ef0c6a-e423-4b49-82a7-83373f564e5e"
+            },
+            "email": {
+                "S": "rgsp8ts@gmail.com"
+            }
+        }
+    ],
+    "Count": 1,
+    "ScannedCount": 1,
+    "ConsumedCapacity": null
+}

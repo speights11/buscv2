@@ -1,25 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import App from "./App";
-import reportWebVitals from "./reportWebVitals";
+import App from "./App.js";
+import reportWebVitals from "./reportWebVitals.js";
 import { BrowserRouter } from "react-router-dom";
-// import { Amplify } from "aws-amplify";
-// import config from "./amplifyconfiguration.json";
+import { Amplify } from "aws-amplify";
+import config from "./amplifyconfiguration.json";
 
-// Amplify.configure(config);
-
-// Amplify.configure({
-//   API: {
-//     GraphQL: {
-//       endpoint:
-//         "https://srfibq73sfhbxhkms3wu3wqntq.appsync-api.us-east-1.amazonaws.com/graphql",
-//       defaultAuthMode: "apiKey",
-//       apiKey: "da2-jfjspilwqfdktmt77rpzlgi6cu",
-//       region: "us-east-1",
-//     },
-//   },
-// });
+Amplify.configure(config);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

@@ -1,4 +1,4 @@
-import { createContactUs } from "graphql/mutations";
+import { createContactUs } from "graphql/mutations.js";
 import { generateClient } from "aws-amplify/api";
 
 export const callAwsEmailSvc = async (page, client, email, message) => {

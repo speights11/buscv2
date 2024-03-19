@@ -10,6 +10,17 @@
       "StackName": "amplify-buscv2-main-214334",
       "StackId": "arn:aws:cloudformation:us-east-1:400149547320:stack/amplify-buscv2-main-214334/1990ccd0-e592-11ee-bac6-0a8dda899a27",
       "AmplifyAppId": "d6ohsa2g3q18f"
+    },
+    "categories": {
+      "function": {
+        "MailFunc": {
+          "deploymentBucketName": "amplify-buscv2-main-214334-deployment",
+          "s3Key": "amplify-builds/MailFunc-7a6a67386a79554b4e49-build.zip"
+        }
+      },
+      "api": {
+        "buscv2": {}
+      }
     }
   }
 }
