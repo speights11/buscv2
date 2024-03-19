@@ -74,8 +74,10 @@ const Contact = () => {
           For all questions pertaining to order status or billing, please
           contact:
         </h3>
-        <p>Tel: 1-800-650-5301</p>
-        <p>Fax: 514-504-2061</p>
+        <p>
+          Tel: 1-800-650-5301 <br />
+          Fax: 514-504-2061
+        </p>
         <p>
           <a href="mailto:billing@pictorem.com">billing@pictorem.com</a>
         </p>
