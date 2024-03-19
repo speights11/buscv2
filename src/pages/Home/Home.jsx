@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React, { useEffect, useState } from "react";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
@@ -84,7 +86,7 @@ const Home = () => {
           <h4>Brought to you by Reggie S.</h4>
         </div>
 
-        <div className={`${complete ? "hidden" : "keep-in-touch"}`}>
+        {/* <div className={`${complete ? "hidden" : "keep-in-touch"}`}>
           <h1>Let&apos;s Keep In Touch</h1>
 
           <p>
@@ -211,7 +213,7 @@ const Home = () => {
           >
             Sign Up
           </Button>
-        </div>
+        </div> */}
 
         <div className={`${complete ? "thank-you" : "hidden"}`}>
           Thank you for reaching out. Your message has been sent.

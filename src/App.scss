@@ -77,6 +77,17 @@
   overflow-x: hidden;
 }
 
+.mailDiv {
+  width: 20vw;
+  margin: 20px auto;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: #5c5eff;
+  font-weight: 700;
+  text-align: center;
+}
+
 .iframe-container {
   height: 100%;
 }

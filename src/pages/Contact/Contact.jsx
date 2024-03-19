@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { useState, useEffect } from "react";
 import {
   Button,
@@ -75,9 +76,27 @@ const Contact = () => {
         </h3>
         <p>Tel: 1-800-650-5301</p>
         <p>Fax: 514-504-2061</p>
-        <p>billing@pictorem.com</p>
+        <p>
+          <a href="mailto:billing@pictorem.com">billing@pictorem.com</a>
+        </p>
       </div>
-      <div className="contact-form">
+
+      <div className="mailDiv">
+        Contact Reggie S. directly here:
+        <p>
+          <a href="mailto:beinguscreations@gmail.com?subject=contact">
+            Contact Us
+          </a>
+        </p>
+      </div>
+
+      <div className="mailDiv">
+        Or join our mailing list here:
+        <p>
+          <a href="mailto:beinguscreations@gmail.com?subject=join">BUSC Join</a>
+        </p>
+      </div>
+      {/* <div className="contact-form">
         <h1>Contact Us</h1>
         <div className={`${complete ? "hidden" : "thank-you"}`}>
           <form>
@@ -124,7 +143,7 @@ const Contact = () => {
               </FormControl>
             </div>
 
-            {/* <FormControl>
+             <FormControl>
                 <TextField
                   error={errorState & nameErr}
                   helperText="Please enter name."
@@ -182,7 +201,7 @@ const Contact = () => {
                   ),
                 }}
               />
-            </FormControl> */}
+            </FormControl>
 
             <div className="btn">
               <Button
@@ -198,7 +217,7 @@ const Contact = () => {
         <div className={`${complete ? "thank-you" : "hidden"}`}>
           Thank you for reaching out. Your message has been sent.
         </div>
-      </div>
+      </div> */}
     </>
   );
 };
