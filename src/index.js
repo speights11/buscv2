@@ -5,9 +5,9 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 import { Amplify } from "aws-amplify";
-import config from "./amplifyconfiguration.json";
+// import config from "./amplifyconfiguration.json";
 
-Amplify.configure(config);
+// Amplify.configure(config);
 
 // Amplify.configure({
 //   API: {
