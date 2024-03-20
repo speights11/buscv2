@@ -12,7 +12,7 @@ const ses = new SESClient({ region: "us-east-1" });
 
 const emailAddr = "beinguscreations@gmail.com";
 
-exports.handler = async (event) => {
+export const handler = async (event) => {
   console.log(`EVENT: ${JSON.stringify(event)}`);
   for (const record of event.Records) {
     if (record.eventName === "INSERT") {

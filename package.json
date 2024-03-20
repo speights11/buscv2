@@ -42,7 +42,7 @@
     "eject": "react-scripts eject",
     "lint": "eslint --fix src/**/*.js",
     "install:clean": "rm -rf node_modules/ && rm -rf yarn.lock && yarn install && yarn audit",
-    "query": "aws dynamodb scan --table-name ContactUs-7ht4ninxqnfdrne7hpnllko6by-main >> email-table-contents.json"
+    "query": "aws dynamodb scan --table-name ContactUs-7ht4ninxqnfdrne7hpnllko6by-main > email-table-contents.json"
   },
   "eslintConfig": {
     "extends": [

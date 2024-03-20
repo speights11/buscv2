@@ -1,17 +1,57 @@
 {
-    "Items": [],
-    "Count": 0,
-    "ScannedCount": 0,
-    "ConsumedCapacity": null
-}
-{
-    "Items": [],
-    "Count": 0,
-    "ScannedCount": 0,
-    "ConsumedCapacity": null
-}
-{
     "Items": [
+        {
+            "__typename": {
+                "S": "ContactUs"
+            },
+            "page": {
+                "S": "contact"
+            },
+            "client": {
+                "S": "Jeff"
+            },
+            "updatedAt": {
+                "S": "2024-03-19T22:54:24.200Z"
+            },
+            "createdAt": {
+                "S": "2024-03-19T22:54:24.200Z"
+            },
+            "message": {
+                "S": "test"
+            },
+            "id": {
+                "S": "5d1ff95e-b467-4b0c-8e50-587595fa8d2d"
+            },
+            "email": {
+                "S": "speights.jeff@gmail.com"
+            }
+        },
+        {
+            "__typename": {
+                "S": "ContactUs"
+            },
+            "page": {
+                "S": "contact"
+            },
+            "client": {
+                "S": "Jeff"
+            },
+            "updatedAt": {
+                "S": "2024-03-20T17:31:54.726Z"
+            },
+            "createdAt": {
+                "S": "2024-03-20T17:31:54.726Z"
+            },
+            "message": {
+                "S": "Test"
+            },
+            "id": {
+                "S": "39f4911d-2b29-49fd-acb3-1638493bb429"
+            },
+            "email": {
+                "S": "speights.jeff@gmail.com"
+            }
+        },
         {
             "__typename": {
                 "S": "ContactUs"
@@ -39,7 +79,7 @@
             }
         }
     ],
-    "Count": 1,
-    "ScannedCount": 1,
+    "Count": 3,
+    "ScannedCount": 3,
     "ConsumedCapacity": null
 }
