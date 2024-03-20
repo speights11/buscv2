@@ -71,21 +71,6 @@ const Contact = () => {
         </p>
       </div>
 
-      {/* <div className="mailDiv">
-        Contact Reggie S. directly here:
-        <p>
-          <a href="mailto:beinguscreations@gmail.com?subject=contact">
-            Contact Us
-          </a>
-        </p>
-      </div>
-
-      <div className="mailDiv">
-        Or join our mailing list here:
-        <p>
-          <a href="mailto:beinguscreations@gmail.com?subject=join">BUSC Join</a>
-        </p>
-      </div> */}
       <div className="contact-form">
         <h1>Contact Reggie S.</h1>
         <div className={`${complete ? "hidden" : "thank-you"}`}>
