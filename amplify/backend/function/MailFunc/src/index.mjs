@@ -43,6 +43,8 @@ export const handler = async (event) => {
           Subject: { Data: `Test Email: ${page}` },
         },
         Source: emailAddr,
+        SourceArn:
+          "arn:aws:ses:us-east-1:400149547320:identity/beinguscreations.info",
       });
 
       try {

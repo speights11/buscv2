@@ -15,7 +15,7 @@
       "function": {
         "MailFunc": {
           "deploymentBucketName": "amplify-buscv2-main-214334-deployment",
-          "s3Key": "amplify-builds/MailFunc-7a6a67386a79554b4e49-build.zip"
+          "s3Key": "amplify-builds/MailFunc-714f5a6e527251345058-build.zip"
         }
       },
       "api": {
