@@ -10,7 +10,7 @@ Amplify Params - DO NOT EDIT */
 import { SESClient, SendEmailCommand } from "@aws-sdk/client-ses";
 const ses = new SESClient({ region: "us-east-1" });
 
-const emailAddr = "beinguscreations@gmail.com";
+const SourceEmail = "beinguscreations@gmail.com";
 
 export const handler = async (event) => {
   console.log(`EVENT: ${JSON.stringify(event)}`);
@@ -33,7 +33,7 @@ export const handler = async (event) => {
 
       const command = new SendEmailCommand({
         Destination: {
-          ToAddresses: [emailAddr],
+          ToAddresses: [SourceEmail],
         },
         Message: {
           Body: {
@@ -42,7 +42,7 @@ export const handler = async (event) => {
 
           Subject: { Data: `Test Email: ${page}` },
         },
-        Source: "speights.jeff@gmail.com",
+        Source: SourceEmail,
       });
 
       try {
