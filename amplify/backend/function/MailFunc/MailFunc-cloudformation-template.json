@@ -177,7 +177,7 @@
               ],
               "Resource": {
                 "Fn::Sub": [
-                  "arn:aws:ses:${region}:${account}:identity/speights.jeff@gmail.com",
+                  "arn:aws:ses:${region}:${account}:identity/buscdev@gmail.com",
                   {
                     "region": {
                       "Ref": "AWS::Region"
@@ -233,7 +233,7 @@
               ],
               "Resource": {
                 "Fn::Sub": [
-                  "arn:aws:ses:${region}:${account}:identity/speights.jeff@gmail.com",
+                  "arn:aws:ses:${region}:${account}:identity/buscdev@gmail.com",
                   {
                     "region": {
                       "Ref": "AWS::Region"
