@@ -42,9 +42,23 @@ export const handler = async (event) => {
 
           Subject: { Data: `Test Email: ${page}` },
         },
-        Source: emailAddr,
-        SourceArn:
-          "arn:aws:ses:us-east-1:400149547320:identity/beinguscreations.info",
+        Source: beinguscreations.info,
+        SourceArn: {
+          "Fn::Sub": [
+            "arn:aws:ses:${region}:${account}:identity/beinguscreations.info",
+            {
+              region: {
+                Ref: "AWS::Region",
+              },
+              account: {
+                Ref: "AWS::AccountId",
+              },
+              lambda: {
+                Ref: "LambdaFunction",
+              },
+            },
+          ],
+        },
       });
 
       try {
