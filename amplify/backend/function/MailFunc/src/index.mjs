@@ -41,7 +41,7 @@ export const handler = async (event) => {
             Text: { Data: `Message from ${client} at ${email}:\n${message}` },
           },
 
-          Subject: { Data: `Test Email: ${page}` },
+          Subject: { Data: `Contact Us Message. Page: ${page}` },
         },
         Source: SourceEmail,
       });
