@@ -16,7 +16,7 @@ export const handler = async (event) => {
   console.log(`EVENT: ${JSON.stringify(event)}`);
   for (const record of event.Records) {
     if (record.eventName === "INSERT") {
-      //pull off items from stream
+      // pull off items from stream
       const page = record.dynamodb.NewImage.page.S;
       const client = record.dynamodb.NewImage.client.S;
       const email = record.dynamodb.NewImage.email.S;
@@ -42,27 +42,11 @@ export const handler = async (event) => {
 
           Subject: { Data: `Test Email: ${page}` },
         },
-        Source: beinguscreations.info,
-        SourceArn: {
-          "Fn::Sub": [
-            "arn:aws:ses:${region}:${account}:identity/beinguscreations.info",
-            {
-              region: {
-                Ref: "AWS::Region",
-              },
-              account: {
-                Ref: "AWS::AccountId",
-              },
-              lambda: {
-                Ref: "LambdaFunction",
-              },
-            },
-          ],
-        },
+        Source: "speights.jeff@gmail.com",
       });
 
       try {
-        let response = await ses.send(command);
+        const response = await ses.send(command);
         return response;
       } catch (error) {
         console.error(error);
