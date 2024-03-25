@@ -72,7 +72,7 @@ const Contact = () => {
       </div>
 
       <div className="contact-form">
-        <h1>Contact Reggie S.</h1>
+        <h1>PLease join our mailing list</h1>
         <div className={`${complete ? "hidden" : "thank-you"}`}>
           <div className="form-row">
             <FormControl>
