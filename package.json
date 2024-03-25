@@ -68,7 +68,8 @@
     "postcss": "^8.4.31",
     "follow-redirects": "^1.15.6",
     "ip": "^2.0.1",
-    "webpack-dev-middleware": "^5.3.4"
+    "webpack-dev-middleware": "^5.3.4",
+    "express": "^4.19.2"
   },
   "devDependencies": {
     "eslint": "^8.55.0",

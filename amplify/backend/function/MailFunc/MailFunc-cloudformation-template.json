@@ -177,16 +177,13 @@
               ],
               "Resource": {
                 "Fn::Sub": [
-                  "arn:aws:ses:${region}:${account}:identity/buscdev@gmail.com",
+                  "arn:aws:ses:${region}:${account}:identity/speights.jeff@gmail.com",
                   {
                     "region": {
                       "Ref": "AWS::Region"
                     },
                     "account": {
                       "Ref": "AWS::AccountId"
-                    },
-                    "lambda": {
-                      "Ref": "LambdaFunction"
                     }
                   }
                 ]
@@ -233,16 +230,13 @@
               ],
               "Resource": {
                 "Fn::Sub": [
-                  "arn:aws:ses:${region}:${account}:identity/buscdev@gmail.com",
+                  "arn:aws:ses:${region}:${account}:identity/speights.jeff@gmail.com",
                   {
                     "region": {
                       "Ref": "AWS::Region"
                     },
                     "account": {
                       "Ref": "AWS::AccountId"
-                    },
-                    "lambda": {
-                      "Ref": "LambdaFunction"
                     }
                   }
                 ]

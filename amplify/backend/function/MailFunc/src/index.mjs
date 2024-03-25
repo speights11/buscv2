@@ -11,7 +11,8 @@ import { SESClient, SendEmailCommand } from "@aws-sdk/client-ses";
 const ses = new SESClient({ region: "us-east-1" });
 
 const ToEmail = "beinguscreations@gmail.com";
-const SourceEmail = "buscdev@gmail.com";
+// const SourceEmail = "buscdev@gmail.com";
+const SourceEmail = "speights.jeff@gmail.com";
 
 export const handler = async (event) => {
   console.log(`EVENT: ${JSON.stringify(event)}`);
