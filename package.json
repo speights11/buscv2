@@ -6,16 +6,54 @@
   "engines": {
     "node": "^20"
   },
+  "jest": {
+    "moduleNameMapper": {
+      "swiper/css": "<rootDir>/node_modules/swiper/swiper.min.css",
+      "swiper/css/navigation": "<rootDir>/node_modules/swiper/modules/autoplay/navigation.min.css",
+      "swiper/css/pagination": "<rootDir>/node_modules/swiper/modules/autoplay/pagination.min.css"
+    },
+    "collectCoverageFrom": [
+      "src/**/{!(registerServiceWorker),}.js"
+    ],
+    "coveragePathIgnorePatterns": [
+      "node_modules",
+      "testUtils",
+      "babel.config.js",
+      "index.js",
+      "BasicBar.js",
+      "MultiBar.js",
+      "testMap",
+      "BlankPageTemplate",
+      "MapTemplate",
+      "ChartTemplate",
+      "theme-context.js",
+      "SMXChart.js",
+      "SMXMap.js",
+      "kenyaMap1Options.js",
+      "togoMapOptions.js",
+      "testMapOptions.js"
+    ],
+    "transform": {
+      "^.+\\.(js|jsx|ts|tsx)$": [
+        "babel-jest"
+      ]
+    },
+    "transformIgnorePatterns": [
+      "/node_modules/(?!(swiper|swiper/react|ssr-window|d3|internmap|dom7|react-countup|countup)/)"
+    ],
+    "snapshotSerializers": []
+  },
   "dependencies": {
     "@aws-amplify/ui-react": "^1.2.5",
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "@emotion/react": "^11.11.1",
-    "@emotion/styled": "^11.11.0",
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
     "@mui/icons-material": "^5.14.19",
-    "@mui/material": "^5.14.20",
+    "@mui/material": "^5.15.18",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "@vidstack/react": "^1.11.21",
     "aws-amplify": "^6.0.0",
     "babel-eslint": "^10.1.0",
     "babel-polyfill": "^6.26.0",
@@ -25,19 +63,24 @@
     "eslint-plugin-n": "^16.4.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^6.1.1",
-    "node-sass": "^9.0.0",
+    "luxon": "^3.4.4",
     "react": "^18.2.0",
     "react-device-detect": "^2.2.3",
     "react-dom": "^18.2.0",
+    "react-lines-ellipsis": "^0.15.4",
     "react-router-dom": "^6.20.1",
     "react-scripts": "5.0.1",
+    "react-share": "^5.1.0",
     "react-spinners": "^0.13.8",
+    "sass": "^1.77.5",
+    "swiper": "^11.1.4",
+    "uuid": "^9.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "prod": "serve -s build",
-    "build": "react-scripts build",
+    "build": "GENERATE_SOURCEMAP=false react-scripts build",
     "test": "react-scripts test",
     "test-ci": "react-scripts --openssl-legacy-provider test --ci --env=jsdom --watchAll=false --updateSnapshot --silent",
     "eject": "react-scripts eject",
@@ -64,12 +107,9 @@
     ]
   },
   "resolutions": {
-    "nth-check": "^2.0.1",
     "postcss": "^8.4.31",
-    "follow-redirects": "^1.15.6",
-    "ip": "^2.0.1",
-    "webpack-dev-middleware": "^5.3.4",
-    "express": "^4.19.2"
+    "nth-check": "^2.0.1",
+    "braces": "^3.0.3"
   },
   "devDependencies": {
     "eslint": "^8.55.0",

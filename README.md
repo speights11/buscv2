@@ -1,3 +1,6 @@
+REACT SHARE
+https://www.npmjs.com/package/react-share
+
 DEBUG SETUP
 https://docs.amplify.aws/javascript/build-a-backend/graphqlapi/set-up-graphql-api/
 

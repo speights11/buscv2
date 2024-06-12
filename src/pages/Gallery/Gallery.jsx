@@ -8,6 +8,9 @@ const Gallery = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    // sessionStorage.setItem("currentPage", "/gallery");
+    sessionStorage.setItem("currentPage", "1");
+
     try {
       /* eslint-disable-next-line no-undef */
       gtag("event", "VisitGallery", {

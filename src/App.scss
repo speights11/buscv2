@@ -1,41 +1,71 @@
+$Cinzel: "Cinzel", serif;
+$Decorative: "Cinzel Decorative", serif;
+$Fredericka: "Fredericka the Great", serif;
+$Sacramento: "Sacramento", cursive;
+$Sevillana: "Sevillana", cursive;
+$Monsieur: "Monsieur La Doulaise", cursive;
+$Zeyada: "Zeyada", cursive;
+
 .app-frame {
   display: grid;
-  grid-template-rows: 15vh 1fr;
+  grid-template-rows: 12vh 1fr;
   gap: 0;
   height: 98vh;
-  background-color: aliceblue;
+  // background-color: aliceblue;
 }
 
 .header {
   display: grid;
-  grid-template-columns: 20vw 60vw 20vw;
-  align-items: flex-start;
+  grid-template-columns: 1fr 55vw 25vw;
+  align-items: center;
   justify-content: space-around;
-  /* font-size: calc(10px + 2vmin); */
-  margin: 0;
+  margin: 0 0 1px 0;
   padding: 0;
   overflow: hidden;
-  border-bottom: 2px inset rgb(124, 124, 124);
   background: url("assets/images/Banner-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
+  border-bottom: 6px ridge rgb(74, 73, 73);
+  // border-bottom: 4px ridge rgb(9, 86, 221);
 
   & img {
     width: 10vw;
+    margin-left: 2vw;
+    // border: 1px solid red;
   }
 }
 
 .HeaderTitle {
+  margin: auto;
   font-family: "Allura", cursive;
   font-size: 4.0vmax;
   font-weight: 800;
   text-align: center;
   width: 60vw;
   padding: 0;
+  // border: 1px solid red;
+}
+
+.slide-container {
+  display: flex;
+  width: 98%;
+  height: 25vw;
+  padding: 3vh;
+  margin-bottom: 2vh;
+  border-radius: 10px;
+  border: 1px solid rgb(97, 92, 92);
+  box-shadow: 0px 15px 5px 10px rgb(52, 53, 53);
+
+  & img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+  }
 }
 
 .links {
   font-size: 4.5vw !important;
+  // border: 1px solid blue;
 }
 
 .footer {
@@ -77,6 +107,34 @@
   overflow-x: hidden;
 }
 
+.testimonial-header {
+  font-family: $Decorative;
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+.testimonials-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px 0px;
+  gap: 20px;
+  width: 98vw;
+  margin: 1% auto;
+  border: 4px inset rgb(206, 202, 202);
+  background-color: #cccccc;
+  background-image: url("assets/images/panel.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.testimonial-instructions {
+  font-size: 1.2rem;
+  margin: 20px auto;
+  text-align: center;
+}
+
 .mailDiv {
   width: 20vw;
   margin: 20px auto;
@@ -92,17 +150,22 @@
   height: 100%;
 }
 
-.image-frame {
+.home-image-frame {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
   width: 100%;
   height: 97%;
+  background-image: url("assets/images/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 
   & img {
-    max-inline-size: 100%;
-    block-size: auto;
+    height: 70vh;
+    // width: 70vw;
+    // max-inline-size: 100%;
+    // block-size: auto;
   }
 }
 
@@ -112,29 +175,52 @@
   width: 100%;
 
   & .intro {
-    font-size: 2.5vmax;
-    font-weight: 700;
-    text-align: center;
-    width: 70%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
     margin: 5vh auto;
-    padding: 0.1vh 5vw 5vh 5vw;
-
-    /* color: #000000;
-    text-shadow: 2px 2px #ffffff; */
-
-    color: #ffffff;
-    text-shadow: 4px 4px black;
-
-    background: url("assets/images/bg1.png");
+    border: 3px inset #cccccc;
+    border-radius: 10px;
+    padding: 5px 8px;
+    background: url("assets/images/bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    border: 3px inset #cccccc;
-    /* box-shadow: 10px 10px 8px 10px #888888; */
+
 
     & h4 {
       padding-top: 10vh;
     }
   }
+}
+
+.carousel-container {
+  width: 86%;
+  margin: auto;
+  padding: 10px 30px;
+  overflow: hidden;
+  border: 3px inset black;
+  background-color: #888888;
+}
+
+#carousel-header {
+  font-family: $Cinzel;
+  text-align: center;
+  font-size: 1.2vw;
+  padding: 0%;
+  // border: 1px solid black;
+}
+
+#slide-img {
+  width: 28vw;
+  height: 30vw;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.plyr {
+  --plyr-border-radius: 8px;
 }
 
 .keep-in-touch {
@@ -232,6 +318,10 @@
   text-align: center;
 }
 
+.zoom-in:hover {
+  cursor: pointer;
+}
+
 .dev {
   border: 2px solid red;
 }
@@ -307,7 +397,11 @@
 }
 
 // Large Monitors - solid green
-@media only screen and (max-width: 1280px) {}
+@media only screen and (max-width: 1500px) {
+  .header {
+    grid-template-columns: 1fr 50vw 30vw;
+  }
+}
 
 // IPAD Pro - dashed purple
 @media only screen and (max-width: 1024px) and (min-height: 1366px) {}
@@ -322,8 +416,7 @@
   }
 
   .header {
-    display: flex;
-    flex-direction: column;
+    grid-auto-rows: auto;
     align-items: center;
     justify-content: center;
     gap: 0;
@@ -331,6 +424,7 @@
 
   .HeaderTitle {
     margin: 0;
+    // border: 4px solid red;
   }
 
   .form-row {
@@ -345,7 +439,29 @@
 }
 
 // IPad - solid orange
-@media screen and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {}
+@media screen and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+  .header {
+    // display: flex;
+    grid-template-columns: 1fr 45vw 35vw;
+    // flex-direction: column;
+    // gap: 0;
+    // justify-content: space-around;
+
+    & img {
+      // width: 45vw;
+    }
+  }
+
+  .HeaderTitle {
+    font-size: 6.0vmin;
+    // width: auto;
+  }
+
+  .links {
+    // font-size: 2.5vw !important;
+    // width: auto;
+  }
+}
 
 // iPhone 13 and iPhone 13 Pro
 /* 2532x1170 pixels at 460ppi */
@@ -412,12 +528,25 @@
 }
 
 // Smartphone Portrait
-@media only screen and (max-width: 479px) {}
+@media only screen and (max-width: 479px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    justify-content: space-around;
 
-/* font-family: "Cinzel", serif; */
-/* font-family: "Cinzel Decorative", serif; */
-/* font-family: "Fredericka the Great", serif; */
-/* font-family: "Sacramento", cursive; */
-/* font-family: "Sevillana", cursive; */
-/* font-family: "Monsieur La Doulaise", cursive; */
-/* font-family: "Zeyada", cursive; */
+    & img {
+      width: 45vw;
+    }
+  }
+
+  .HeaderTitle {
+    font-size: 6.0vmin;
+    width: auto;
+  }
+
+  .links {
+    font-size: 2.5vw !important;
+    width: auto;
+  }
+}

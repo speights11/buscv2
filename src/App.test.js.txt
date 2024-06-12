@@ -1,0 +1,27 @@
+import React from "react";
+import "@testing-library/jest-dom";
+import App from "./App";
+
+describe("App Mount Normal Tests", () => {
+  beforeEach(() => {
+    jest.spyOn(React, "useEffect").mockResolvedValue({
+      json: jest.fn().mockResolvedValue({}),
+    });
+  });
+
+  afterEach(() => {
+    jest.restoreAllMocks();
+  });
+
+  it("mounts app", async () => {
+    jest.spyOn(global, "fetch").mockResolvedValue({
+      json: jest.fn().mockResolvedValue(maintNormalResponse),
+    });
+
+    const { findByTestId, getAllByRole, getByText, findByText } = render(
+      <App />,
+    );
+
+    // expect(getByText("Menu")).toBeInTheDocument();
+  });
+});
