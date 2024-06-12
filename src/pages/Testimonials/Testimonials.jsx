@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import TestimonialsCard from "./TestimonialsCard";
-import shonaCurry from "assets/images/testimonials/Shona Curry.jpeg";
+import shonaCurry from "assets/images/testimonials/Shona_Curry.jpeg";
 import davidMcCall from "assets/images/testimonials/David McCall.png";
 import darrellBrown from "assets/images/testimonials/Darrell Brown.png";
 import gladysAndDean from "assets/images/testimonials/Gladys and Dean.jpg";
@@ -9,7 +9,7 @@ import jazzie from "assets/images/testimonials/Jazzie.jpg";
 import delOwens from "assets/images/testimonials/Del Sayles Owen.png";
 import franGray from "assets/images/testimonials/Fran Gray.png";
 import lula from "assets/images/testimonials/Dr Lula Ballton.jpg";
-import brianJenkins from "assets/images/testimonials/Brian.jpeg";
+import brianJenkins from "assets/images/testimonials/Brian Jenkins.jpeg";
 import "../../App.scss";
 
 const Testimonials = () => {
