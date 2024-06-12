@@ -9,7 +9,7 @@ import jazzie from "assets/images/testimonials/Jazzie.jpg";
 import delOwens from "assets/images/testimonials/Del Sayles Owen.png";
 import franGray from "assets/images/testimonials/Fran Gray.png";
 import lula from "assets/images/testimonials/Dr Lula Ballton.jpg";
-import brian from "assets/images/testimonials/Brian.jpeg";
+import brianJenkins from "assets/images/testimonials/Brian.jpeg";
 import "../../App.scss";
 
 const Testimonials = () => {
@@ -56,7 +56,7 @@ const Testimonials = () => {
           title="Brian Jenkins"
           subTitle="Verified Purchaser"
           description="In conversation one day, Regina asked me my favorite color. From that, she created this beautiful art that I repurposed as the center piece of my living room. It is a constant conversation starter, and I am very thankful."
-          image={brian}
+          image={brianJenkins}
           link="https://www.pictorem.com/912484/Gas%20Clouds.html?iframe=1"
         />
 
