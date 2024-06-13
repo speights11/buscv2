@@ -10,6 +10,11 @@ import delOwens from "assets/images/testimonials/Del Sayles Owen.png";
 import franGray from "assets/images/testimonials/Fran Gray.png";
 import lula from "assets/images/testimonials/Dr Lula Ballton.jpg";
 import brianJenkins from "assets/images/testimonials/Brian_Jenkins.png";
+import tonyAndClark1 from "assets/images/testimonials/Tony_Clark1.png";
+import tonyAndClark2 from "assets/images/testimonials/Tony_Clark2.png";
+import tonyAndClark3 from "assets/images/testimonials/Tony_Clark3.png";
+import tonyAndClark4 from "assets/images/testimonials/Tony_Clark4.png";
+
 import "../../App.scss";
 
 const Testimonials = () => {
@@ -37,6 +42,14 @@ const Testimonials = () => {
           description="As Regina's sibling, I've had the privilege of watching her artistic journey unfold from the very beginning. Her art is nothing short of extraordinary, and I am constantly in awe of her talent and creativity. Regina's work encompasses a stunning variety of styles, from abstract pieces filled with intricate shapes and patterns to portraits that come alive with her innovative use of color. Each piece is a reflection of her unique vision and artistic voice. One of the things I love most about Regina’s art is her use of multimedia effects. These elements add a fascinating three-dimensional perspective, making her work not just something to see, but something to experience. Her ability to bring depth and texture to her pieces is truly remarkable and sets her apart in the art world. I am incredibly proud of Regina and her dedication to her craft. Her art has a way of speaking to the soul, and I believe it has the power to inspire and move anyone who encounters it. If you're looking for artwork that is both visually captivating and emotionally resonant, I wholeheartedly encourage you to explore Regina’s collection. Her pieces are more than just art, they are a celebration of creativity and imagination."
           image={darrellBrown}
           link="https://www.pictorem.com/912451/Ticking%20Time.html?iframe=1"
+        />
+        <TestimonialsCard
+          title="Tony and Clark Duncan"
+          subTitle="Verified Purchasers"
+          description="Beautifully fierce! What I love about Regina’s paintings is the way that she often addresses relevant social issues in an artistic form.  Whether sending a message or doing Freeform, all of her art speaks to her passion for life and the kind spirit she displays every day.
+"
+          image={tonyAndClark2}
+          link=""
         />
         <TestimonialsCard
           title="Shona Curry"
@@ -88,6 +101,15 @@ const Testimonials = () => {
           image={davidMcCall}
           link="https://www.pictorem.com/912517/Storm.html?iframe=1"
         />
+
+        <TestimonialsCard
+          title="Tony and Clark Duncan"
+          subTitle="Verified Purchasers"
+          description="Beautifully fierce! What I love about Regina’s paintings is the way that she often addresses relevant social issues in an artistic form.  Whether sending a message or doing Freeform, all of her art speaks to her passion for life and the kind spirit she displays every day.
+"
+          image={tonyAndClark1}
+          link=""
+        />
         <TestimonialsCard
           title="Del Sayles Owen"
           subTitle="Verified Purchaser"
@@ -103,11 +125,27 @@ const Testimonials = () => {
           link="https://www.pictorem.com/912437/Hey%20Ladies.html?iframe=1"
         />
         <TestimonialsCard
+          title="Tony and Clark Duncan"
+          subTitle="Verified Purchasers"
+          description="Beautifully fierce! What I love about Regina’s paintings is the way that she often addresses relevant social issues in an artistic form.  Whether sending a message or doing Freeform, all of her art speaks to her passion for life and the kind spirit she displays every day.
+"
+          image={tonyAndClark3}
+          link=""
+        />
+        <TestimonialsCard
           title="Dr. Lula Ballton"
           subTitle="Verified Purchaser"
           description=""
           image={lula}
           link="https://www.pictorem.com/912487/Scanners.html?iframe=1"
+        />
+        <TestimonialsCard
+          title="Tony and Clark Duncan"
+          subTitle="Verified Purchasers"
+          description="Beautifully fierce! What I love about Regina’s paintings is the way that she often addresses relevant social issues in an artistic form.  Whether sending a message or doing Freeform, all of her art speaks to her passion for life and the kind spirit she displays every day.
+"
+          image={tonyAndClark4}
+          link=""
         />
       </div>
       <div className="testimonial-instructions">
