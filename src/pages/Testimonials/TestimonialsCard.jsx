@@ -17,8 +17,8 @@ import PropTypes from "prop-types";
 import {
   FacebookShareButton,
   FacebookIcon,
-  PinterestShareButton,
-  PinterestIcon,
+  // PinterestShareButton,
+  // PinterestIcon,
   EmailShareButton,
   EmailIcon,
   LinkedinShareButton,
@@ -204,13 +204,13 @@ const TestimonialsCard = (props) => {
           <DialogContent>
             <div>
               <CardActions>
-                <PinterestShareButton
+                {/* <PinterestShareButton
                   url="https://www.beinguscreations.com"
                   media={"https://www.beinguscreations.com/siteImg.png"}
                   beforeOnClick={() => handleClose()}
                 >
                   <PinterestIcon size={iconSize} round={true} />
-                </PinterestShareButton>
+                </PinterestShareButton> */}
                 <FacebookShareButton
                   url="https://www.beinguscreations.com"
                   beforeOnClick={() => handleClose()}
