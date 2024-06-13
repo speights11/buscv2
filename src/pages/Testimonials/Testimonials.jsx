@@ -49,7 +49,7 @@ const Testimonials = () => {
           description="Beautifully fierce! What I love about Regina’s paintings is the way that she often addresses relevant social issues in an artistic form.  Whether sending a message or doing Freeform, all of her art speaks to her passion for life and the kind spirit she displays every day.
 "
           image={tonyAndClark2}
-          link=""
+          link="https://www.pictorem.com/1974226/Booked.html?iframe=1"
         />
         <TestimonialsCard
           title="Shona Curry"
@@ -108,7 +108,7 @@ const Testimonials = () => {
           description="Beautifully fierce! What I love about Regina’s paintings is the way that she often addresses relevant social issues in an artistic form.  Whether sending a message or doing Freeform, all of her art speaks to her passion for life and the kind spirit she displays every day.
 "
           image={tonyAndClark1}
-          link=""
+          link="https://www.pictorem.com/912431/Brown%20Brothers%20Tribe.html?iframe=1"
         />
         <TestimonialsCard
           title="Del Sayles Owen"
@@ -130,7 +130,7 @@ const Testimonials = () => {
           description="Beautifully fierce! What I love about Regina’s paintings is the way that she often addresses relevant social issues in an artistic form.  Whether sending a message or doing Freeform, all of her art speaks to her passion for life and the kind spirit she displays every day.
 "
           image={tonyAndClark3}
-          link=""
+          link="https://www.pictorem.com/912509/Free%20Mold.html?iframe=1"
         />
         <TestimonialsCard
           title="Dr. Lula Ballton"
@@ -145,7 +145,7 @@ const Testimonials = () => {
           description="Beautifully fierce! What I love about Regina’s paintings is the way that she often addresses relevant social issues in an artistic form.  Whether sending a message or doing Freeform, all of her art speaks to her passion for life and the kind spirit she displays every day.
 "
           image={tonyAndClark4}
-          link=""
+          link="https://www.pictorem.com/912460/Own%20World.html?iframe=1"
         />
       </div>
       <div className="testimonial-instructions">
