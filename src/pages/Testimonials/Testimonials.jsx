@@ -117,7 +117,7 @@ const Testimonials = () => {
         their perspective. I love it! Regina your art on your website is
         wonderful! I see why you have great success! Keep going! "
           image={SharonCrumley}
-          link=""
+          link="https://www.pictorem.com/912437/Hey%20Ladies.html?iframe=1"
         />
         <TestimonialsCard
           title="Del Sayles Owen"
