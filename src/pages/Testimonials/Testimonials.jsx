@@ -14,6 +14,7 @@ import tonyAndClark1 from "assets/images/testimonials/Tony_Clark1.png";
 import tonyAndClark2 from "assets/images/testimonials/Tony_Clark2.png";
 import tonyAndClark3 from "assets/images/testimonials/Tony_Clark3.png";
 import tonyAndClark4 from "assets/images/testimonials/Tony_Clark4.png";
+import SharonCrumley from "assets/images/testimonials/SharonCrumley.jpg";
 
 import "../../App.scss";
 
@@ -72,7 +73,6 @@ const Testimonials = () => {
           image={brianJenkins}
           link="https://www.pictorem.com/912484/Gas%20Clouds.html?iframe=1"
         />
-
         <TestimonialsCard
           title="Dr. Gladys and Dean Yarbrough"
           subTitle="Verified Purchaser"
@@ -101,7 +101,6 @@ const Testimonials = () => {
           image={davidMcCall}
           link="https://www.pictorem.com/912517/Storm.html?iframe=1"
         />
-
         <TestimonialsCard
           title="Tony and Clark Duncan"
           subTitle="Verified Purchasers"
@@ -109,6 +108,16 @@ const Testimonials = () => {
 "
           image={tonyAndClark1}
           link="https://www.pictorem.com/912431/Brown%20Brothers%20Tribe.html?iframe=1"
+        />
+        <TestimonialsCard
+          title="Sharon Crumley"
+          subTitle="Verified Purchaser"
+          description="Regina's art is a great addition to my art collection. It
+        adds visual texture and allows the viewer to interpret the art from
+        their perspective. I love it! Regina your art on your website is
+        wonderful! I see why you have great success! Keep going! "
+          image={SharonCrumley}
+          link=""
         />
         <TestimonialsCard
           title="Del Sayles Owen"
