@@ -15,6 +15,7 @@ import tonyAndClark2 from "assets/images/testimonials/Tony_Clark2.png";
 import tonyAndClark3 from "assets/images/testimonials/Tony_Clark3.png";
 import tonyAndClark4 from "assets/images/testimonials/Tony_Clark4.png";
 import SharonCrumley from "assets/images/testimonials/SharonCrumley.jpg";
+import janetBivens from "assets/images/testimonials/janetBivens.png";
 
 import "../../App.scss";
 
@@ -65,6 +66,13 @@ const Testimonials = () => {
         college squad every day, minus the work!"
           image={shonaCurry}
           link="https://www.pictorem.com/912508/Color%20Me%20Love.html?iframe=1"
+        />
+        <TestimonialsCard
+          title="Janet Bivens"
+          subTitle="Verified Purchasers"
+          description="Midnight Quiet is an elegant piece. The splashes of colors are vibrant against a blue black background. When I look at I feel as though I am being drawn into another world like a fine jazz solo."
+          image={janetBivens}
+          link="https://www.pictorem.com/1987512/Midnight%20Quiet.html?iframe=1"
         />
         <TestimonialsCard
           title="Brian Jenkins"
