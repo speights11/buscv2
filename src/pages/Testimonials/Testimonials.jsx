@@ -68,7 +68,7 @@ const Testimonials = () => {
           link="https://www.pictorem.com/912508/Color%20Me%20Love.html?iframe=1"
         />
         <TestimonialsCard
-          title="Janet Bivens"
+          title="Dr. Janet Bivens"
           subTitle="Verified Purchasers"
           description="Midnight Quiet is an elegant piece. The splashes of colors are vibrant against a blue black background. When I look at I feel as though I am being drawn into another world like a fine jazz solo."
           image={janetBivens}
