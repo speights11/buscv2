@@ -69,7 +69,7 @@ const Testimonials = () => {
         />
         <TestimonialsCard
           title="Dr. Janet Bivens"
-          subTitle="Verified Purchasers"
+          subTitle="Verified Purchaser"
           description="Midnight Quiet is an elegant piece. The splashes of colors are vibrant against a blue black background. When I look at I feel as though I am being drawn into another world like a fine jazz solo."
           image={janetBivens}
           link="https://www.pictorem.com/1987512/Midnight%20Quiet.html?iframe=1"
@@ -83,7 +83,7 @@ const Testimonials = () => {
         />
         <TestimonialsCard
           title="Dr. Gladys and Dean Yarbrough"
-          subTitle="Verified Purchaser"
+          subTitle="Verified Purchasers"
           description="Regina’s artwork will entice and delight your senses. Her vibrant use of color and texture is mesmerizing. We are pleased with our purchase and will add more of Regina’s fine work to our collection soon."
           image={gladysAndDean}
           link="https://www.pictorem.com/2003020/Ocean%20Bubbles.html?iframe=1"
