@@ -16,6 +16,7 @@ import tonyAndClark3 from "assets/images/testimonials/Tony_Clark3.png";
 import tonyAndClark4 from "assets/images/testimonials/Tony_Clark4.png";
 import SharonCrumley from "assets/images/testimonials/SharonCrumley.jpg";
 import janetBivens from "assets/images/testimonials/janetBivens.png";
+import delAndTony from "assets/images/testimonials/DelandDavidO.png";
 
 import "../../App.scss";
 
@@ -148,6 +149,13 @@ const Testimonials = () => {
 "
           image={tonyAndClark3}
           link="https://www.pictorem.com/912509/Free%20Mold.html?iframe=1"
+        />
+        <TestimonialsCard
+          title="Del and David O"
+          subTitle="Verified Purchasers"
+          description="We had an unremarkable sliver of wall and this piece has now made it shine!  It brings beautiful colors and delicious textures together to feed the soul. Thank you Reggie S!"
+          image={delAndTony}
+          link="https://www.pictorem.com/912478/Eye%20Of%20Light.html?iframe=1"
         />
         <TestimonialsCard
           title="Dr. Lula Ballton"
