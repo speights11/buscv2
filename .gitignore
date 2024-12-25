@@ -1,6 +1,7 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 notes.txt
+CCA-Setup-3.5.4.msi
 
 # dependencies
 /node_modules

@@ -22,9 +22,10 @@ $Zeyada: "Zeyada", cursive;
   margin: 0 0 1px 0;
   padding: 0;
   overflow: hidden;
-  background: url("assets/images/Banner-bg.png");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: #a6a27d;
+  // background: url("assets/images/Banner-bg.png");
+  // background-repeat: no-repeat;
+  // background-size: cover;
   border-bottom: 6px ridge rgb(74, 73, 73);
   // border-bottom: 4px ridge rgb(9, 86, 221);
 
@@ -38,7 +39,7 @@ $Zeyada: "Zeyada", cursive;
 .HeaderTitle {
   margin: auto;
   font-family: "Allura", cursive;
-  font-size: 4.0vmax;
+  font-size: 4vmax;
   font-weight: 800;
   text-align: center;
   width: 60vw;
@@ -72,7 +73,7 @@ $Zeyada: "Zeyada", cursive;
   margin: 0px auto 5vh auto;
   width: 50vw;
   text-align: center;
-  background-color: aliceblue;
+  // background-color: aliceblue;
   border: 1px solid rgb(41, 41, 43);
   box-shadow: 10px 10px 8px 2px #888888;
 
@@ -123,8 +124,8 @@ $Zeyada: "Zeyada", cursive;
   width: 98vw;
   margin: 1% auto;
   border: 4px inset rgb(206, 202, 202);
-  background-color: #cccccc;
-  background-image: url("assets/images/panel.jpg");
+  // background-color: #cccccc;
+  // background-image: url("assets/images/panel.jpg");
   // background-image: url("assets/images/MahagonyGrain.jpg");
   // background-repeat: no-repeat;
   // background-size: cover;
@@ -142,7 +143,7 @@ $Zeyada: "Zeyada", cursive;
   padding: 10px;
   border: 1px solid black;
   border-radius: 10px;
-  background-color: #5c5eff;
+  // background-color: #5c5eff;
   font-weight: 700;
   text-align: center;
 }
@@ -158,9 +159,9 @@ $Zeyada: "Zeyada", cursive;
   justify-content: space-around;
   width: 100%;
   height: 97%;
-  background-image: url("assets/images/bg.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  // background-image: url("assets/images/bg.jpg");
+  // background-repeat: no-repeat;
+  // background-size: cover;
 
   & img {
     height: 70vh;
@@ -185,10 +186,9 @@ $Zeyada: "Zeyada", cursive;
     border: 3px inset #cccccc;
     border-radius: 10px;
     padding: 5px 8px;
-    background: url("assets/images/bg.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-
+    // background: url("assets/images/bg.jpg");
+    // background-repeat: no-repeat;
+    // background-size: cover;
 
     & h4 {
       padding-top: 10vh;
@@ -202,7 +202,7 @@ $Zeyada: "Zeyada", cursive;
   padding: 10px 30px;
   overflow: hidden;
   border: 3px inset black;
-  background-color: #888888;
+  // background-color: #888888;
 }
 
 #carousel-header {
@@ -215,7 +215,7 @@ $Zeyada: "Zeyada", cursive;
 
 #slide-img {
   width: 28vw;
-  height: 30vw;
+  height: 30vh;
   border: 2px solid black;
   border-radius: 10px;
 }
@@ -232,7 +232,7 @@ $Zeyada: "Zeyada", cursive;
   width: 65vw;
   margin: 1vh auto 5vh auto;
   padding: 0px 0px 2vh 0px;
-  background-color: aliceblue;
+  // background-color: aliceblue;
   border: 1px solid #cccccc;
   box-shadow: 10px 10px 8px 2px #888888;
 }
@@ -257,7 +257,7 @@ $Zeyada: "Zeyada", cursive;
   margin: 5vh auto;
   border: 1px solid gray;
   border-style: double;
-  background-color: aliceblue;
+  // background-color: aliceblue;
   border-radius: 8px;
 
   & h1 {
@@ -361,23 +361,19 @@ $Zeyada: "Zeyada", cursive;
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
 
-
 // ****************************************************
 // ***************** MEDIA QUERIES ********************
 // ****************************************************
 
-
 // Macbook Pro and xtra large Monitors
 @media screen and (min-device-width: 2800px) {
-
-
   .keep-in-touch {
     & h1 {
       font-size: 1.5vw;
     }
 
     & p {
-      font-size: 1.0vw;
+      font-size: 1vw;
     }
   }
 
@@ -394,7 +390,6 @@ $Zeyada: "Zeyada", cursive;
       font-size: 0.8vw;
     }
   }
-
 }
 
 // Large Monitors - solid green
@@ -405,10 +400,12 @@ $Zeyada: "Zeyada", cursive;
 }
 
 // IPAD Pro - dashed purple
-@media only screen and (max-width: 1024px) and (min-height: 1366px) {}
+@media only screen and (max-width: 1024px) and (min-height: 1366px) {
+}
 
 // Small, Older Monitors - solid purple
-@media only screen and (max-width: 1024px) {}
+@media only screen and (max-width: 1024px) {
+}
 
 // Tablet Only - dashed orange
 @media only screen and (min-width: 768px) and (max-width: 980px) {
@@ -454,7 +451,7 @@ $Zeyada: "Zeyada", cursive;
   }
 
   .HeaderTitle {
-    font-size: 6.0vmin;
+    font-size: 6vmin;
     // width: auto;
   }
 
@@ -466,20 +463,20 @@ $Zeyada: "Zeyada", cursive;
 
 // iPhone 13 and iPhone 13 Pro
 /* 2532x1170 pixels at 460ppi */
-@media only screen and (device-width: 390px) and (device-height: 844px) and (device-pixel-ratio: 3) {}
+@media only screen and (device-width: 390px) and (device-height: 844px) and (device-pixel-ratio: 3) {
+}
 
 // Smartphone Only
 @media only screen and (max-width: 767px) {
-
   .app-frame {
     grid-template-rows: 30vh 1fr;
   }
 
   .header {
     flex-direction: column;
-    background-color: #888888;
+    // background-color: #888888;
     // background: none;
-    background: url("assets/images/Mobile-Banner-bg.png");
+    // background: url("assets/images/Mobile-Banner-bg.png");
 
     & img {
       // padding-top: 5vw;
@@ -542,7 +539,7 @@ $Zeyada: "Zeyada", cursive;
   }
 
   .HeaderTitle {
-    font-size: 6.0vmin;
+    font-size: 6vmin;
     width: auto;
   }
 

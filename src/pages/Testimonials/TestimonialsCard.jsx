@@ -86,8 +86,9 @@ const TestimonialsCard = (props) => {
       <Card
         raised={true}
         sx={{
-          maxWidth: "30vw",
-          minWidth: "20vw",
+          width: "30vw",
+          height: "100%",
+          // minWidth: "20vw",
           ":hover": {
             boxShadow: 24,
           },
