@@ -3,6 +3,7 @@ import TestimonialsCard from "./TestimonialsCard";
 import shonaCurry from "assets/images/testimonials/Shona_Curry.png";
 import davidMcCall from "assets/images/testimonials/David McCall.png";
 import darrellBrown from "assets/images/testimonials/Darrell Brown.png";
+import kelechi from "assets/images/testimonials/Kelechi.jpg";
 import gladysAndDean from "assets/images/testimonials/Gladys and Dean.jpg";
 import kelvin from "assets/images/testimonials/Kelvin Brown.png";
 import jazzie from "assets/images/testimonials/Jazzie.jpg";
@@ -74,6 +75,13 @@ const Testimonials = () => {
           description="Midnight Quiet is an elegant piece. The splashes of colors are vibrant against a blue black background. When I look at I feel as though I am being drawn into another world like a fine jazz solo."
           image={janetBivens}
           link="https://www.pictorem.com/1987512/Midnight%20Quiet.html?iframe=1"
+        />
+        <TestimonialsCard
+          title="Kelechi Ubozoh"
+          subTitle="Verified Purchaser"
+          description="There is so much movement and play in this piece. I was originally drawn to the colors and shapes, but what especially strikes me is the conversation around the liminal space of being free and bound simultaneously"
+          image={kelechi}
+          link="https://www.pictorem.com/912517/Storm.html?iframe=1"
         />
         <TestimonialsCard
           title="Brian Jenkins"
