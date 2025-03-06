@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import Carousel from "components/Carousel";
+import Sale from "./Sale";
 // import { MediaPlayer, MediaProvider, Poster } from "@vidstack/react";
 // import {
 //   PlyrLayout,
@@ -30,7 +31,9 @@ const Home = () => {
     <>
       <div className="home-content">
         <div className="home-image-frame">
+          <Sale/>
           <img src={gina} alt="Gina at 1st annual art show" />
+          <Sale/>
         </div>
         <br />
         <div className="carousel-container">
