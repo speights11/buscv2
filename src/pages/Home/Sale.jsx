@@ -15,7 +15,7 @@ const Sale = () => {
                     <div className="sale-body">All art pieces</div>
                     <div className="sale-body">up to 25% off!</div>
                 </div>
-                <div className="sale-disclaimer">Sale prices valid on orders completed by Midnight, March 31, 2025.</div>
+                <div className="sale-disclaimer">Sale prices valid on orders completed by Midnight, Jun 20, 2025.</div>
             </div>
         </>
     );
