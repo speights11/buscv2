@@ -18,6 +18,7 @@ import tonyAndClark4 from "assets/images/testimonials/Tony_Clark4.png";
 import SharonCrumley from "assets/images/testimonials/SharonCrumley.jpg";
 import janetBivens from "assets/images/testimonials/janetBivens.png";
 import delAndTony from "assets/images/testimonials/DelandDavidO.png";
+import jr from "assets/images/testimonials/jr.jpg";
 
 import "../../App.scss";
 
@@ -103,6 +104,13 @@ const Testimonials = () => {
           description="I love the art from Being Us Creations! There’s so many styles to choose from."
           image={jazzie}
           link="https://www.pictorem.com/912487/Scanners.html?iframe=1"
+        />
+        <TestimonialsCard
+          title="Joseph Richards Jr."
+          subTitle="Verified Purchaser"
+          description="Reggie S.’s artistic portrayal of “Kenny the Drummer Boy” is a beautiful depiction of her brother and my best friend, Kenny, who loved playing the drums.  I was blown away by her ability to capture Kenny in his element.  The creative vision was spiritual, emotional, and inspirational - seeing Kenny placed  in the middle of the piece with angels by his side, a heavenly chorus behind him and Kenny, while playing, is supported by the hands of God.  What a great imagination, beautiful symbolism, and a wonderful message.  The use of ethnic colors and dark tones gives the painting a perfect setting.  Reggie S. is a gifted artist who pours her heart and soul into her work."
+          image={jr}
+          link="https://www.pictorem.com/951459/drummer-boy/?iframe=1"
         />
         <TestimonialsCard
           title="Kelvin Brown"
