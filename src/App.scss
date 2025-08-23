@@ -108,7 +108,7 @@ $Zeyada: "Zeyada", cursive;
   overflow-x: hidden;
 }
 
-.sale-div{
+.sale-div {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -121,29 +121,39 @@ $Zeyada: "Zeyada", cursive;
   padding: 2vw 0px;
 }
 
-.sale-cell{
+.sale-cell {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 5vh;;
+  margin-bottom: 5vh;
 }
 
-.sale-title{
+.sale-title {
   display: flex;
-  margin: auto 10px ;
+  margin: auto 10px;
   font-family: $Sacramento;
   font-size: 2.5vw;
 }
 
-.sale-body{
+.sale-body {
   font-family: $Cinzel;
   font-size: 1.5vw;
 }
 
-.sale-disclaimer{
+.sale-disclaimer {
   width: 100%;
   margin: auto;
   text-align: center;
+}
+
+.upcoming-content {
+  margin-bottom: 30px;
+  padding: 30px;
+  background-image: url("./assets/images/Events/background.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  background-attachment: fixed;
 }
 
 .testimonial-header {

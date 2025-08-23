@@ -11,6 +11,7 @@ import HomeIcon from "@mui/icons-material/Home";
 import ContactPageIcon from "@mui/icons-material/ContactPage";
 import CollectionsIcon from "@mui/icons-material/Collections";
 import TestimonialsIcon from "@mui/icons-material/ThumbUp";
+import TheatersIcon from '@mui/icons-material/Theaters';
 import { isMobileOnly, isTablet } from "react-device-detect";
 import PropTypes from "prop-types";
 import logo from "assets/images/logo.png";
@@ -24,7 +25,7 @@ const Main = forwardRef(({ children }, ref) => {
   Main.displayName = "Main";
   const [pageNumber, setPageNumber] = useState(0);
   const navigate = useNavigate();
-  const routePath = ["/home", "/gallery", "/testimonials", "/contact"];
+  const routePath = ["/home", "/gallery", "/upcoming", "/testimonials", "/contact"];
 
   const setPage = (requestedPage) => {
     logger.debug(`setPage: ${requestedPage}  CurrentPage: ${pageNumber}`);
@@ -91,14 +92,22 @@ const Main = forwardRef(({ children }, ref) => {
               <Tab
                 key={2}
                 value={2}
+                icon={<TheatersIcon />}
+                aria-label="upcoming"
+                label="upcoming events"
+                sx={{ fontSize: _fontSz, fontWeight: 800 }}
+              />
+              <Tab
+                key={3}
+                value={3}
                 icon={<TestimonialsIcon />}
                 aria-label="testimonials"
                 label="testimonials"
                 sx={{ fontSize: _fontSz, fontWeight: 800 }}
               />
               <Tab
-                key={3}
-                value={3}
+                key={4}
+                value={4}
                 icon={<ContactPageIcon />}
                 aria-label="contact"
                 label="contact us"
