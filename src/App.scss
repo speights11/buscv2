@@ -6,6 +6,17 @@ $Sevillana: "Sevillana", cursive;
 $Monsieur: "Monsieur La Doulaise", cursive;
 $Zeyada: "Zeyada", cursive;
 
+.single-icon-row {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  margin: auto;
+}
+
+.dual-icon-row {
+  display: grid;
+  grid-template-columns: 30px 30px 1fr;
+}
+
 .app-frame {
   display: grid;
   grid-template-rows: 12vh 1fr;
