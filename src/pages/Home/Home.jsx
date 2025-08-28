@@ -50,11 +50,11 @@ const Home = () => {
             </Box>
           </Grid>
         </Grid>
-        <Grid container size={12} sx={{ p: 5 }}>
+        <Grid container size={12} sx={{ p: 2 }}>
           <Grid size={12} sx={{ py: 2, textAlign: "center", marginBottom: 5 }}>
-            <Typography variant="h5" sx={{ fontSize: "2.0vw" }}>
-              See Gallery for Paintings and photographs available in a wide
-              array of options, such as:
+            <Typography variant="h5" sx={{ fontSize: "1.9vmax" }}>
+              Browse our Gallery for Paintings and Photographs available in a
+              wide array of options, such as:
             </Typography>
           </Grid>
 
