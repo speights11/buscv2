@@ -1,3 +1,4 @@
+/* eslint-disable spaced-comment */
 import React, {
   useState,
   useEffect,
@@ -11,7 +12,8 @@ import HomeIcon from "@mui/icons-material/Home";
 import ContactPageIcon from "@mui/icons-material/ContactPage";
 import CollectionsIcon from "@mui/icons-material/Collections";
 import TestimonialsIcon from "@mui/icons-material/ThumbUp";
-import TheatersIcon from '@mui/icons-material/Theaters';
+//TODO: Add UpcomingEvents
+// import TheatersIcon from '@mui/icons-material/Theaters';
 import { isMobileOnly, isTablet } from "react-device-detect";
 import PropTypes from "prop-types";
 import logo from "assets/images/logo.png";
@@ -57,6 +59,8 @@ const Main = forwardRef(({ children }, ref) => {
     }
   };
 
+  //TODO: Add UpcomingEvents - line93
+
   return (
     <div className="app-frame">
       <div className="header">
@@ -89,14 +93,14 @@ const Main = forwardRef(({ children }, ref) => {
                 label="gallery"
                 sx={{ fontSize: _fontSz, fontWeight: 800 }}
               />
-              <Tab
+              {/* <Tab
                 key={2}
                 value={2}
                 icon={<TheatersIcon />}
                 aria-label="upcoming"
                 label="upcoming events"
                 sx={{ fontSize: _fontSz, fontWeight: 800 }}
-              />
+              /> */}
               <Tab
                 key={3}
                 value={3}

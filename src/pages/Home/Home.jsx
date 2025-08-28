@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import Carousel from "components/Carousel";
-import Sale from "./Sale";
+import { Grid, Box } from "@mui/material";
+import Image from "mui-image";
 // import { MediaPlayer, MediaProvider, Poster } from "@vidstack/react";
 // import {
 //   PlyrLayout,
@@ -30,11 +31,9 @@ const Home = () => {
   return (
     <>
       <div className="home-content">
-        <div className="home-image-frame">
-          <Sale/>
-          <img src={gina} alt="Gina at 1st annual art show" />
-          <Sale/>
-        </div>
+        <Grid container size={12} sx={{ m: 2, p: 2 }} display="flex" flexDirection="row" justifyContent="center">
+          <Grid size={{ xs: 12, md: 7 }}><Box><Image src={gina} alt="Gina at 1st annual art show" /></Box></Grid>
+        </Grid>
         <br />
         <div className="carousel-container">
           <p id="carousel-header">
@@ -45,23 +44,6 @@ const Home = () => {
         </div>
         <br />
         <hr />
-        {/* <div className="intro">
-          <img src={skin} alt="Image of Reggie S. as a child" />
-           <MediaPlayer
-            title="The room where it happens"
-            src="/GinasProcessOne.mp4"
-            playsInline
-          >
-            <MediaProvider>
-              <Poster
-                className="vds-poster"
-                src={skin}
-                alt="Picture of Reggie S. as a child with giant paint brushes as background."
-              />
-            </MediaProvider>
-            <PlyrLayout icons={plyrLayoutIcons} />
-          </MediaPlayer> 
-        </div> */}
         <br />
       </div>
     </>

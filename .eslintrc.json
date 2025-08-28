@@ -9,9 +9,11 @@
       "files": ["**/*.spec.js", "**/*.test.js"],
       "env": {
         "jest": true
-      }
+      },
+      "rules": { "spaced-comment": "off" }
     }
   ],
+  "rules": { "spaced-comment": "off" },
   "parser": "@babel/eslint-parser",
   "parserOptions": {
     "requireConfigFile": false,
