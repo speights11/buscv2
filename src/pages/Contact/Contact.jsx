@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Button, FormControl, TextField } from "@mui/material";
+import { Button, FormControl, TextField, Box } from "@mui/material";
 import { callAwsEmailSvc } from "components/EmailService";
 import InputAdornment from "@mui/material/InputAdornment";
 import EmailIcon from "@mui/icons-material/Email";
@@ -58,18 +58,20 @@ const Contact = () => {
 
   return (
     <>
-      <div className="billing">
-        <h2>ATTENTION</h2>
-        <h3>
-          For all questions pertaining to order status or billing,
-          <br /> please contact our drop shipper at:
-        </h3>
-        <p>Tel: 1-800-650-5301</p>
-        <p>Fax: 514-504-2061</p>
-        <p>
-          <a href="mailto:billing@pictorem.com">billing@pictorem.com</a>
-        </p>
-      </div>
+      <Box sx={{ py: 5 }}>
+        <div className="billing">
+          <h2>ATTENTION</h2>
+          <h3>
+            For all questions pertaining to order status or billing,
+            <br /> please contact our drop shipper at:
+          </h3>
+          <p>Tel: 1-800-650-5301</p>
+          <p>Fax: 514-504-2061</p>
+          <p>
+            <a href="mailto:billing@pictorem.com">billing@pictorem.com</a>
+          </p>
+        </div>
+      </Box>
 
       <div className="contact-form">
         <h1>PLease join our mailing list</h1>
