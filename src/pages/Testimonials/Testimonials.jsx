@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import Grid from "@mui/material/Grid";
 import TestimonialsCard from "./TestimonialsCard";
 import shonaCurry from "assets/images/testimonials/Shona_Curry.png";
 import davidMcCall from "assets/images/testimonials/David McCall.png";
@@ -40,7 +41,16 @@ const Testimonials = () => {
   return (
     <>
       <div className="testimonial-header">The Wall</div>
-      <div className="testimonials-content">
+      <Grid
+        container
+        sx={{ width: "100%" }}
+        size={12}
+        rowSpacing={1}
+        columnSpacing={{ xs: 1, sm: 1, md: 1, lg: 1 }}
+        display="flex"
+        flexDirection="row"
+        justifyContent="space-between"
+      >
         <TestimonialsCard
           title="Darrell Brown"
           subTitle="Verified Purchaser"
@@ -52,7 +62,7 @@ const Testimonials = () => {
           title="Tony and Clark Duncan"
           subTitle="Verified Purchasers"
           description="Beautifully fierce! What I love about Regina’s paintings is the way that she often addresses relevant social issues in an artistic form.  Whether sending a message or doing Freeform, all of her art speaks to her passion for life and the kind spirit she displays every day.
-"
+  "
           image={tonyAndClark2}
           link="https://www.pictorem.com/1974226/Booked.html?iframe=1"
         />
@@ -60,13 +70,13 @@ const Testimonials = () => {
           title="Shona Curry"
           subTitle="Verified Purchaser"
           description="This painting is like a visual caffeine hit for my nostalgia, capturing
-        the vibrant chaos of my Georgia State University days with a brush
-        dipped in pure joy. Every stroke teems with the energy of our dynamic,
-        diverse crew, making it impossible to look at it without grinning like a
-        fool. Kudos to Regina (my forever colleague & mentor) and small business
-        dynamo who managed to bottle our collective spirit into this
-        masterpiece. Hanging it on my wall is like having a reunion with my
-        college squad every day, minus the work!"
+          the vibrant chaos of my Georgia State University days with a brush
+          dipped in pure joy. Every stroke teems with the energy of our dynamic,
+          diverse crew, making it impossible to look at it without grinning like a
+          fool. Kudos to Regina (my forever colleague & mentor) and small business
+          dynamo who managed to bottle our collective spirit into this
+          masterpiece. Hanging it on my wall is like having a reunion with my
+          college squad every day, minus the work!"
           image={shonaCurry}
           link="https://www.pictorem.com/912508/Color%20Me%20Love.html?iframe=1"
         />
@@ -130,7 +140,7 @@ const Testimonials = () => {
           title="Tony and Clark Duncan"
           subTitle="Verified Purchasers"
           description="Beautifully fierce! What I love about Regina’s paintings is the way that she often addresses relevant social issues in an artistic form.  Whether sending a message or doing Freeform, all of her art speaks to her passion for life and the kind spirit she displays every day.
-"
+  "
           image={tonyAndClark1}
           link="https://www.pictorem.com/912431/Brown%20Brothers%20Tribe.html?iframe=1"
         />
@@ -138,9 +148,9 @@ const Testimonials = () => {
           title="Sharon Crumley"
           subTitle="Verified Purchaser"
           description="Regina's art is a great addition to my art collection. It
-        adds visual texture and allows the viewer to interpret the art from
-        their perspective. I love it! Regina your art on your website is
-        wonderful! I see why you have great success! Keep going! "
+          adds visual texture and allows the viewer to interpret the art from
+          their perspective. I love it! Regina your art on your website is
+          wonderful! I see why you have great success! Keep going! "
           image={SharonCrumley}
           link="https://www.pictorem.com/912437/Hey%20Ladies.html?iframe=1"
         />
@@ -162,7 +172,7 @@ const Testimonials = () => {
           title="Tony and Clark Duncan"
           subTitle="Verified Purchasers"
           description="Beautifully fierce! What I love about Regina’s paintings is the way that she often addresses relevant social issues in an artistic form.  Whether sending a message or doing Freeform, all of her art speaks to her passion for life and the kind spirit she displays every day.
-"
+  "
           image={tonyAndClark3}
           link="https://www.pictorem.com/912509/Free%20Mold.html?iframe=1"
         />
@@ -184,11 +194,11 @@ const Testimonials = () => {
           title="Tony and Clark Duncan"
           subTitle="Verified Purchasers"
           description="Beautifully fierce! What I love about Regina’s paintings is the way that she often addresses relevant social issues in an artistic form.  Whether sending a message or doing Freeform, all of her art speaks to her passion for life and the kind spirit she displays every day.
-"
+  "
           image={tonyAndClark4}
           link="https://www.pictorem.com/912460/Own%20World.html?iframe=1"
         />
-      </div>
+      </Grid>
       <div className="testimonial-instructions">
         Want to add your picture to the testimonials wall? Email us at{" "}
         <a href="mailto:beignuscreations@gmail.com">

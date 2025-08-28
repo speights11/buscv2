@@ -1,4 +1,5 @@
 import React, { useState, useRef } from "react";
+import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
 import CardHeader from "@mui/material/CardHeader";
 import CardMedia from "@mui/material/CardMedia";
@@ -82,11 +83,17 @@ const TestimonialsCard = (props) => {
   };
 
   return (
-    <div>
+    <Grid
+      display="flex"
+      flexDirection="row"
+      justifyContent="space-around"
+      size={{ sm: 12, md: 5.5, lg: 3.5 }}
+      m={{ sm: 15, md: 2, lg: 2 }}
+    >
       <Card
         raised={true}
         sx={{
-          width: "30vw",
+          width: "100%",
           height: "100%",
           // minWidth: "20vw",
           ":hover": {
@@ -206,12 +213,12 @@ const TestimonialsCard = (props) => {
             <div>
               <CardActions>
                 {/* <PinterestShareButton
-                  url="https://www.beinguscreations.com"
-                  media={"https://www.beinguscreations.com/siteImg.png"}
-                  beforeOnClick={() => handleClose()}
-                >
-                  <PinterestIcon size={iconSize} round={true} />
-                </PinterestShareButton> */}
+                    url="https://www.beinguscreations.com"
+                    media={"https://www.beinguscreations.com/siteImg.png"}
+                    beforeOnClick={() => handleClose()}
+                  >
+                    <PinterestIcon size={iconSize} round={true} />
+                  </PinterestShareButton> */}
                 <FacebookShareButton
                   url="https://www.beinguscreations.com"
                   beforeOnClick={() => handleClose()}
@@ -239,7 +246,7 @@ const TestimonialsCard = (props) => {
           </DialogContent>
         </Dialog>
       </Card>
-    </div>
+    </Grid>
   );
 };
 
