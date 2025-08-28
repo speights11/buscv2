@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import Carousel from "components/Carousel";
-import { Grid, Box } from "@mui/material";
+import { Grid, Box, Typography } from "@mui/material";
 import Image from "mui-image";
 // import { MediaPlayer, MediaProvider, Poster } from "@vidstack/react";
 // import {
@@ -31,20 +31,44 @@ const Home = () => {
   return (
     <>
       <div className="home-content">
-        <Grid container size={12} sx={{ m: 2, p: 2 }} display="flex" flexDirection="row" justifyContent="center">
-          <Grid size={{ xs: 12, md: 7 }}><Box><Image src={gina} alt="Gina at 1st annual art show" /></Box></Grid>
+        <Grid
+          container
+          size={12}
+          sx={{ p: 2 }}
+          display="flex"
+          flexDirection="row"
+          justifyContent="center"
+        >
+          <Grid
+            size={12}
+            display="flex"
+            flexDirection="row"
+            justifyContent="center"
+          >
+            <Box sx={{ width: "85%" }}>
+              <Image src={gina} alt="Gina at 1st annual art show" />
+            </Box>
+          </Grid>
         </Grid>
-        <br />
-        <div className="carousel-container">
-          <p id="carousel-header">
-            See Gallery for Paintings and photographs available in a wide array
-            of options, such as:
-          </p>
-          <Carousel />
-        </div>
-        <br />
-        <hr />
-        <br />
+        <Grid container size={12} sx={{ p: 5 }}>
+          <Grid size={12} sx={{ py: 2, textAlign: "center", marginBottom: 5 }}>
+            <Typography variant="h5" sx={{ fontSize: "2.0vw" }}>
+              See Gallery for Paintings and photographs available in a wide
+              array of options, such as:
+            </Typography>
+          </Grid>
+
+          <Grid size={12} sx={{ marginLeft: 2, marginBottom: 10 }}>
+            <Box
+              sx={{ width: "100%" }}
+              display="flex"
+              flexDirection="row"
+              justifyContent="center"
+            >
+              <Carousel />
+            </Box>
+          </Grid>
+        </Grid>
       </div>
     </>
   );

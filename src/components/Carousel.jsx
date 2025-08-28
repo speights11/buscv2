@@ -1,6 +1,9 @@
+/* eslint-disable */
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow } from "swiper/modules";
+import Image from "mui-image";
+import Box from "@mui/material/Box";
 
 import "swiper/css";
 import "swiper/css/effect-coverflow";
@@ -22,8 +25,7 @@ import slideImg12 from "assets/images/carousel/slide12.png";
 const Carousel = (props) => {
   return (
     <Swiper
-      spaceBetween={40}
-      slidesPerView={3}
+      spaceBetween={50}
       autoplay={true}
       speed={800}
       effect={"coverflow"}
@@ -35,67 +37,139 @@ const Carousel = (props) => {
         modifier: 1,
         slideShadows: true,
       }}
+      breakpoints={{
+        // when window width is >= 640px
+        640: {
+          slidesPerView: 1, // small screens
+          spaceBetween: 0,
+        },
+        // when window width is >= 1500px
+        1500: {
+          slidesPerView: 3, //  large screens
+          spaceBetween: 40,
+        },
+      }}
       modules={[EffectCoverflow]}
     >
       <SwiperSlide>
-        <div className="slide-container">
-          <img src={slideImg1} />
-        </div>
+        <Box
+          display="flex"
+          flexDirection="row"
+          justifyContent="center"
+          sx={{ width: "90%", height: "70vmin" }}
+        >
+          <Image fit="contain" src={slideImg1} />
+        </Box>
       </SwiperSlide>
       <SwiperSlide>
-        <div className="slide-container">
-          <img src={slideImg2} />
-        </div>
+        <Box
+          display="flex"
+          flexDirection="row"
+          justifyContent="center"
+          sx={{ width: "90%", height: "70vmin" }}
+        >
+          <Image fit="contain" src={slideImg2} />
+        </Box>
       </SwiperSlide>
       <SwiperSlide>
-        <div className="slide-container">
-          <img src={slideImg3} />
-        </div>
+        <Box
+          display="flex"
+          flexDirection="row"
+          justifyContent="center"
+          sx={{ width: "90%", height: "70vmin" }}
+        >
+          <Image fit="contain" src={slideImg3} />
+        </Box>
       </SwiperSlide>
       <SwiperSlide>
-        <div className="slide-container">
-          <img src={slideImg4} />
-        </div>
+        <Box
+          display="flex"
+          flexDirection="row"
+          justifyContent="center"
+          sx={{ width: "90%", height: "70vmin" }}
+        >
+          <Image fit="contain" src={slideImg4} />
+        </Box>
       </SwiperSlide>
       <SwiperSlide>
-        <div className="slide-container">
-          <img src={slideImg5} />
-        </div>
+        <Box
+          display="flex"
+          flexDirection="row"
+          justifyContent="center"
+          sx={{ width: "90%", height: "70vmin" }}
+        >
+          <Image fit="contain" src={slideImg5} />
+        </Box>
       </SwiperSlide>
       <SwiperSlide>
-        <div className="slide-container">
-          <img src={slideImg6} />
-        </div>
+        <Box
+          display="flex"
+          flexDirection="row"
+          justifyContent="center"
+          sx={{ width: "90%", height: "70vmin" }}
+        >
+          <Image fit="contain" src={slideImg6} />
+        </Box>
       </SwiperSlide>
       <SwiperSlide>
-        <div className="slide-container">
-          <img src={slideImg7} />
-        </div>
+        <Box
+          display="flex"
+          flexDirection="row"
+          justifyContent="center"
+          sx={{ width: "90%", height: "70vmin" }}
+        >
+          <Image fit="contain" src={slideImg7} />
+        </Box>
       </SwiperSlide>
       <SwiperSlide>
-        <div className="slide-container">
-          <img src={slideImg8} />
-        </div>
+        <Box
+          display="flex"
+          flexDirection="row"
+          justifyContent="center"
+          sx={{ width: "90%", height: "70vmin" }}
+        >
+          <Image fit="contain" src={slideImg8} />
+        </Box>
       </SwiperSlide>
       <SwiperSlide>
-        <div className="slide-container">
-          <img src={slideImg9} />
-        </div>
+        <Box
+          display="flex"
+          flexDirection="row"
+          justifyContent="center"
+          sx={{ width: "90%", height: "70vmin" }}
+        >
+          <Image fit="contain" src={slideImg9} />
+        </Box>
       </SwiperSlide>
       <SwiperSlide>
-        <div className="slide-container">
-          <img src={slideImg10} />
-        </div>
+        <Box
+          display="flex"
+          flexDirection="row"
+          justifyContent="center"
+          sx={{ width: "90%", height: "70vmin" }}
+        >
+          <Image fit="contain" src={slideImg10} />
+        </Box>
       </SwiperSlide>
       <SwiperSlide>
-        <div className="slide-container">
-          <img src={slideImg11} />
-        </div>
+        <Box
+          display="flex"
+          flexDirection="row"
+          justifyContent="center"
+          sx={{ width: "90%", height: "70vmin" }}
+        >
+          <Image fit="contain" src={slideImg11} />
+        </Box>
       </SwiperSlide>
       <SwiperSlide>
-        <div className="slide-container">
-          <img src={slideImg12} />
-        </div>
+        <Box
+          display="flex"
+          flexDirection="row"
+          justifyContent="center"
+          sx={{ width: "90%", height: "70vmin" }}
+        >
+          <Image fit="contain" src={slideImg12} />
+        </Box>
       </SwiperSlide>
     </Swiper>
   );

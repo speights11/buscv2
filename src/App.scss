@@ -22,7 +22,6 @@ $Zeyada: "Zeyada", cursive;
   grid-template-rows: 12vh 1fr;
   gap: 0;
   height: 98vh;
-  // background-color: aliceblue;
 }
 
 .header {
@@ -34,16 +33,11 @@ $Zeyada: "Zeyada", cursive;
   padding: 0;
   overflow: hidden;
   background-color: #a6a27d;
-  // background: url("assets/images/Banner-bg.png");
-  // background-repeat: no-repeat;
-  // background-size: cover;
   border-bottom: 6px ridge rgb(74, 73, 73);
-  // border-bottom: 4px ridge rgb(9, 86, 221);
 
   & img {
     width: 10vw;
     margin-left: 2vw;
-    // border: 1px solid red;
   }
 }
 
@@ -55,24 +49,6 @@ $Zeyada: "Zeyada", cursive;
   text-align: center;
   width: 60vw;
   padding: 0;
-  // border: 1px solid red;
-}
-
-.slide-container {
-  display: flex;
-  width: 98%;
-  height: 25vw;
-  padding: 3vh;
-  margin-bottom: 2vh;
-  border-radius: 10px;
-  border: 1px solid rgb(97, 92, 92);
-  box-shadow: 0px 15px 5px 10px rgb(52, 53, 53);
-
-  & img {
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-  }
 }
 
 .links {
@@ -84,7 +60,6 @@ $Zeyada: "Zeyada", cursive;
   margin: 0px auto 5vh auto;
   width: 50vw;
   text-align: center;
-  // background-color: aliceblue;
   border: 1px solid rgb(41, 41, 43);
   box-shadow: 10px 10px 8px 2px #888888;
 
@@ -119,26 +94,6 @@ $Zeyada: "Zeyada", cursive;
   overflow-x: hidden;
 }
 
-.sale-div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  // width: 100%;
-  // height: 40vh;
-  background-color: #a6a27d;
-  border: 4px solid gray;
-  border-radius: 10px;
-  // margin: 10px 3vw;
-  // padding: 2vw 0px;
-}
-
-.sale-cell {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  // margin-bottom: 5vh;
-}
-
 .upcoming-content {
   margin-bottom: 30px;
   padding: 30px;
@@ -165,11 +120,6 @@ $Zeyada: "Zeyada", cursive;
   width: 98vw;
   margin: 1% auto;
   border: 4px inset rgb(206, 202, 202);
-  // background-color: #cccccc;
-  // background-image: url("assets/images/panel.jpg");
-  // background-image: url("assets/images/MahagonyGrain.jpg");
-  // background-repeat: no-repeat;
-  // background-size: cover;
 }
 
 .testimonial-instructions {
@@ -184,7 +134,6 @@ $Zeyada: "Zeyada", cursive;
   padding: 10px;
   border: 1px solid black;
   border-radius: 10px;
-  // background-color: #5c5eff;
   font-weight: 700;
   text-align: center;
 }
@@ -200,15 +149,9 @@ $Zeyada: "Zeyada", cursive;
   justify-content: space-around;
   width: 100%;
   height: 97%;
-  // background-image: url("assets/images/bg.jpg");
-  // background-repeat: no-repeat;
-  // background-size: cover;
 
   & img {
     height: 70vh;
-    // width: 70vw;
-    // max-inline-size: 100%;
-    // block-size: auto;
   }
 }
 
@@ -227,9 +170,6 @@ $Zeyada: "Zeyada", cursive;
     border: 3px inset #cccccc;
     border-radius: 10px;
     padding: 5px 8px;
-    // background: url("assets/images/bg.jpg");
-    // background-repeat: no-repeat;
-    // background-size: cover;
 
     & h4 {
       padding-top: 10vh;
@@ -238,12 +178,9 @@ $Zeyada: "Zeyada", cursive;
 }
 
 .carousel-container {
-  width: 86%;
-  margin: auto;
-  padding: 10px 30px;
   overflow: hidden;
   border: 3px inset black;
-  // background-color: #888888;
+  border-radius: "8px";
 }
 
 #carousel-header {
@@ -251,7 +188,6 @@ $Zeyada: "Zeyada", cursive;
   text-align: center;
   font-size: 1.2vw;
   padding: 0%;
-  // border: 1px solid black;
 }
 
 #slide-img {
@@ -273,7 +209,6 @@ $Zeyada: "Zeyada", cursive;
   width: 65vw;
   margin: 1vh auto 5vh auto;
   padding: 0px 0px 2vh 0px;
-  // background-color: aliceblue;
   border: 1px solid #cccccc;
   box-shadow: 10px 10px 8px 2px #888888;
 }
@@ -298,7 +233,6 @@ $Zeyada: "Zeyada", cursive;
   margin: 5vh auto;
   border: 1px solid gray;
   border-style: double;
-  // background-color: aliceblue;
   border-radius: 8px;
 
   & h1 {
@@ -480,25 +414,11 @@ $Zeyada: "Zeyada", cursive;
 // IPad - solid orange
 @media screen and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
   .header {
-    // display: flex;
     grid-template-columns: 1fr 45vw 35vw;
-    // flex-direction: column;
-    // gap: 0;
-    // justify-content: space-around;
-
-    & img {
-      // width: 45vw;
-    }
   }
 
   .HeaderTitle {
     font-size: 6vmin;
-    // width: auto;
-  }
-
-  .links {
-    // font-size: 2.5vw !important;
-    // width: auto;
   }
 }
 
@@ -515,12 +435,8 @@ $Zeyada: "Zeyada", cursive;
 
   .header {
     flex-direction: column;
-    // background-color: #888888;
-    // background: none;
-    // background: url("assets/images/Mobile-Banner-bg.png");
 
     & img {
-      // padding-top: 5vw;
       width: 30vw;
     }
   }
