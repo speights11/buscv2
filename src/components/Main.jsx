@@ -27,9 +27,17 @@ import "App.scss";
 const Main = forwardRef(({ children }, ref) => {
   Main.displayName = "Main";
   const iconSize = {
-    xs: "0.9vw",
-    sm: "0.9vw",
-    md: "0.7vw",
+    xs: 20,
+    sm: 20,
+    md: 35,
+    lg: 30,
+    xl: 40,
+  };
+
+  const iconFontSize = {
+    xs: "1.5vw",
+    sm: "1.2vw",
+    md: "1.0vw",
     lg: "0.5vw",
     xl: "0.7vw",
   };
@@ -84,7 +92,7 @@ const Main = forwardRef(({ children }, ref) => {
           background: "#a6a27d",
         }}
         container
-        width={{ xs: "50%", sm: "50%", md: "50%", lg: "90%", xl: "90%" }}
+        width={{ xs: "90%", sm: "70%", md: "60%", lg: "90%", xl: "90%" }}
         display="flex"
         flexDirection="row"
         justifyContent="center"
@@ -130,23 +138,23 @@ const Main = forwardRef(({ children }, ref) => {
             <Tab
               key={0}
               value={0}
-              icon={<HomeIcon />}
+              icon={<HomeIcon sx={{ fontSize: iconSize }} />}
               aria-label="home"
               label="home"
-              sx={{ fontSize: iconSize, fontWeight: 800 }}
+              sx={{ fontSize: iconFontSize, fontWeight: 800 }}
             />
             <Tab
               key={1}
               value={1}
-              icon={<CollectionsIcon />}
+              icon={<CollectionsIcon sx={{ fontSize: iconSize }} />}
               aria-label="gallery"
               label="gallery"
-              sx={{ fontSize: iconSize, fontWeight: 800 }}
+              sx={{ fontSize: iconFontSize, fontWeight: 800 }}
             />
             {/* <Tab
                   key={2}
                   value={2}
-                  icon={<TheatersIcon />}
+                  icon={<TheatersIcon sx={{fontSize:iconSize}}/>}
                   aria-label="upcoming"
                   label="upcoming events"
                   sx={{ fontSize: iconSize, fontWeight: 800 }}
@@ -154,18 +162,18 @@ const Main = forwardRef(({ children }, ref) => {
             <Tab
               key={3}
               value={3}
-              icon={<TestimonialsIcon />}
+              icon={<TestimonialsIcon sx={{ fontSize: iconSize }} />}
               aria-label="testimonials"
               label="testimonials"
-              sx={{ fontSize: iconSize, fontWeight: 800 }}
+              sx={{ fontSize: iconFontSize, fontWeight: 800 }}
             />
             <Tab
               key={4}
               value={4}
-              icon={<ContactPageIcon />}
+              icon={<ContactPageIcon sx={{ fontSize: iconSize }} />}
               aria-label="contact"
               label="contact us"
-              sx={{ fontSize: iconSize, fontWeight: 800 }}
+              sx={{ fontSize: iconFontSize, fontWeight: 800 }}
             />
           </Tabs>
         </Grid>
