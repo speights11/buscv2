@@ -5,7 +5,10 @@ import React, {
   forwardRef,
   useImperativeHandle,
 } from "react";
+import Image from "mui-image";
 import { useNavigate } from "react-router-dom";
+import Grid from "@mui/material/Grid";
+import Box from "@mui/material/Box";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import HomeIcon from "@mui/icons-material/Home";
@@ -14,25 +17,35 @@ import CollectionsIcon from "@mui/icons-material/Collections";
 import TestimonialsIcon from "@mui/icons-material/ThumbUp";
 //TODO: Add UpcomingEvents
 // import TheatersIcon from '@mui/icons-material/Theaters';
-import { isMobileOnly, isTablet } from "react-device-detect";
+// import { isMobileOnly, isTablet } from "react-device-detect";
 import PropTypes from "prop-types";
 import logo from "assets/images/logo.png";
 import logger from "services/LoggingService.js";
 
 import "App.scss";
 
-const _fontSz = isTablet ? "0.4vmin" : isMobileOnly ? "1.7vmin" : "0.6vw";
-
 const Main = forwardRef(({ children }, ref) => {
   Main.displayName = "Main";
+  const iconSize = {
+    xs: "0.9vw",
+    sm: "0.9vw",
+    md: "0.7vw",
+    lg: "0.5vw",
+    xl: "0.7vw",
+  };
   const [pageNumber, setPageNumber] = useState(0);
   const navigate = useNavigate();
-  const routePath = ["/home", "/gallery", "/upcoming", "/testimonials", "/contact"];
+  const routePath = [
+    "/home",
+    "/gallery",
+    "/upcoming",
+    "/testimonials",
+    "/contact",
+  ];
 
   const setPage = (requestedPage) => {
     logger.debug(`setPage: ${requestedPage}  CurrentPage: ${pageNumber}`);
     if (requestedPage !== pageNumber) {
-      // navigate(routePath[requestedPage]);
       setPageNumber(requestedPage);
     }
   };
@@ -62,67 +75,103 @@ const Main = forwardRef(({ children }, ref) => {
   //TODO: Add UpcomingEvents - line93
 
   return (
-    <div className="app-frame">
-      <div className="header">
-        <div>
-          <img src={logo} alt="BUSC logo" />
-        </div>
-        <div>
-          <p className="HeaderTitle">Being Us Creations</p>
-        </div>
-        <div className="links">
-          <div>
-            <Tabs
-              value={pageNumber}
-              onChange={handleChange}
-              aria-label="icon tabs example"
-            >
-              <Tab
-                key={0}
-                value={0}
-                icon={<HomeIcon />}
-                aria-label="home"
-                label="home"
-                sx={{ fontSize: _fontSz, fontWeight: 800 }}
-              />
-              <Tab
-                key={1}
-                value={1}
-                icon={<CollectionsIcon />}
-                aria-label="gallery"
-                label="gallery"
-                sx={{ fontSize: _fontSz, fontWeight: 800 }}
-              />
-              {/* <Tab
-                key={2}
-                value={2}
-                icon={<TheatersIcon />}
-                aria-label="upcoming"
-                label="upcoming events"
-                sx={{ fontSize: _fontSz, fontWeight: 800 }}
-              /> */}
-              <Tab
-                key={3}
-                value={3}
-                icon={<TestimonialsIcon />}
-                aria-label="testimonials"
-                label="testimonials"
-                sx={{ fontSize: _fontSz, fontWeight: 800 }}
-              />
-              <Tab
-                key={4}
-                value={4}
-                icon={<ContactPageIcon />}
-                aria-label="contact"
-                label="contact us"
-                sx={{ fontSize: _fontSz, fontWeight: 800 }}
-              />
-            </Tabs>
-          </div>
-        </div>
-      </div>
+    <>
+      <Grid
+        sx={{
+          margin: "auto",
+          border: 1,
+          borderRadius: 2,
+          background: "#a6a27d",
+        }}
+        container
+        width={{ xs: "50%", sm: "50%", md: "50%", lg: "90%", xl: "90%" }}
+        display="flex"
+        flexDirection="row"
+        justifyContent="center"
+      >
+        <Grid
+          display="flex"
+          flexDirection="row"
+          justifyContent="center"
+          sx={{ margin: "auto" }}
+          size={{ xs: 12, sm: 12, md: 12, lg: 2, xl: 2 }}
+        >
+          <Box width={{ xs: 100, sm: 100, md: 150, lg: 200, xl: 250 }}>
+            <Image fit="contain" src={logo} alt="BUSC logo" />
+          </Box>
+        </Grid>
+        <Grid
+          display="flex"
+          flexDirection="row"
+          justifyContent="center"
+          sx={{ mx: "auto" }}
+          size={{ xs: 12, sm: 12, md: 12, lg: 5, xl: 5 }}
+        >
+          <Box
+            sx={{ py: { xs: 0, sm: 1, md: 2, lg: 4, xl: 5 } }}
+            class="HeaderTitle"
+          >
+            Being Us Creations
+          </Box>
+        </Grid>
+        <Grid
+          display="flex"
+          flexDirection="row"
+          justifyContent="center"
+          sx={{ margin: "auto" }}
+          size={{ xs: 10, sm: 10, md: 10, lg: 4, xl: 4 }}
+        >
+          <Tabs
+            value={pageNumber}
+            onChange={handleChange}
+            variant="scrollable"
+            aria-label="icon tabs example"
+          >
+            <Tab
+              key={0}
+              value={0}
+              icon={<HomeIcon />}
+              aria-label="home"
+              label="home"
+              sx={{ fontSize: iconSize, fontWeight: 800 }}
+            />
+            <Tab
+              key={1}
+              value={1}
+              icon={<CollectionsIcon />}
+              aria-label="gallery"
+              label="gallery"
+              sx={{ fontSize: iconSize, fontWeight: 800 }}
+            />
+            {/* <Tab
+                  key={2}
+                  value={2}
+                  icon={<TheatersIcon />}
+                  aria-label="upcoming"
+                  label="upcoming events"
+                  sx={{ fontSize: iconSize, fontWeight: 800 }}
+                /> */}
+            <Tab
+              key={3}
+              value={3}
+              icon={<TestimonialsIcon />}
+              aria-label="testimonials"
+              label="testimonials"
+              sx={{ fontSize: iconSize, fontWeight: 800 }}
+            />
+            <Tab
+              key={4}
+              value={4}
+              icon={<ContactPageIcon />}
+              aria-label="contact"
+              label="contact us"
+              sx={{ fontSize: iconSize, fontWeight: 800 }}
+            />
+          </Tabs>
+        </Grid>
+      </Grid>
       <div className="main-content">
-        {children}
+        <Box>{children}</Box>
         <div className={`${pageNumber === 1 ? "hidden" : "footer"}`}>
           <h4>Being Us Creations</h4>
           <div className="address">
@@ -140,7 +189,7 @@ const Main = forwardRef(({ children }, ref) => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 });
 

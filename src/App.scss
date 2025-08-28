@@ -17,12 +17,12 @@ $Zeyada: "Zeyada", cursive;
   grid-template-columns: 30px 30px 1fr;
 }
 
-.app-frame {
-  display: grid;
-  grid-template-rows: 12vh 1fr;
-  gap: 0;
-  height: 98vh;
-}
+// .app-frame {
+//   display: grid;
+//   grid-template-rows: 12vh 1fr;
+//   gap: 0;
+//   height: 98vh;
+// }
 
 .header {
   display: grid;
@@ -42,18 +42,14 @@ $Zeyada: "Zeyada", cursive;
 }
 
 .HeaderTitle {
-  margin: auto;
   font-family: "Allura", cursive;
-  font-size: 4vmax;
+  font-size: 4vw;
   font-weight: 800;
   text-align: center;
-  width: 60vw;
-  padding: 0;
 }
 
 .links {
   font-size: 4.5vw !important;
-  // border: 1px solid blue;
 }
 
 .footer {
@@ -90,6 +86,7 @@ $Zeyada: "Zeyada", cursive;
 
 .main-content {
   width: 100vw;
+  height: "70vh";
   overflow-y: scroll;
   overflow-x: hidden;
 }
@@ -384,20 +381,15 @@ $Zeyada: "Zeyada", cursive;
 
 // Tablet Only - dashed orange
 @media only screen and (min-width: 768px) and (max-width: 980px) {
-  .app-frame {
-    grid-template-rows: 20vh 1fr;
-  }
+  // .app-frame {
+  //   grid-template-rows: 20vh 1fr;
+  // }
 
   .header {
     grid-auto-rows: auto;
     align-items: center;
     justify-content: center;
     gap: 0;
-  }
-
-  .HeaderTitle {
-    margin: 0;
-    // border: 4px solid red;
   }
 
   .form-row {
@@ -414,11 +406,16 @@ $Zeyada: "Zeyada", cursive;
 // IPad - solid orange
 @media screen and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
   .header {
-    grid-template-columns: 1fr 45vw 35vw;
+    grid-template-columns: 1fr 35vw 45vw;
+
+    & img {
+      width: 20vw;
+      margin-left: 2vw;
+    }
   }
 
-  .HeaderTitle {
-    font-size: 6vmin;
+  .links {
+    font-size: 3vw !important;
   }
 }
 
@@ -430,7 +427,7 @@ $Zeyada: "Zeyada", cursive;
 // Smartphone Only
 @media only screen and (max-width: 767px) {
   .app-frame {
-    grid-template-rows: 30vh 1fr;
+    // grid-template-rows: 30vh 1fr;
   }
 
   .header {
@@ -439,10 +436,6 @@ $Zeyada: "Zeyada", cursive;
     & img {
       width: 30vw;
     }
-  }
-
-  .HeaderTitle {
-    margin: 0;
   }
 
   .form-row {
@@ -493,11 +486,6 @@ $Zeyada: "Zeyada", cursive;
     & img {
       width: 45vw;
     }
-  }
-
-  .HeaderTitle {
-    font-size: 6vmin;
-    width: auto;
   }
 
   .links {

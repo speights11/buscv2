@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Box from "@mui/material/Box";
 import RingLoader from "react-spinners/RingLoader";
 
 import "../../App.scss";
@@ -33,16 +34,18 @@ const Gallery = () => {
         />
         <h2>One Moment Please...</h2>
       </div>
-      <div className={`${loading ? "hidden" : "iframe-container"}`}>
-        <iframe
-          src="https://www.pictorem.com/gallery/Reggie.S"
-          allowfullscreen
-          width={"100%"}
-          height={"100%"}
-          onLoad={() => setLoading(false)}
-          sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation"
-        ></iframe>
-      </div>
+      <Box sx={{ p: 5, height: "70.0vmax" }}>
+        <div className={`${loading ? "hidden" : "iframe-container"}`}>
+          <iframe
+            src="https://www.pictorem.com/gallery/Reggie.S"
+            allowfullscreen
+            width={"100%"}
+            height={"100%"}
+            onLoad={() => setLoading(false)}
+            sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation"
+          ></iframe>
+        </div>
+      </Box>
     </>
   );
 };
