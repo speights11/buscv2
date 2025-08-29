@@ -6,6 +6,8 @@ import Box from "@mui/material/Box";
 
 import "swiper/css";
 import "swiper/css/effect-coverflow";
+import "swiper/css/autoplay";
+import "swiper/css/effect-cards";
 
 // Slide Images
 import slideImg1 from "assets/images/carousel/slide1.png";
@@ -39,8 +41,9 @@ const Carousel = (props) => {
       breakpoints={{
         // when window width is >= 640px
         640: {
-          slidesPerView: 1, // small screens
-          spaceBetween: 0,
+          // slidesPerView: 1, // small screens
+          centeredSlides: true,
+          // spaceBetween: 10,
         },
         // when window width is >= 1500px
         1500: {
@@ -55,7 +58,7 @@ const Carousel = (props) => {
           display="flex"
           flexDirection="row"
           justifyContent="center"
-          sx={{ width: "90%", height: "70vmin" }}
+          sx={{ width: "100%", height: "70vmin" }}
         >
           <Image fit="contain" src={slideImg1} />
         </Box>
@@ -65,7 +68,7 @@ const Carousel = (props) => {
           display="flex"
           flexDirection="row"
           justifyContent="center"
-          sx={{ width: "90%", height: "70vmin" }}
+          sx={{ width: "100%", height: "70vmin" }}
         >
           <Image fit="contain" src={slideImg2} />
         </Box>
@@ -75,7 +78,7 @@ const Carousel = (props) => {
           display="flex"
           flexDirection="row"
           justifyContent="center"
-          sx={{ width: "90%", height: "70vmin" }}
+          sx={{ width: "100%", height: "70vmin" }}
         >
           <Image fit="contain" src={slideImg3} />
         </Box>
@@ -85,7 +88,7 @@ const Carousel = (props) => {
           display="flex"
           flexDirection="row"
           justifyContent="center"
-          sx={{ width: "90%", height: "70vmin" }}
+          sx={{ width: "100%", height: "70vmin" }}
         >
           <Image fit="contain" src={slideImg4} />
         </Box>
@@ -95,7 +98,7 @@ const Carousel = (props) => {
           display="flex"
           flexDirection="row"
           justifyContent="center"
-          sx={{ width: "90%", height: "70vmin" }}
+          sx={{ width: "100%", height: "70vmin" }}
         >
           <Image fit="contain" src={slideImg5} />
         </Box>
@@ -105,7 +108,7 @@ const Carousel = (props) => {
           display="flex"
           flexDirection="row"
           justifyContent="center"
-          sx={{ width: "90%", height: "70vmin" }}
+          sx={{ width: "100%", height: "70vmin" }}
         >
           <Image fit="contain" src={slideImg6} />
         </Box>
@@ -115,7 +118,7 @@ const Carousel = (props) => {
           display="flex"
           flexDirection="row"
           justifyContent="center"
-          sx={{ width: "90%", height: "70vmin" }}
+          sx={{ width: "100%", height: "70vmin" }}
         >
           <Image fit="contain" src={slideImg7} />
         </Box>
@@ -125,7 +128,7 @@ const Carousel = (props) => {
           display="flex"
           flexDirection="row"
           justifyContent="center"
-          sx={{ width: "90%", height: "70vmin" }}
+          sx={{ width: "100%", height: "70vmin" }}
         >
           <Image fit="contain" src={slideImg8} />
         </Box>
@@ -135,7 +138,7 @@ const Carousel = (props) => {
           display="flex"
           flexDirection="row"
           justifyContent="center"
-          sx={{ width: "90%", height: "70vmin" }}
+          sx={{ width: "100%", height: "70vmin" }}
         >
           <Image fit="contain" src={slideImg9} />
         </Box>
@@ -145,7 +148,7 @@ const Carousel = (props) => {
           display="flex"
           flexDirection="row"
           justifyContent="center"
-          sx={{ width: "90%", height: "70vmin" }}
+          sx={{ width: "100%", height: "70vmin" }}
         >
           <Image fit="contain" src={slideImg10} />
         </Box>
@@ -155,7 +158,7 @@ const Carousel = (props) => {
           display="flex"
           flexDirection="row"
           justifyContent="center"
-          sx={{ width: "90%", height: "70vmin" }}
+          sx={{ width: "100%", height: "70vmin" }}
         >
           <Image fit="contain" src={slideImg11} />
         </Box>
@@ -165,7 +168,7 @@ const Carousel = (props) => {
           display="flex"
           flexDirection="row"
           justifyContent="center"
-          sx={{ width: "90%", height: "70vmin" }}
+          sx={{ width: "100%", height: "70vmin" }}
         >
           <Image fit="contain" src={slideImg12} />
         </Box>

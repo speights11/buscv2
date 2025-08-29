@@ -58,7 +58,7 @@ const Home = () => {
             </Typography>
           </Grid>
 
-          <Grid size={12} sx={{ marginLeft: 2, marginBottom: 10 }}>
+          <Grid size={12} sx={{ marginBottom: 10 }}>
             <Box
               sx={{ width: "100%" }}
               display="flex"

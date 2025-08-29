@@ -1,95 +1,97 @@
 import React, { useEffect } from "react";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
-import Paper from "@mui/material/Paper";
-// import event from "../../assets/images/Events/WineDownWithArt.png";
-// (moved to css) import background from "../../assets/images/background.jpg"; 
-// https://www.istockphoto.com/vector/spotlight-backdrop-illuminated-blue-stage-background-for-displaying-products-bright-gm1322502570-408449206?searchscope=image%2Cfilm
-
-import { Typography } from "@mui/material";
-import logo from "assets/images/Events/bird.png";
-import ColorLensIcon from '@mui/icons-material/ColorLens';
-import WineBarIcon from '@mui/icons-material/WineBar';
-import EventAvailableIcon from '@mui/icons-material/EventAvailable';
-import ScheduleIcon from '@mui/icons-material/Schedule';
-import HouseboatOutlinedIcon from '@mui/icons-material/HouseboatOutlined';
-
+import Link from "@mui/material/Link";
+import Image from "mui-image";
+import event from "assets/images/Events/WineDownWithArt2.png";
 import "../../App.scss";
-
-const cardStyle = { width: "100%", textAlign: "center" };
+import { Typography } from "@mui/material";
 
 const UpcomingEvents = () => {
-    useEffect(() => {
-        try {
-            sessionStorage.setItem("currentPage", "2");
+  const hdrFontSize = {
+    xs: "4.5vw",
+    sm: "4.5vw",
+    md: "4.5vw",
+    lg: "4.5vw",
+    xl: "4.5vw",
+  };
 
-            /* eslint-disable-next-line no-undef */
-            gtag("event", "VisitUpcomingEvents", {
-                event_category: "Pages",
-                event_label: "Visit Upcoming Events Page",
-            });
-        } catch (error) {
-            console.log(error);
-        }
-    });
+  useEffect(() => {
+    try {
+      sessionStorage.setItem("currentPage", "2");
 
-    return (
-        <>
-            <Box className="upcoming-content">
-                <div className="testimonial-header" style={{ color: "white" }}>Coming Soon</div>
-                <div className="" style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    justifyContent: "space-around",
-                    margin: "2vmin"
-                }}>
-                    <Paper elevation={4} sx={{ padding: 1, borderRadius: 8, borderStyle: "groove", borderWidth: "2px", borderColor: "#6571edff" }}>
-                        <Grid container
-                            sx={{
-                                width: "30vw",
-                            }}
+      /* eslint-disable-next-line no-undef */
+      gtag("event", "VisitUpcomingEvents", {
+        event_category: "Pages",
+        event_label: "Visit Upcoming Events Page",
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  });
 
-                            display="flex"
-                            flexDirection="row"
-                            justifyContent="space-around"
-                        >
-                            <Grid size={12}><Typography variant="h4" sx={{ fontWeight: 800, pb: 2, fontFamily: "Decorative" }} style={cardStyle} >WINE DOWN WITH ART</Typography></Grid>
-                            <Grid size={12} display="flex" flexDirection="row" justifyContent="space-around"><img height="50vw" src={logo} alt="BUSC logo" /></Grid>
-
-
-                            <Grid sx={{ margin: "auto" }}>
-                                <div className="dual-icon-row">
-                                    <ColorLensIcon /><WineBarIcon /><Typography variant="body1" sx={{ fontWeight: 600 }}>An afternoon of creativity, culture & connection </Typography>
-                                </div>
-                            </Grid>
-
-
-
-                            <Grid size={12}><Typography variant="body1" style={cardStyle} sx={{ fontWeight: 600 }}>Paintings and Photography by </Typography></Grid>
-                            <Grid size={12}><Typography variant="body1" style={cardStyle} sx={{ fontWeight: 600 }}>Jae Di and Reggie S.</Typography></Grid>
-                            <Grid size={12}><Typography variant="h6" style={cardStyle} sx={{ fontWeight: 800, pt: 5 }}>Save the date...</Typography></Grid>
-
-                            <Grid size={12} display="flex">
-                                <div className="single-icon-row"><EventAvailableIcon /><Typography variant="body1" sx={{ fontWeight: 600 }}>**Saturday, October 11, 2025**</Typography></div>
-                            </Grid>
-
-                            <Grid size={12} display="flex" sx={{ pb: 5 }}>
-                                <div className="single-icon-row"><ScheduleIcon /><Typography variant="body1" sx={{ fontWeight: 600 }}>**12:00PM - 4:00PM**</Typography></div>
-                            </Grid>
-
-                            <Grid size={12} display="flex">
-                                <div className="single-icon-row"><HouseboatOutlinedIcon /><Typography variant="h6" sx={{ fontWeight: 600 }}>Waters Edge Clubhouse</Typography></div>
-                            </Grid>
-
-                            <Grid size={12}><Typography variant="h6" style={cardStyle} sx={{ fontWeight: 600 }}>7115 Waters Edge Dr. #B, Stone Mountain, GA 30087</Typography></Grid>
-                            <Grid size={12}><Typography variant="body1" style={cardStyle} sx={{ fontWeight: 600, pt: 5 }}>Free Admission</Typography></Grid>
-                            <Grid size={12}><Typography variant="body1" style={cardStyle} sx={{ fontWeight: 600 }}>Wine, Refreshments & Lite Bites</Typography></Grid>
-                        </Grid>
-                    </Paper>
-                </div>
-            </Box>
-        </>
-    );
+  return (
+    <Grid container size={12}>
+      <div className="home-content">
+        <Box
+          className="upcoming-content"
+          sx={{ my: 5, mx: "auto", width: "90%" }}
+        >
+          <Grid
+            item
+            size={12}
+            display="flex"
+            flexDirection="row"
+            justifyContent="center"
+          >
+            <Typography
+              style={{ fontFamily: " 'Cinzel Decorative', serif;" }}
+              variant="h1"
+              fontSize={hdrFontSize}
+            >
+              Coming Soon
+            </Typography>
+          </Grid>
+          <Grid
+            size={12}
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "center",
+              margin: "2vmin",
+            }}
+          >
+            <Typography variant="h6" fontSize={"2vw"}>
+              (click below to RSVP)
+            </Typography>
+          </Grid>
+          <Grid
+            item
+            size={12}
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "center",
+              margin: "2vmin",
+            }}
+          >
+            <Link
+              href="https://partiful.com/e/FF3JeA6Gh5JeGojJ1pme"
+              underline="none"
+              rel="noreferrer noopener"
+              target="__blank"
+            >
+              <Image
+                sx={{ border: 2, borderRadius: { xs: 3, md: 6, xl: 8 } }}
+                src={event}
+                width="40vw"
+              />
+            </Link>
+          </Grid>
+        </Box>
+      </div>
+    </Grid>
+  );
 };
 
 export default UpcomingEvents;

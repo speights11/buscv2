@@ -7,6 +7,7 @@ import React, {
 } from "react";
 import Image from "mui-image";
 import { useNavigate } from "react-router-dom";
+import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import Tabs from "@mui/material/Tabs";
@@ -16,7 +17,7 @@ import ContactPageIcon from "@mui/icons-material/ContactPage";
 import CollectionsIcon from "@mui/icons-material/Collections";
 import TestimonialsIcon from "@mui/icons-material/ThumbUp";
 //TODO: Add UpcomingEvents
-// import TheatersIcon from '@mui/icons-material/Theaters';
+import TheatersIcon from "@mui/icons-material/Theaters";
 // import { isMobileOnly, isTablet } from "react-device-detect";
 import PropTypes from "prop-types";
 import logo from "assets/images/logo.png";
@@ -79,8 +80,6 @@ const Main = forwardRef(({ children }, ref) => {
       console.log(error);
     }
   };
-
-  //TODO: Add UpcomingEvents - line93
 
   return (
     <>
@@ -151,14 +150,14 @@ const Main = forwardRef(({ children }, ref) => {
               label="gallery"
               sx={{ fontSize: iconFontSize, fontWeight: 800 }}
             />
-            {/* <Tab
-                  key={2}
-                  value={2}
-                  icon={<TheatersIcon sx={{fontSize:iconSize}}/>}
-                  aria-label="upcoming"
-                  label="upcoming events"
-                  sx={{ fontSize: iconSize, fontWeight: 800 }}
-                /> */}
+            <Tab
+              key={2}
+              value={2}
+              icon={<TheatersIcon sx={{ fontSize: iconSize }} />}
+              aria-label="upcoming"
+              label="upcoming events"
+              sx={{ fontSize: iconFontSize, fontWeight: 800 }}
+            />
             <Tab
               key={3}
               value={3}
@@ -181,20 +180,28 @@ const Main = forwardRef(({ children }, ref) => {
       <div className="main-content">
         <Box>{children}</Box>
         <div className={`${pageNumber === 1 ? "hidden" : "footer"}`}>
-          <h4>Being Us Creations</h4>
-          <div className="address">
-            <p>4002 Hwy 78</p>
-            <p>Suite 530-199</p>
-            <p>Snelleville, GA 30039</p>
-          </div>
-          <div className="copyright">
-            Copyright &#169;2023 Being Us Creations All Rights Reserved.
-            <br />
-            All photographs appearing on this site are the property of Being Us
-            Creations. They are protected by U.S. Copyright Laws and are not to
-            be downloaded or reproduced in any way without the express written
-            permission of Being Us Creations.
-          </div>
+          <Box sx={{ p: 1 }}>
+            <Typography variant="h6">Being Us Creations</Typography>
+          </Box>
+          <Box sx={{ p: 1 }}>
+            <Typography variant="body2">4002 Hwy 78</Typography>
+          </Box>
+          <Box sx={{ p: 1 }}>
+            <Typography variant="body2">Suite 530-199</Typography>
+          </Box>
+          <Box sx={{ p: 1 }}>
+            <Typography variant="body2">Snelleville, GA 30039</Typography>
+          </Box>
+          <Box sx={{ p: 1 }}>
+            <Typography variant="caption">
+              Copyright &#169;2023 Being Us Creations All Rights Reserved.
+              <br />
+              All photographs appearing on this site are the property of Being
+              Us Creations. They are protected by U.S. Copyright Laws and are
+              not to be downloaded or reproduced in any way without the express
+              written permission of Being Us Creations.
+            </Typography>
+          </Box>
         </div>
       </div>
     </>

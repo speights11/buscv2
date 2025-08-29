@@ -63,12 +63,6 @@ $Zeyada: "Zeyada", cursive;
     font-size: 0.8rem;
     line-height: 0.5;
   }
-
-  & .copyright {
-    margin: 2vh auto;
-    font-size: 0.8rem;
-    padding: 5px;
-  }
 }
 
 .billing {
@@ -92,20 +86,16 @@ $Zeyada: "Zeyada", cursive;
 }
 
 .upcoming-content {
-  margin-bottom: 30px;
-  padding: 30px;
+  color: white;
   background-image: url("./assets/images/Events/background.jpg");
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: contain;
+  background-size: cover;
   background-attachment: fixed;
 }
 
 .testimonial-header {
   font-family: $Decorative;
-  font-size: 2.5rem;
-  font-weight: 800;
-  text-align: center;
 }
 
 .testimonials-content {
@@ -349,19 +339,14 @@ $Zeyada: "Zeyada", cursive;
     }
   }
 
-  .footer {
-    & h4 {
-      font-size: 1.5vw;
-    }
+  // .footer {
+  //   & h4 {
+  //     font-size: 1.5vw;
+  //   }
 
-    & p {
-      font-size: 0.8vw;
-    }
-
-    & .copyright {
-      font-size: 0.8vw;
-    }
-  }
+  //   & p {
+  //     font-size: 0.8vw;
+  //   }
 }
 
 // Large Monitors - solid green
@@ -456,10 +441,6 @@ $Zeyada: "Zeyada", cursive;
 
   .footer {
     width: 80vw;
-
-    & .copyright {
-      font-size: 1.5vmax;
-    }
   }
 
   .billing {
