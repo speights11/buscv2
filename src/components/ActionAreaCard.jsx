@@ -16,7 +16,7 @@ const ActionAreaCard = ({ title, desc, imageUrl, salesUrl }) => {
   return (
     <Card
       sx={{
-        width: { xs: "90vw", sm: "90vw", md: "70vw", lg: "60vw", xl: "30vw" },
+        width: { xs: "85vw", sm: "85vw", md: "70vw", lg: "60vw", xl: "30vw" },
       }}
     >
       <CardActionArea>
