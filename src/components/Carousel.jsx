@@ -45,9 +45,14 @@ const Carousel = (props) => {
       breakpoints={{
         // when window width is >= 640px
         640: {
-          // slidesPerView: 1, // small screens
+          slidesPerView: 1, // small screens
           centeredSlides: true,
           // spaceBetween: 10,
+        },
+        1024: {
+          slidesPerView: 3, // small screens
+          centeredSlides: true,
+          spaceBetween: 10,
         },
         // when window width is >= 1500px
         1500: {

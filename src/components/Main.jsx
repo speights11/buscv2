@@ -31,7 +31,7 @@ const Main = forwardRef(({ children }, ref) => {
     xs: 20,
     sm: 20,
     md: 35,
-    lg: 30,
+    lg: 20,
     xl: 40,
   };
 
@@ -39,8 +39,8 @@ const Main = forwardRef(({ children }, ref) => {
     xs: "1.5vw",
     sm: "1.2vw",
     md: "1.0vw",
-    lg: "0.5vw",
-    xl: "0.7vw",
+    lg: "0.4vw",
+    xl: "0.4vw",
   };
   const [pageNumber, setPageNumber] = useState(0);
   const navigate = useNavigate();

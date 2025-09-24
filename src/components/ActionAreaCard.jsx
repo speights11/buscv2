@@ -14,7 +14,11 @@ const ActionAreaCard = ({ title, desc, imageUrl, salesUrl }) => {
   const shareTitle = "Check out this great art!";
 
   return (
-    <Card sx={{ width: "30vw" }}>
+    <Card
+      sx={{
+        width: { xs: "90vw", sm: "90vw", md: "70vw", lg: "60vw", xl: "30vw" },
+      }}
+    >
       <CardActionArea>
         <CardMedia
           component="img"
