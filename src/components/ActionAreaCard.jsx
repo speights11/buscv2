@@ -5,11 +5,11 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import CardActions from "@mui/material/CardActions";
 import Typography from "@mui/material/Typography";
-// import LearnMoreButton from "./LearnMoreButton";
+import LearnMoreButton from "./LearnMoreButton";
 import CardActionArea from "@mui/material/CardActionArea";
 import SocialShare from "./SocialShare";
 
-const ActionAreaCard = ({ title, desc, imageUrl }) => {
+const ActionAreaCard = ({ title, desc, imageUrl, salesUrl }) => {
   const shareUrl = "https://www.beinguscreations.com";
   const shareTitle = "Check out this great art!";
 
@@ -35,7 +35,7 @@ const ActionAreaCard = ({ title, desc, imageUrl }) => {
         </CardContent>
         <CardActions sx={{ py: 0 }}>
           <SocialShare url={shareUrl} title={shareTitle} />
-          {/* <LearnMoreButton url="" /> */}
+          <LearnMoreButton url={salesUrl} />
         </CardActions>
       </CardActionArea>
     </Card>

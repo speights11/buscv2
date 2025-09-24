@@ -8,7 +8,7 @@ function LearnMoreButton({ url }) {
     <Button
       component="a"
       href={url}
-      target="_blank"
+      //   target="_blank"
       rel="noopener noreferrer"
       variant="outlined"
       color="primary"
