@@ -63,7 +63,12 @@ const Carousel = (props) => {
       modules={[EffectCoverflow, Navigation]}
     >
       <SwiperSlide>
-        <Box display="flex" flexDirection="row" justifyContent="center">
+        <Box
+          sx={{ width: "100%" }}
+          display="flex"
+          flexDirection="row"
+          justifyContent="center"
+        >
           <ActionAreaCard
             title="Wall Mural"
             desc="Our wall murals are produced on printers with Outstanding photographic print quality & durability Extreme image resolution : photographic image quality with the largest color gamut in its class."
@@ -73,7 +78,12 @@ const Carousel = (props) => {
         </Box>
       </SwiperSlide>
       <SwiperSlide>
-        <Box display="flex" flexDirection="row" justifyContent="center">
+        <Box
+          sx={{ width: "100%" }}
+          display="flex"
+          flexDirection="row"
+          justifyContent="center"
+        >
           <ActionAreaCard
             title="Giclée Roll Print  "
             desc="Printed on Fine Art Matte Canvas Paper, Photo Satin Paper - ( Poster ) or Premium Archival Matte Paper with a smooth texture & neutral-white - Provided inside a Strong mailing tube."
@@ -83,7 +93,12 @@ const Carousel = (props) => {
         </Box>
       </SwiperSlide>
       <SwiperSlide>
-        <Box display="flex" flexDirection="row" justifyContent="center">
+        <Box
+          sx={{ width: "100%" }}
+          display="flex"
+          flexDirection="row"
+          justifyContent="center"
+        >
           <ActionAreaCard
             title="Framed Print"
             desc="Fully customizable - at the exact size you want. Select paper type, glass, matte and decorating frame."
@@ -93,7 +108,12 @@ const Carousel = (props) => {
         </Box>
       </SwiperSlide>
       <SwiperSlide>
-        <Box display="flex" flexDirection="row" justifyContent="center">
+        <Box
+          sx={{ width: "100%" }}
+          display="flex"
+          flexDirection="row"
+          justifyContent="center"
+        >
           <ActionAreaCard
             title="Cross Triptych Split Canvas"
             desc="All our stretched Canvas are custom made on a Premium Fine Art Matte Canvas 410g/m2 1.5 Inch Thick wood for a real gallery look       
@@ -104,7 +124,12 @@ Giclee printing with Pigment ink designed to meet galleries and museum longevity
         </Box>
       </SwiperSlide>
       <SwiperSlide>
-        <Box display="flex" flexDirection="row" justifyContent="center">
+        <Box
+          sx={{ width: "100%" }}
+          display="flex"
+          flexDirection="row"
+          justifyContent="center"
+        >
           <ActionAreaCard
             title="Split Canvas"
             desc="All our stretched Canvas are custom made on a Premium Fine Art Matte Canvas 410g/m2 1.5 Inch Thick wood for a real gallery look       
@@ -115,7 +140,12 @@ Giclee printing with Pigment ink designed to meet galleries and museum longevity
         </Box>
       </SwiperSlide>
       <SwiperSlide>
-        <Box display="flex" flexDirection="row" justifyContent="center">
+        <Box
+          sx={{ width: "100%" }}
+          display="flex"
+          flexDirection="row"
+          justifyContent="center"
+        >
           <ActionAreaCard
             title="Triptych Split Canvas"
             desc="Also available in Acrylic, Brushed Metal, GH Metal and wood."
@@ -125,7 +155,12 @@ Giclee printing with Pigment ink designed to meet galleries and museum longevity
         </Box>
       </SwiperSlide>
       <SwiperSlide>
-        <Box display="flex" flexDirection="row" justifyContent="center">
+        <Box
+          sx={{ width: "100%" }}
+          display="flex"
+          flexDirection="row"
+          justifyContent="center"
+        >
           <ActionAreaCard
             title="Stretched Canvas"
             desc="All our stretched Canvas are custom made on a Premium Fine Art Matte Canvas 410g/m2 1.5 Inch Thick wood for a real gallery look       
@@ -136,7 +171,12 @@ Giclee printing with Pigment ink designed to meet galleries and museum longevity
         </Box>
       </SwiperSlide>
       <SwiperSlide>
-        <Box display="flex" flexDirection="row" justifyContent="center">
+        <Box
+          sx={{ width: "100%" }}
+          display="flex"
+          flexDirection="row"
+          justifyContent="center"
+        >
           <ActionAreaCard
             title="Wood Print with Black Frame Mount"
             desc="Printed with UV cured inks providing an incredible high quality printed image which is scratch resistant with colors that will not fade over time."
@@ -146,7 +186,12 @@ Giclee printing with Pigment ink designed to meet galleries and museum longevity
         </Box>
       </SwiperSlide>
       <SwiperSlide>
-        <Box display="flex" flexDirection="row" justifyContent="center">
+        <Box
+          sx={{ width: "100%" }}
+          display="flex"
+          flexDirection="row"
+          justifyContent="center"
+        >
           <ActionAreaCard
             title="Acrylic Print with Standoff"
             desc="Get a Modern piece of art with this vibrant Acrylic Print. Fine Art made from a Premium polished, best-in-class, 99.9% optically pure acrylic and the latest Flatbed printing craftmanship. "
