@@ -54,7 +54,7 @@ const Home = () => {
           <Grid size={12} sx={{ py: 2, textAlign: "center", marginBottom: 5 }}>
             <Typography variant="h5" sx={{ fontSize: "1.9vmax" }}>
               Browse our Gallery for Paintings and Photographs available in a
-              wide array of options, such as:
+              wide array of options.
             </Typography>
           </Grid>
 
