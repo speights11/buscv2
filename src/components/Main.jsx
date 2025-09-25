@@ -12,6 +12,7 @@ import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
+import Paper from "@mui/material/Paper";
 import HomeIcon from "@mui/icons-material/Home";
 import ContactPageIcon from "@mui/icons-material/ContactPage";
 import CollectionsIcon from "@mui/icons-material/Collections";
@@ -27,21 +28,6 @@ import "App.scss";
 
 const Main = forwardRef(({ children }, ref) => {
   Main.displayName = "Main";
-  const iconSize = {
-    xs: 20,
-    sm: 20,
-    md: 35,
-    lg: 20,
-    xl: 40,
-  };
-
-  const iconFontSize = {
-    xs: "1.5vw",
-    sm: "1.2vw",
-    md: "1.0vw",
-    lg: "0.4vw",
-    xl: "0.4vw",
-  };
   const [pageNumber, setPageNumber] = useState(0);
   const navigate = useNavigate();
   const routePath = [
@@ -83,100 +69,123 @@ const Main = forwardRef(({ children }, ref) => {
 
   return (
     <>
-      <Grid
-        sx={{
-          margin: "auto",
-          border: 1,
-          borderRadius: 2,
-          background: "#a6a27d",
-        }}
-        container
-        width={{ xs: "90%", sm: "70%", md: "60%", lg: "90%", xl: "90%" }}
-        display="flex"
-        flexDirection="row"
-        justifyContent="center"
-      >
+      <Paper elevation={8}>
         <Grid
+          sx={{
+            pt: 1,
+            margin: "auto",
+            borderBottom: 3,
+            borderColor: "#999696ff",
+            background: "#a6a27d",
+          }}
+          container
+          width="100%"
           display="flex"
           flexDirection="row"
           justifyContent="center"
-          sx={{ margin: "auto" }}
-          size={{ xs: 12, sm: 12, md: 12, lg: 2, xl: 2 }}
         >
-          <Box width={{ xs: 100, sm: 100, md: 150, lg: 200, xl: 250 }}>
-            <Image fit="contain" src={logo} alt="BUSC logo" />
-          </Box>
-        </Grid>
-        <Grid
-          display="flex"
-          flexDirection="row"
-          justifyContent="center"
-          sx={{ mx: "auto" }}
-          size={{ xs: 12, sm: 12, md: 12, lg: 5, xl: 5 }}
-        >
-          <Box
-            sx={{ py: { xs: 0, sm: 1, md: 2, lg: 4, xl: 5 } }}
-            class="HeaderTitle"
+          <Grid
+            display="flex"
+            flexDirection="row"
+            justifyContent="center" //{{ md: "center", lg: "flex-start" }}
+            sx={{ px: 5 }}
+            size={{ xs: 12, sm: 12, md: 12, lg: 4, xl: 4 }}
           >
-            Being Us Creations
-          </Box>
-        </Grid>
-        <Grid
-          display="flex"
-          flexDirection="row"
-          justifyContent="center"
-          sx={{ margin: "auto" }}
-          size={{ xs: 10, sm: 10, md: 10, lg: 4, xl: 4 }}
-        >
-          <Tabs
-            value={pageNumber}
-            onChange={handleChange}
-            variant="scrollable"
-            aria-label="icon tabs example"
+            <Box width={{ xs: 100, sm: 100, md: 150, lg: 200, xl: 250 }}>
+              <Image fit="contain" src={logo} alt="BUSC logo" />
+            </Box>
+          </Grid>
+
+          {/* ******************* TABS ********************* */}
+          <Grid
+            display="flex"
+            justifyContent={{ md: "center", lg: "flex-end" }}
+            sx={{ px: { xs: 1, lg: 3 } }}
+            size={{ xs: 12, sm: 12, md: 12, lg: 8, xl: 8 }}
           >
-            <Tab
-              key={0}
-              value={0}
-              icon={<HomeIcon sx={{ fontSize: iconSize }} />}
-              aria-label="home"
-              label="home"
-              sx={{ fontSize: iconFontSize, fontWeight: 800 }}
-            />
-            <Tab
-              key={1}
-              value={1}
-              icon={<CollectionsIcon sx={{ fontSize: iconSize }} />}
-              aria-label="gallery"
-              label="gallery"
-              sx={{ fontSize: iconFontSize, fontWeight: 800 }}
-            />
-            <Tab
-              key={2}
-              value={2}
-              icon={<TheatersIcon sx={{ fontSize: iconSize }} />}
-              aria-label="upcoming"
-              label="upcoming events"
-              sx={{ fontSize: iconFontSize, fontWeight: 800 }}
-            />
-            <Tab
-              key={3}
-              value={3}
-              icon={<TestimonialsIcon sx={{ fontSize: iconSize }} />}
-              aria-label="testimonials"
-              label="testimonials"
-              sx={{ fontSize: iconFontSize, fontWeight: 800 }}
-            />
-            <Tab
-              key={4}
-              value={4}
-              icon={<ContactPageIcon sx={{ fontSize: iconSize }} />}
-              aria-label="contact"
-              label="contact us"
-              sx={{ fontSize: iconFontSize, fontWeight: 800 }}
-            />
-          </Tabs>
+            <Tabs
+              value={pageNumber}
+              onChange={handleChange}
+              variant="scrollable"
+              scrollButtons="auto"
+              allowScrollButtonsMobile
+              aria-label="responsive tabs"
+            >
+              <Tab
+                key={0}
+                value={0}
+                icon={
+                  <HomeIcon sx={{ fontSize: { xs: 18, sm: 20, md: 22 } }} />
+                }
+                label="Home"
+                sx={{
+                  fontSize: { xs: 8, sm: 10, md: 11 },
+                  fontWeight: 800,
+                  minWidth: { xs: 80, sm: 100, md: 120 },
+                }}
+              />
+              <Tab
+                key={1}
+                value={1}
+                icon={
+                  <CollectionsIcon
+                    sx={{ fontSize: { xs: 18, sm: 20, md: 22 } }}
+                  />
+                }
+                label="Gallery"
+                sx={{
+                  fontSize: { xs: 8, sm: 10, md: 11 },
+                  fontWeight: 800,
+                  minWidth: { xs: 80, sm: 100, md: 120 },
+                }}
+              />
+              <Tab
+                key={2}
+                value={2}
+                icon={
+                  <TheatersIcon sx={{ fontSize: { xs: 18, sm: 20, md: 22 } }} />
+                }
+                label="Upcoming Events"
+                sx={{
+                  fontSize: { xs: 8, sm: 10, md: 11 },
+                  fontWeight: 800,
+                  minWidth: { xs: 100, sm: 120, md: 140 },
+                }}
+              />
+              <Tab
+                key={3}
+                value={3}
+                icon={
+                  <TestimonialsIcon
+                    sx={{ fontSize: { xs: 18, sm: 20, md: 22 } }}
+                  />
+                }
+                label="Testimonials"
+                sx={{
+                  fontSize: { xs: 8, sm: 10, md: 11 },
+                  fontWeight: 800,
+                  minWidth: { xs: 90, sm: 110, md: 130 },
+                }}
+              />
+              <Tab
+                key={4}
+                value={4}
+                icon={
+                  <ContactPageIcon
+                    sx={{ fontSize: { xs: 18, sm: 20, md: 22 } }}
+                  />
+                }
+                label="Contact Us"
+                sx={{
+                  fontSize: { xs: 8, sm: 10, md: 11 },
+                  fontWeight: 800,
+                  minWidth: { xs: 90, sm: 110, md: 130 },
+                }}
+              />
+            </Tabs>
+          </Grid>
         </Grid>
-      </Grid>
+      </Paper>
       <div className="main-content">
         <Box>{children}</Box>
         <div className={`${pageNumber === 1 ? "hidden" : "footer"}`}>
