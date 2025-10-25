@@ -199,7 +199,7 @@ const Main = forwardRef(({ children }, ref) => {
             <Typography variant="body2">Suite 530-199</Typography>
           </Box>
           <Box sx={{ p: 1 }}>
-            <Typography variant="body2">Snelleville, GA 30039</Typography>
+            <Typography variant="body2">Snellville, GA 30039</Typography>
           </Box>
           <Box sx={{ p: 1 }}>
             <Typography variant="caption">
