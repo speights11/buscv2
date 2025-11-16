@@ -19,6 +19,7 @@ import tonyAndClark4 from "assets/images/testimonials/Tony_Clark4.png";
 import SharonCrumley from "assets/images/testimonials/SharonCrumley.jpg";
 import janetBivens from "assets/images/testimonials/janetBivens.png";
 import delAndTony from "assets/images/testimonials/DelandDavidO.png";
+import fredAndLisaBrown from "assets/images/testimonials/Fred_Lisa_Brown.jpg";
 import jr from "assets/images/testimonials/jr.jpg";
 
 import "../../App.scss";
@@ -51,6 +52,13 @@ const Testimonials = () => {
         flexDirection="row"
         justifyContent="space-between"
       >
+        <TestimonialsCard
+          title="Fred & Lisa Brown"
+          subTitle="Verified Purchaser"
+          description="We had a wonderful time at the art show hosted by Jeff and Regina. The atmosphere was welcoming, the artwork was inspiring, and the entire event felt beautifully put together. Their creativity, passion, and attention to detail really showed in every piece and in the way they curated the experience. These two paintings that my wife and I selected, are just two of many favorites. We both left feeling uplifted and grateful to have attended. Excellent work!"
+          image={fredAndLisaBrown}
+          link="https://www.pictorem.com/2064578/listen/?iframe=1"
+        />
         <TestimonialsCard
           title="Darrell Brown"
           subTitle="Verified Purchaser"
