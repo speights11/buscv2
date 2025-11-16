@@ -3,7 +3,7 @@ import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 // import Link from "@mui/material/Link";
 import Image from "mui-image";
-import event from "assets/images/Events/WineDownWithArt2.png";
+// import event from "assets/images/Events/WineDownWithArt2.png";
 import collage from "assets/images/Events/WineDownWithArtCollage.png";
 import "../../App.scss";
 import { Typography } from "@mui/material";
@@ -37,12 +37,15 @@ const UpcomingEvents = () => {
       <div className="home-content">
         <Box
           className="upcoming-content"
-          sx={{ my: 5, mx: "auto", width: "90%" }}
+          sx={{ my: 1, mx: "auto", width: "100%" }}
         >
           <Grid size={12}>
-            <Box sx={{ textAlign: "center" }}>
+            <Box sx={{ textAlign: "center", pt: 2 }}>
               <Typography variant="h3">
-                A great day of wine, food and art.{" "}
+                Wine Down With Art : Oct. 2025
+              </Typography>
+              <Typography variant="h6">
+                A great day of wine, food and art.
               </Typography>
             </Box>
           </Grid>
@@ -53,27 +56,20 @@ const UpcomingEvents = () => {
               display: "flex",
               flexDirection: "row",
               justifyContent: "center",
-              margin: "2vmin",
+              // margin: "1vmin",
             }}
           >
             <Box sx={{ p: 2 }}>
               <Image
                 sx={{ border: 2, borderRadius: { xs: 3, md: 6, xl: 8 } }}
-                src={event}
-                width="25vw"
-              />
-            </Box>
-            <Box sx={{ p: 2 }}>
-              <Image
-                sx={{ border: 2, borderRadius: { xs: 3, md: 6, xl: 8 } }}
                 src={collage}
-                width="45vw"
+                width="90vw"
               />
             </Box>
           </Grid>
           <Grid size={12}>
-            <Box sx={{ textAlign: "center", pb: 5 }}>
-              <Typography variant="h3">Stay Tuned... More to Come</Typography>
+            <Box sx={{ textAlign: "center", pb: 2 }}>
+              <Typography variant="h4">Stay Tuned... More to Come</Typography>
             </Box>
           </Grid>
         </Box>
