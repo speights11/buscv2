@@ -64,6 +64,7 @@ const UpcomingEvents = () => {
                 sx={{ border: 2, borderRadius: { xs: 3, md: 6, xl: 8 } }}
                 src={collage}
                 width="90vw"
+                showLoading
               />
             </Box>
           </Grid>
