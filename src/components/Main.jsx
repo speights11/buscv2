@@ -145,7 +145,7 @@ const Main = forwardRef(({ children }, ref) => {
                 icon={
                   <TheatersIcon sx={{ fontSize: { xs: 18, sm: 20, md: 22 } }} />
                 }
-                label="Upcoming Events"
+                label="Events"
                 sx={{
                   fontSize: { xs: 8, sm: 10, md: 11 },
                   fontWeight: 800,

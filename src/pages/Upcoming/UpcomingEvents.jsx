@@ -25,7 +25,7 @@ const UpcomingEvents = () => {
       /* eslint-disable-next-line no-undef */
       gtag("event", "VisitUpcomingEvents", {
         event_category: "Pages",
-        event_label: "Visit Upcoming Events Page",
+        event_label: "Visit Events Page",
       });
     } catch (error) {
       console.log(error);
