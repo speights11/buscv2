@@ -10,6 +10,8 @@ import kelvin from "assets/images/testimonials/Kelvin Brown.png";
 import jazzie from "assets/images/testimonials/Jazzie.jpg";
 import delOwens from "assets/images/testimonials/Del Sayles Owen.png";
 import franGray from "assets/images/testimonials/Fran Gray.png";
+import franGray2 from "assets/images/testimonials/Fran Gray 2.png";
+import franGray3 from "assets/images/testimonials/Fran Gray 3.png";
 import lula from "assets/images/testimonials/Dr Lula Ballton.jpg";
 import brianJenkins from "assets/images/testimonials/Brian_Jenkins.png";
 import tonyAndClark1 from "assets/images/testimonials/Tony_Clark1.png";
@@ -21,6 +23,7 @@ import janetBivens from "assets/images/testimonials/janetBivens.png";
 import delAndTony from "assets/images/testimonials/DelandDavidO.png";
 import fredAndLisaBrown from "assets/images/testimonials/Fred_Lisa_Brown.jpg";
 import jr from "assets/images/testimonials/jr.jpg";
+import trevoris from "assets/images/testimonials/trevoris.png";
 
 import "../../App.scss";
 
@@ -177,10 +180,30 @@ const Testimonials = () => {
           link="https://www.pictorem.com/912437/Hey%20Ladies.html?iframe=1"
         />
         <TestimonialsCard
+          title="Fran Gray"
+          subTitle="Verified Purchaser"
+          description=""
+          image={franGray2}
+          link="https://www.pictorem.com/2506091/the-potters-collection/?iframe=1"
+        />
+        <TestimonialsCard
+          title="Fran Gray"
+          subTitle="Verified Purchaser"
+          description=""
+          image={franGray3}
+          link="https://www.pictorem.com/2457392/echoes-of-tradition/?iframe=1"
+        />
+        <TestimonialsCard
+          title="Trevoris Jefferson"
+          subTitle="Verified Purchasers"
+          description="I ordered two pieces and both look great on my wall. The ordering process was easy, but does take a while to get printed and shipped out. The process of hanging them on my hallway wall was also easy."
+          image={trevoris}
+          link="https://www.pictorem.com/1974307/springtime/?iframe=1"
+        />
+        <TestimonialsCard
           title="Tony and Clark Duncan"
           subTitle="Verified Purchasers"
-          description="Beautifully fierce! What I love about Regina’s paintings is the way that she often addresses relevant social issues in an artistic form.  Whether sending a message or doing Freeform, all of her art speaks to her passion for life and the kind spirit she displays every day.
-  "
+          description="Beautifully fierce! What I love about Regina’s paintings is the way that she often addresses relevant social issues in an artistic form.  Whether sending a message or doing Freeform, all of her art speaks to her passion for life and the kind spirit she displays every day."
           image={tonyAndClark3}
           link="https://www.pictorem.com/912509/Free%20Mold.html?iframe=1"
         />
