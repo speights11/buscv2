@@ -24,6 +24,7 @@ import delAndTony from "assets/images/testimonials/DelandDavidO.png";
 import fredAndLisaBrown from "assets/images/testimonials/Fred_Lisa_Brown.jpg";
 import jr from "assets/images/testimonials/jr.jpg";
 import trevoris from "assets/images/testimonials/trevoris.png";
+import greatGrands from "assets/images/testimonials/greatGrands.png";
 
 import "../../App.scss";
 
@@ -55,6 +56,14 @@ const Testimonials = () => {
         flexDirection="row"
         justifyContent="space-between"
       >
+        <TestimonialsCard
+          title="Sherman and Tanesia Jones"
+          subTitle="Verified Purchaser"
+          description="This portrait captures more than faces, it captures the heart of my family! Seeing my three boys together in one beautiful piece of art is incredibly meaningful, with each of their personalities shining through. The mural is a daily reminder of our bond, love, joy, and energy they bring into our lives. Regina’s talent and attention to detail brought this vision to life, creating a timeless piece we will cherish for years to come ❤️"
+          image={greatGrands}
+          link="https://www.pictorem.com/2506088/heirs-to-the-throne/?iframe=1"
+        />
+
         <TestimonialsCard
           title="Fred & Lisa Brown"
           subTitle="Verified Purchaser"
@@ -134,7 +143,7 @@ const Testimonials = () => {
           link="https://www.pictorem.com/951459/drummer-boy/?iframe=1"
         />
         <TestimonialsCard
-          title="Kelvin Brown"
+          title="Kelvin and Bird Brown"
           subTitle="Verified Purchaser"
           description="I really enjoy the artwork. It reminds me of my father and his brothers. It’s a pleasure to look at each day."
           image={kelvin}
@@ -173,21 +182,21 @@ const Testimonials = () => {
           link="https://www.pictorem.com/912478/Eye%20Of%20Light.html?iframe=1"
         />
         <TestimonialsCard
-          title="Fran Gray"
+          title="Rob and Fran Gray"
           subTitle="Verified Purchaser"
           description=""
           image={franGray}
           link="https://www.pictorem.com/912437/Hey%20Ladies.html?iframe=1"
         />
         <TestimonialsCard
-          title="Fran Gray"
+          title="Rob and Fran Gray"
           subTitle="Verified Purchaser"
           description=""
           image={franGray2}
           link="https://www.pictorem.com/2506091/the-potters-collection/?iframe=1"
         />
         <TestimonialsCard
-          title="Fran Gray"
+          title="Rob and Fran Gray"
           subTitle="Verified Purchaser"
           description=""
           image={franGray3}
