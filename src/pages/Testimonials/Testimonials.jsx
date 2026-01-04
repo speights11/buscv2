@@ -57,7 +57,7 @@ const Testimonials = () => {
         justifyContent="space-between"
       >
         <TestimonialsCard
-          title="Sherman and Tanesia Jones"
+          title="Sherman and Tanisa Jones"
           subTitle="Verified Purchaser"
           description="This portrait captures more than faces, it captures the heart of my family! Seeing my three boys together in one beautiful piece of art is incredibly meaningful, with each of their personalities shining through. The painting is a daily reminder of our bond, love, joy, and energy they bring into our lives. Regina’s talent and attention to detail brought this vision to life, creating a timeless piece we will cherish for years to come ❤️"
           image={greatGrands}
