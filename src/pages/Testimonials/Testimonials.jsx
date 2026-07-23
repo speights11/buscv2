@@ -87,7 +87,7 @@ const Testimonials = () => {
           link="https://www.pictorem.com/1974226/Booked.html?iframe=1"
         />
         <TestimonialsCard
-          title="Shona Curry"
+          title="Shona Curry (RIP BEAUTIFUL SOUL)"
           subTitle="Verified Purchaser"
           description="This painting is like a visual caffeine hit for my nostalgia, capturing
           the vibrant chaos of my Georgia State University days with a brush
